@@ -1,2 +1,2 @@
 ## Homepage
-![Homepage](plan/HomePage.jpg)git 
+![Homepage](plan/HomePage.jpg)
