@@ -29,3 +29,16 @@
 2. Before all the features were clamped up in one spot but now everything is more organized
 3. I also added more features into the summary section
 4. Iam also not doubtfull towards the addition of the time zone converter any more
+
+27/07/2024
+
+1. I redesigned the home page grid layout to make it more attractive
+2. I added a HomePage Text.md file to write the text that is going to be in the home page
+3. I worked on finding a good background and theme but I couldn't find any
+4. I am wondering if I should just make all the wire frames and then decide the theme
+5. I also asked for advice from others on the order in which I should do this
+6. Progress on this site has been slow because I have been putting a lot of attention to the Udemy course from the morning to atleast 7PM
+7. And the rest of the time is being spent on the website
+8. Iam thinking of flipping that around now and spending the mornings on this site and the nights on Udemy course
+9. I will prepare a scheduel for my self to manage time once I get up
+10. If I do 2 sections a day I predict it would take me 21 days to get through the whole course
