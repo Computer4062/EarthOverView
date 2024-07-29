@@ -1,0 +1,202 @@
+[
+  {
+    "region": "East Asia",
+    "countries": [
+      "China",
+      "Japan",
+      "Mongolia",
+      "North Korea",
+      "South Korea",
+      "Taiwan"
+    ]
+  },
+  {
+    "region": "South Asia",
+    "countries": [
+      "Afghanistan",
+      "Bangladesh",
+      "Bhutan",
+      "India",
+      "Maldives",
+      "Nepal",
+      "Pakistan",
+      "Sri Lanka"
+    ]
+  },
+  {
+    "region": "Southeast Asia",
+    "countries": [
+      "Brunei",
+      "Cambodia",
+      "Indonesia",
+      "Laos",
+      "Malaysia",
+      "Myanmar (Burma)",
+      "Philippines",
+      "Singapore",
+      "Thailand",
+      "Timor-Leste",
+      "Vietnam"
+    ]
+  },
+  {
+    "region": "Central Asia",
+    "countries": [
+      "Kazakhstan",
+      "Kyrgyzstan",
+      "Tajikistan",
+      "Turkmenistan",
+      "Uzbekistan"
+    ]
+  },
+  {
+    "region": "Western Asia",
+    "countries": [
+      "Armenia",
+      "Azerbaijan",
+      "Bahrain",
+      "Cyprus",
+      "Georgia",
+      "Iraq",
+      "Israel",
+      "Jordan",
+      "Kuwait",
+      "Lebanon",
+      "Oman",
+      "Qatar",
+      "Saudi Arabia",
+      "Syria",
+      "Turkey",
+      "United Arab Emirates",
+      "Yemen"
+    ]
+  },
+
+  {
+	"region": "Northern Africa",
+	"countries": [
+		"Northern Africa",
+		"Algeria",
+		"Egypt",
+		"Libya",
+		"Morocco",
+		"Sudan",
+		"Tunisia"
+	]
+  },
+  {
+	"region": "Western Africa",
+	"countries": [
+		"Benin",
+		"Burkina Faso",
+		"Cape Verde",
+		"Côte d'Ivoire",
+		"Gambia",
+		"Ghana",
+		"Guinea",
+		"Guinea-Bissau",
+		"Liberia",
+		"Mali",
+		"Mauritania",
+		"Niger",
+		"Nigeria",
+		"Senegal",
+		"Sierra Leone",
+		"Togo"
+	]
+  },
+  {
+    "region": "Eastern Africa",
+    "countries": [
+		"Burundi", 
+		"Djibouti", 
+		"Eritrea", 
+		"Ethiopia", 
+		"Kenya", 
+		"Madagascar", 
+		"Malawi", 
+		"Mauritius", 
+		"Mozambique", 
+		"Rwanda", 
+		"Seychelles", 
+		"Somalia", 
+		"South Sudan", 
+		"Sudan", 
+		"Tanzania", 
+		"Uganda", 
+		"Zambia", 
+		"Zimbabwe"
+	]
+
+  },
+  {
+    "region": "Southern Africa",
+    "countries": [
+		"Angola", 
+		"Botswana", 
+		"Eswatini (Swaziland)", 
+		"Lesotho", 
+		"Namibia", 
+		"South Africa"
+	]
+  },
+  {
+    "region": "Central Africa",
+    "countries": [
+		"Cameroon", 
+		"Central African Republic", 
+		"Chad", 
+		"Democratic Republic of the Congo", 
+		"Equatorial Guinea", 
+		"Gabon", 
+		"Republic of the Congo"
+	]
+   },
+
+	{
+		"region:": "Southern America",
+		"countries": [
+			"Argentina",
+			"Bolivia",
+			"Brazil",
+			"Chile",
+			"Colombia",
+			"Ecuador",
+			"Guyana",
+			"Paraguay",
+			"Peru",
+			"Suriname",
+			"Uruguay",
+			"Venezuela"
+		]
+	},
+	{
+		"region": "Northern America",
+		"countries": [
+			"Canada",
+			"United States",
+			"Mexico",
+			"Cuba",
+			"Bahamas",
+			"Jamaica",
+			"Haiti",
+			"Dominican Republic",
+			"Trinidad and Tobago",
+			"Antigua and Barbuda",
+			"Barbados",
+			"Belize",
+			"Costa Rica",
+			"Dominica",
+			"El Salvador",
+			"Grenada",
+			"Guatemala",
+			"Honduras",
+			"Nicaragua",
+			"Panama",
+			"Saint Kitts and Nevis",
+			"Saint Lucia",
+			"Saint Vincent and the Grenadines",
+			"Grenada"
+		]
+	}
+]
