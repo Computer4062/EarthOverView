@@ -42,3 +42,8 @@
 8. Iam thinking of flipping that around now and spending the mornings on this site and the nights on Udemy course
 9. I will prepare a scheduel for my self to manage time once I get up
 10. If I do 2 sections a day I predict it would take me 21 days to get through the whole course
+
+28/07/2024
+
+1. I worked on defining the functionalities very well this time instead of focussing a lot on the design as the first part.
+2. And it helped because it got right down to the details of what the website really needs to look like and in what ways users want to use the website and how I should desing it to meet the users use cases.
