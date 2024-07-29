@@ -1,0 +1,348 @@
+{
+	"China": {
+		"currency": "Chinese Yuan Renminbi",
+		"symbol": "¥",
+		"code": "CNY"
+	},
+	"Japan": {
+		"currency": "Japanese Yen",
+		"symbol": "¥",
+		"code": "JPY"
+	},
+	"Mongolia": {
+		"currency": "Mongolian Tögrög",
+		"symbol": "₮",
+		"code": "MNT"
+	},
+	"North Korea": {
+		"currency": "North Korean Won",
+		"symbol": "₩",
+		"code": "KPW"
+	},
+	"South Korea": {
+		"currency": "South Korean Won",
+		"symbol": "₩",
+		"code": "KRW"
+	},
+	"Taiwan": {
+		"currency": "New Taiwan Dollar",
+		"symbol": "NT$",
+		"code": "TWD"
+	},
+
+	"Afghanistan": {
+		"currency": "Afghan Afghani",
+		"symbol": "؋",
+		"code": "AFN"
+	},
+	"Bangladesh": {
+		"currency": "Bangladeshi Taka",
+		"symbol": "৳",
+		"code": "BDT"
+	},
+	"Bhutan": {
+		"currency": "Bhutanese Ngultrum",
+		"symbol": "Nu.",
+		"code": "BTN"
+	},
+	"India": {
+		"currency": "Indian Rupee",
+		"symbol": "₹",
+		"code": "INR"
+	},
+	"Maldives": {
+		"currency": "Maldivian Rufiyaa",
+		"symbol": "Rf.",
+		"code": "MVR"
+	},
+	"Nepal": {
+		"currency": "Nepalese Rupee",
+		"symbol": "₨",
+		"code": "NPR"
+	},
+	"Pakistan": {
+		"currency": "Pakistani Rupee",
+		"symbol": "₨",
+		"code": "PKR"
+	},
+	"Sri Lanka": {
+		"currency": "Sri Lankan Rupee",
+		"symbol": "LKR",
+		"code": "LKR"
+	},
+
+	"Cambodia": {
+		"currency": "Cambodian Riel",
+		"symbol": "៛",
+		"code": "KHR"
+	},
+	"Indonesia": {
+		"currency": "Indonesian Rupiah",
+		"symbol": "Rp",
+		"code": "IDR"
+	},
+	"Laos": {
+		"currency": "Lao Kip",
+		"symbol": "₭",
+		"code": "LAK"
+	},
+	"Malaysia": {
+		"currency": "Malaysian Ringgit",
+		"symbol": "RM",
+		"code": "MYR"
+	},
+	"Myanmar (Burma)": {
+		"currency": "Myanmar Kyat",
+		"symbol": "K",
+		"code": "MMK"
+	},
+	"Philippines": {
+		"currency": "Philippine Peso",
+		"symbol": "₱",
+		"code": "PHP"
+	},
+	"Singapore": {
+		"currency": "Singapore Dollar",
+		"symbol": "S$",
+		"code": "SGD"
+	},
+	"Thailand": {
+		"currency": "Thai Baht",
+		"symbol": "฿",
+		"code": "THB"
+	},
+	"Timor-Leste": {
+		"currency": "United States Dollar",
+		"symbol": "$",
+		"code": "USD"
+	},
+	"Vietnam": {
+		"currency": "Vietnamese Dong",
+		"symbol": "₫",
+		"code": "VND"
+	},
+
+	"Kazakhstan": {
+		"currency": "Kazakhstani Tenge",
+		"symbol": "₸",
+		"code": "KZT"
+	},
+	"Kyrgyzstan": {
+		"currency": "Kyrgyzstani Som",
+		"symbol": "сом",
+		"code": "KGS"
+	},
+	"Tajikistan": {
+		"currency": "Tajikistani Somoni",
+		"symbol": "SM",
+		"code": "TJS"
+	},
+	"Turkmenistan": {
+		"currency": "Turkmenistan Manat",
+		"symbol": "m",
+		"code": "TMT"
+	},
+	"Uzbekistan": {
+		"currency": "Uzbekistan Som",
+		"symbol": "so'm",
+		"code": "UZS"
+	},
+
+	"Armenia": {
+		"currency": "Armenian Dram",
+		"symbol": "֏",
+		"code": "AMD"
+	},
+	"Azerbaijan": {
+		"currency": "Azerbaijani Manat",
+		"symbol": "₼",
+		"code": "AZN"
+	},
+	"Bahrain": {
+		"currency": "Bahraini Dinar",
+		"symbol": "BD",
+		"code": "BHD"
+	},
+	"Cyprus": {
+		"currency": "Euro",
+		"symbol": "€",
+		"code": "EUR"
+	},
+	"Georgia": {
+		"currency": "Georgian Lari",
+		"symbol": "₾",
+		"code": "GEL"
+	},
+	"Iraq": {
+		"currency": "Iraqi Dinar",
+		"symbol": "ع.د",
+		"code": "IQD"
+	},
+	"Israel": {
+		"currency": "Israeli New Shekel",
+		"symbol": "₪",
+		"code": "ILS"
+	},
+	"Jordan": {
+		"currency": "Jordanian Dinar",
+		"symbol": "JD",
+		"code": "JOD"
+	},
+	"Kuwait": {
+		"currency": "Kuwaiti Dinar",
+		"symbol": "KD",
+		"code": "KWD"
+	},
+	"Lebanon": {
+		"currency": "Lebanese Pound",
+		"symbol": "£",
+		"code": "LBP"
+	},
+	"Oman": {
+		"currency": "Omani Rial",
+		"symbol": "﷼",
+		"code": "OMR"
+	},
+	"Qatar": {
+		"currency": "Qatari Rial",
+		"symbol": "QAR",
+		"code": "QAR"
+	},
+	"Saudi Arabia": {
+		"currency": "Saudi Riyal",
+		"symbol": "﷼",
+		"code": "SAR"
+	},
+	"Syria": {
+		"currency": "Syrian Pound",
+		"symbol": "£S",
+		"code": "SYP"
+	},
+	"Turkey": {
+		"currency": "Turkish Lira",
+		"symbol": "₺",
+		"code": "TRY"
+	},
+	"United Arab Emirates": {
+		"currency": "United Arab Emirates Dirham",
+		"symbol": "د.إ",
+		"code": "AED"
+	},
+	"Yemen": {
+		"currency": "Yemeni Rial",
+		"symbol": "﷼",
+		"code": "YER"
+	},
+
+    "Algeria": {
+      "currency": "Algerian Dinar",
+      "symbol": "د.ج",
+      "code": "DZD"
+    },
+    "Egypt": {
+      "currency": "Egyptian Pound",
+      "symbol": "£E",
+      "code": "EGP"
+    },
+    "Libya": {
+      "currency": "Libyan Dinar",
+      "symbol": "ل.د",
+      "code": "LYD"
+    },
+    "Morocco": {
+      "currency": "Moroccan Dirham",
+      "symbol": "د.م.",
+      "code": "MAD"
+    },
+    "Sudan": {
+      "currency": "Sudanese Pound",
+      "symbol": "ج.س.",
+      "code": "SDG"
+    },
+    "Tunisia": {
+      "currency": "Tunisian Dinar",
+      "symbol": "د.ت",
+      "code": "TND"
+    },
+
+	"Benin": {
+      "currency": "West African CFA franc",
+      "symbol": "CFA",
+      "code": "XOF"
+    },
+    "Burkina Faso": {
+      "currency": "West African CFA franc",
+      "symbol": "CFA",
+      "code": "XOF"
+    },
+    "Cape Verde": {
+      "currency": "Cape Verdean Escudo",
+      "symbol": "CVE",
+      "code": "CVE"
+    },
+    "Côte d'Ivoire": {
+      "currency": "West African CFA franc",
+      "symbol": "CFA",
+      "code": "XOF"
+    },
+    "Gambia": {
+      "currency": "Gambian Dalasi",
+      "symbol": "D",
+      "code": "GMD"
+    },
+    "Ghana": {
+      "currency": "Ghanaian Cedi",
+      "symbol": "GH₵",
+      "code": "GHS"
+    },
+    "Guinea": {
+      "currency": "Guinean Franc",
+      "symbol": "FG",
+      "code": "GNF"
+    },
+    "Guinea-Bissau": {
+      "currency": "West African CFA franc",
+      "symbol": "CFA",
+      "code": "XOF"
+    },
+    "Liberia": {
+      "currency": "Liberian Dollar",
+      "symbol": "$",
+      "code": "LRD"
+    },
+    "Mali": {
+      "currency": "West African CFA franc",
+      "symbol": "CFA",
+      "code": "XOF"
+    },
+    "Mauritania": {
+      "currency": "Mauritanian Ouguiya",
+      "symbol": "UM",
+      "code": "MRO"
+    },
+    "Niger": {
+      "currency": "West African CFA franc",
+      "symbol": "CFA",
+      "code": "XOF"
+    },
+    "Nigeria": {
+      "currency": "Nigerian Naira",
+      "symbol": "₦",
+      "code": "NGN"
+    },
+    "Senegal": {
+      "currency": "West African CFA franc",
+      "symbol": "CFA",
+      "code": "XOF"
+    },
+    "Sierra Leone": {
+      "currency": "Sierra Leonean Leone",
+      "symbol": "Le",
+      "code": "SLL"
+    },
+    "Togo": {
+      "currency": "West African CFA franc",
+      "symbol": "CFA",
+      "code": "XOF"
+    }
+}

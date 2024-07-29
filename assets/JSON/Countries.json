@@ -1,18 +1,14 @@
-[
-  {
-    "region": "East Asia",
-    "countries": [
+{
+   "East Asia": [
       "China",
       "Japan",
       "Mongolia",
       "North Korea",
       "South Korea",
       "Taiwan"
-    ]
-  },
-  {
-    "region": "South Asia",
-    "countries": [
+    ],
+
+	"South Asia": [
       "Afghanistan",
       "Bangladesh",
       "Bhutan",
@@ -21,11 +17,9 @@
       "Nepal",
       "Pakistan",
       "Sri Lanka"
-    ]
-  },
-  {
-    "region": "Southeast Asia",
-    "countries": [
+    ],
+
+	"Southeast Asia": [
       "Brunei",
       "Cambodia",
       "Indonesia",
@@ -37,21 +31,17 @@
       "Thailand",
       "Timor-Leste",
       "Vietnam"
-    ]
-  },
-  {
-    "region": "Central Asia",
-    "countries": [
+    ],
+
+    "Central Asia": [
       "Kazakhstan",
       "Kyrgyzstan",
       "Tajikistan",
       "Turkmenistan",
       "Uzbekistan"
-    ]
-  },
-  {
-    "region": "Western Asia",
-    "countries": [
+    ],
+
+    "Western Asia": [
       "Armenia",
       "Azerbaijan",
       "Bahrain",
@@ -69,12 +59,9 @@
       "Turkey",
       "United Arab Emirates",
       "Yemen"
-    ]
-  },
+    ],
 
-  {
-	"region": "Northern Africa",
-	"countries": [
+	"Northern Africa": [
 		"Northern Africa",
 		"Algeria",
 		"Egypt",
@@ -82,11 +69,9 @@
 		"Morocco",
 		"Sudan",
 		"Tunisia"
-	]
-  },
-  {
-	"region": "Western Africa",
-	"countries": [
+	],
+
+	"Western Africa": [
 		"Benin",
 		"Burkina Faso",
 		"Cape Verde",
@@ -103,11 +88,9 @@
 		"Senegal",
 		"Sierra Leone",
 		"Togo"
-	]
-  },
-  {
-    "region": "Eastern Africa",
-    "countries": [
+	],
+
+    "Eastern Africa": [
 		"Burundi", 
 		"Djibouti", 
 		"Eritrea", 
@@ -126,23 +109,18 @@
 		"Uganda", 
 		"Zambia", 
 		"Zimbabwe"
-	]
+	],
 
-  },
-  {
-    "region": "Southern Africa",
-    "countries": [
+    "Southern Africa": [
 		"Angola", 
 		"Botswana", 
 		"Eswatini (Swaziland)", 
 		"Lesotho", 
 		"Namibia", 
 		"South Africa"
-	]
-  },
-  {
-    "region": "Central Africa",
-    "countries": [
+	],
+
+    "Central Africa": [
 		"Cameroon", 
 		"Central African Republic", 
 		"Chad", 
@@ -150,53 +128,117 @@
 		"Equatorial Guinea", 
 		"Gabon", 
 		"Republic of the Congo"
-	]
-   },
+	],
 
-	{
-		"region:": "Southern America",
-		"countries": [
-			"Argentina",
-			"Bolivia",
-			"Brazil",
-			"Chile",
-			"Colombia",
-			"Ecuador",
-			"Guyana",
-			"Paraguay",
-			"Peru",
-			"Suriname",
-			"Uruguay",
-			"Venezuela"
-		]
-	},
-	{
-		"region": "Northern America",
-		"countries": [
-			"Canada",
-			"United States",
-			"Mexico",
-			"Cuba",
-			"Bahamas",
-			"Jamaica",
-			"Haiti",
-			"Dominican Republic",
-			"Trinidad and Tobago",
-			"Antigua and Barbuda",
-			"Barbados",
-			"Belize",
-			"Costa Rica",
-			"Dominica",
-			"El Salvador",
-			"Grenada",
-			"Guatemala",
-			"Honduras",
-			"Nicaragua",
-			"Panama",
-			"Saint Kitts and Nevis",
-			"Saint Lucia",
-			"Saint Vincent and the Grenadines",
-			"Grenada"
-		]
-	}
-]
+	"Europe": [
+		"Albania",
+		"Andorra",
+		"Armenia",
+		"Austria",
+		"Azerbaijan",
+		"Belarus",
+		"Belgium",
+		"Bosnia and Herzegovina",
+		"Bulgaria",
+		"Croatia",
+		"Cyprus",
+		"Czech Republic",
+		"Denmark",
+		"Estonia",
+		"Finland",
+		"France",
+		"Georgia",
+		"Germany",
+		"Greece",
+		"Hungary",
+		"Iceland",
+
+		"Ireland",
+		"Italy",
+		"Kazakhstan",
+		"Latvia",
+		"Liechtenstein",
+		"Lithuania",
+		"Luxembourg",
+		"Malta",
+		"Moldova",
+		"Monaco",
+		"Montenegro",
+		"Netherlands",
+		"North Macedonia",
+		"Norway",
+		"Poland",
+		"Portugal",
+		"Romania",
+
+		"Russia",
+		"San Marino",
+		"Serbia",
+		"Slovakia",
+		"Slovenia",
+		"Spain",
+		"Sweden",
+		"Switzerland",
+		"Ukraine",
+		"United Kingdom",
+		"Vatican City"
+	],
+
+	"Southern America": [
+		"Argentina",
+		"Bolivia",
+		"Brazil",
+		"Chile",
+		"Colombia",
+		"Ecuador",
+		"Guyana",
+		"Paraguay",
+		"Peru",
+		"Suriname",
+		"Uruguay",
+		"Venezuela"
+	],
+
+	"Northern America": [
+		"Canada",
+		"United States",
+		"Mexico",
+		"Cuba",
+		"Bahamas",
+		"Jamaica",
+		"Haiti",
+		"Dominican Republic",
+		"Trinidad and Tobago",
+		"Antigua and Barbuda",
+		"Barbados",
+		"Belize",
+		"Costa Rica",
+		"Dominica",
+		"El Salvador",
+		"Grenada",
+		"Guatemala",
+		"Honduras",
+		"Nicaragua",
+		"Panama",
+		"Saint Kitts and Nevis",
+		"Saint Lucia",
+		"Saint Vincent and the Grenadines",
+		"Grenada"
+	],
+
+	"Oceania": [
+		"Australia",
+		"New Zealand",
+		"Papua New Guinea",
+		"Solomon Islands",
+		"Vanuatu",
+		"Fiji",
+		"Micronesia",
+		"Palau",
+		"Marshall Islands",
+		"Kiribati",
+		"Nauru",
+		"Tonga",
+		"Samoa"
+	]
+}

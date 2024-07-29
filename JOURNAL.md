@@ -47,3 +47,9 @@
 
 1. I worked on defining the functionalities very well this time instead of focussing a lot on the design as the first part.
 2. And it helped because it got right down to the details of what the website really needs to look like and in what ways users want to use the website and how I should desing it to meet the users use cases.
+
+29/07/2024
+
+1. I completed the charter document for the website and learned a lot myself.
+2. I also started to make JSON files because the API's Iam going to use cannot provide me with all the information and some information doesn't need API's.
+3. I have also started utilizing my AI slave Bard to write the JSON files so I can make the JSON files very quickly.
