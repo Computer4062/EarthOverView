@@ -53,3 +53,14 @@
 1. I completed the charter document for the website and learned a lot myself.
 2. I also started to make JSON files because the API's Iam going to use cannot provide me with all the information and some information doesn't need API's.
 3. I have also started utilizing my AI slave Bard to write the JSON files so I can make the JSON files very quickly.
+
+30/07/2024
+
+1. I figured out that things like Capital cities, currency names and symbols, calling codes, and languages doesn't change that often so I created JSON files for them.
+2. I haven't completed all the JSON files ,but I think it is a good idea for me to get started on the page designing process
+3. I used Figma to design a home page.
+4. The main trouble I had was to select a good theme
+5. The theme that I first had in mind was too old fashioned and didn't fit in properly
+6. But now I decided on a Theme that fills buttons, cards, icons and everything with gradient backgrounds
+7. This theme is similar to the Microsoft theme
+8. I also want to make the background look like spaces
