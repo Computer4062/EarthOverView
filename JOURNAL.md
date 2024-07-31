@@ -64,3 +64,15 @@
 6. But now I decided on a Theme that fills buttons, cards, icons and everything with gradient backgrounds
 7. This theme is similar to the Microsoft theme
 8. I also want to make the background look like spaces
+
+31/07/2024
+
+1. I spent the time making the homepage look really good
+2. I also designed a little bit of the Calling codes page
+3. I also watched a tutorial on how to use Figma
+4. I watched the video after completing the home page ,but I should have watched it before using Figma
+5. Because of that I realized a few mistakes in the way I designed the home page so I tore it down and redesigned it again
+6. I only have one element in the homepage to complete now
+7. I was also thinking of dirrectly getting to building the home page after designing it
+8. Then after it is complete I will go to building the Calling codes page
+9. So it is like refer and build
