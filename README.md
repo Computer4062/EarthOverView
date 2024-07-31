@@ -1,4 +1,4 @@
 ## Homepage
 ![Homepage](plan/Page%20Images/HomePage.jpg)
 
-https://miro.com/welcomeonboard/eUFyeGdSY3djZDVzbm41S3c5cUt2Rm93T2Fpd1VKaEVLWmRGcE9HNDBybXBYNkgxUzRQMnB1cXRyZXQwWUE5SXwzNDU4NzY0NTk1Mjk0MDgwNDMxfDI=?share_link_id=397515816473
+https://www.figma.com/design/A0i6ZGX9M9cN5znT8kAa2V/Figma-basics?node-id=615-9&m=dev&t=EEtuN0MOQZc3nmoF-1
