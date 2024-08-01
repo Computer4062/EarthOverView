@@ -91,3 +91,4 @@
 10. There is a problem with npm and so I couldn't complete the rest of the procedure
 11. Iam currently also doing a Udemy course and they will teach us about Express so that will help even more
 12. I also often tend to worry that I will not have enough time to complete this site
+13. The website might "look" modern but it really is a website that belongs to the 19th century
