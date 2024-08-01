@@ -76,3 +76,18 @@
 7. I was also thinking of dirrectly getting to building the home page after designing it
 8. Then after it is complete I will go to building the Calling codes page
 9. So it is like refer and build
+
+01/08/2024
+
+1. I did the iterative developement tactic to build the homepage
+2. There is still java script functionality to add ,but I was thinking of leaving it till the end
+3. This is mainly because the API that shows the population only accepts 1000 requests per hour
+4. And I want more
+5. So I decided to store the value of the population at every increment on the server it self
+6. So that when the maximum API calls are reached I can give the stored value instead
+7. This would make things as accurate as possible
+8. I also realized that on a mobile the text in the population data was actually too big so I have to fix that
+9. I also realized that the API keys should be kept a secret so I created an env file to store them
+10. There is a problem with npm and so I couldn't complete the rest of the procedure
+11. Iam currently also doing a Udemy course and they will teach us about Express so that will help even more
+12. I also often tend to worry that I will not have enough time to complete this site
