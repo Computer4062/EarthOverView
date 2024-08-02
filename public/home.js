@@ -1,3 +1,6 @@
+/*
+Get current population
+*/
 const populationElement = document.getElementById("population");
 
 const url = 'https://get-population.p.rapidapi.com/population';
@@ -28,3 +31,10 @@ try {
 1. Get the API key from the .env file
 2. Use Express to store the value of the population in the server it self
 */
+
+/*
+Navigation links
+*/
+function NavigateToCallingCodes(){
+  window.location.href = "../src/Pages/CallingCodes.html";
+}

@@ -92,3 +92,15 @@
 11. Iam currently also doing a Udemy course and they will teach us about Express so that will help even more
 12. I also often tend to worry that I will not have enough time to complete this site
 13. The website might "look" modern but it really is a website that belongs to the 19th century
+
+02/08/2024
+
+1. I started upon the calling codes page
+2. I made it in Figma and tried using a plugin to get the code but the output was messed up
+3. The application actually ends up looking a lot more different from that of the prototy but at the same time a lot more better.
+4. So I wrote the code my self
+5. I only managed to complete half the calling codes page
+6. Most of the code in the calling codes page is just going to be repeated so I don't think the rest of the features in the countries section will take much time
+7. I also want to change the directory structure because I don't think it is appropriate for me to put the charter documents in the same place as the code
+8. So I focussed on putting the code in public and src dirrectories
+9. I was also thinking of creating a routing system to route through the pages with Express
