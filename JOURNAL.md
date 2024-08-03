@@ -104,3 +104,12 @@
 7. I also want to change the directory structure because I don't think it is appropriate for me to put the charter documents in the same place as the code
 8. So I focussed on putting the code in public and src dirrectories
 9. I was also thinking of creating a routing system to route through the pages with Express
+
+03/08/2024
+
+1. I completed the sort and filter functions
+2. I also made the page a bit more compatible for a mobile phone
+3. There still need to be changes like the table should stop shrinking
+4. I also need to edit the Figma page
+5. I initially wanted to put a notification card like thing that pops out for the sort and filter options but Bootstrap did not have them and Tailwind is paid
+6. So I decided to make something similar to a notification which is a div underneth the search bar that can be hidden and unhidden when a button is pressed
