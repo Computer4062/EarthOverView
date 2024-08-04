@@ -900,7 +900,71 @@
     "city": "Kingstown",
     "latitude": 13.1467,
     "longitude": -61.2225
+  },
+  
+  "Australia": {
+    "city": "Canberra",
+    "latitude": -35.2808,
+    "longitude": 149.1302
+  },
+  "New Zealand": {
+    "city": "Wellington",
+    "latitude": -41.2865,
+    "longitude": 174.7762
+  },
+  "Papua New Guinea": {
+    "city": "Port Moresby",
+    "latitude": -9.4431,
+    "longitude": 147.1801
+  },
+  "Solomon Islands": {
+    "city": "Honiara",
+    "latitude": -9.6457,
+    "longitude": 159.9592
+  },
+  "Vanuatu": {
+    "city": "Port Vila",
+    "latitude": -17.7132,
+    "longitude": 168.3294
+  },
+  "Fiji": {
+    "city": "Suva",
+    "latitude": -18.1432,
+    "longitude": 178.4444
+  },
+  "Micronesia": {
+    "city": "Palikir",
+    "latitude": 6.9147,
+    "longitude": 158.1807
+  },
+  "Palau": {
+    "city": "Ngerulmud",
+    "latitude": 7.3147,
+    "longitude": 134.4815
+  },
+  "Marshall Islands": {
+    "city": "Majuro",
+    "latitude": 7.1296,
+    "longitude": 171.1743
+  },
+  "Kiribati": {
+    "city": "South Tarawa",
+    "latitude": 1.3104,
+    "longitude": 172.9574
+  },
+  "Nauru": {
+    "city": "Yaren District",
+    "latitude": -0.5228,
+    "longitude": 166.9315
+  },
+  "Tonga": {
+    "city": "Nuku'alofa",
+    "latitude": -21.1357,
+    "longitude": -175.2000
+  },
+  "Samoa": {
+    "city": "Apia",
+    "latitude": -13.8333,
+    "longitude": -171.7500
   }
-
-  --- Do Oceania ---
 }

@@ -113,3 +113,14 @@
 4. I also need to edit the Figma page
 5. I initially wanted to put a notification card like thing that pops out for the sort and filter options but Bootstrap did not have them and Tailwind is paid
 6. So I decided to make something similar to a notification which is a div underneth the search bar that can be hidden and unhidden when a button is pressed
+
+04/08/2024
+
+1. I completed editing the Figma page
+2. I also completed the design of the find currencies page
+3. It was very similar to the find calling codes page so their was only a lot of copying and pasting to do
+4. I also completed the functionality of the sorting option in the calling codes section
+5. I was able to sort all countries by alphabetical order or by calling codes
+6. I was planning on designing everything and touching upon the functionalities in the end 
+7. but I decideed to tap on the functionalities for the first one (calling codes section) just to check if it was feasible
+8. I will also try adding the filter options for the calling codes section and once again begin focusing upon building of the other features.
