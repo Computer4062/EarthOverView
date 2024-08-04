@@ -123,4 +123,4 @@
 5. I was able to sort all countries by alphabetical order or by calling codes
 6. I was planning on designing everything and touching upon the functionalities in the end 
 7. but I decideed to tap on the functionalities for the first one (calling codes section) just to check if it was feasible
-8. I will also try adding the filter options for the calling codes section and once again begin focusing upon building of the other features.
+8. I will also try adding the filter options for the calling codes section and once again begin focusing upon building of the other pages.
