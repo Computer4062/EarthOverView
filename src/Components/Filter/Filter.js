@@ -1,3 +1,4 @@
+/* Filtering section effects */
 filterControls = false;
 filterBtn = document.querySelector("#filter-btn");
 

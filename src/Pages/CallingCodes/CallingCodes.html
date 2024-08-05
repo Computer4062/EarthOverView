@@ -54,9 +54,9 @@
 					<p class="options-subtitle">Filter to Calling Code Value</p>
 
 					<div class="input-group" data-bs-theme="dark">
-						<input type="text" placeholder="100's digit" aria-label="hundreds value" class="form-control">
-						<input type="text" placeholder="10's digit" aria-label="tens value" class="form-control">
-						<input type="text" placeholder="1's digit" aria-label="ones value" class="form-control">
+						<input type="text" placeholder="100's digit" aria-label="hundreds value" class="form-control filterHundredsDigit">
+						<input type="text" placeholder="10's digit" aria-label="tens value" class="form-control filterTensDigit">
+						<input type="text" placeholder="1's digit" aria-label="ones value" class="form-control filterOnesDigit">
 					</div>
 				</div>
 
@@ -65,85 +65,84 @@
 					<div id="options-grid">
 						<div class="input-group" id="Asia-selector" data-bs-theme="dark">
 						<div class="input-group-text">
-							<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Radio button for following text Asia">
+							<input class="form-check-input mt-0 asiaCheckBox" type="checkbox" value="" aria-label="Radio button for following text Asia">
 							<label class="form-check-label">Asia</label>
 						</div>
 						</div>
 						<!---->
 						<div class="input-group" id="South-Asia-selector" data-bs-theme="dark">
 						<div class="input-group-text">
-							<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Radio button for following text South Asia">
+							<input class="form-check-input mt-0 southAsiaCheckBox Asia" type="checkbox" value="" aria-label="Radio button for following text South Asia">
 							<label class="form-check-label">South Asia</label>
 						</div>
 						</div>
 						<!---->
 						<div class="input-group" id="SouthEast-Asia-selector" data-bs-theme="dark">
 						<div class="input-group-text">
-							<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Radio button for following text SouthEast Asia">
+							<input class="form-check-input mt-0 southEastAsiaCheckBox Asia" type="checkbox" value="" aria-label="Radio button for following text SouthEast Asia">
 							<label class="form-check-label">SouthEast Asia</label>
 						</div>
 						</div>
 						<!---->
 						<div class="input-group" id="East-Asia-selector" data-bs-theme="dark">
 						<div class="input-group-text">
-							<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Radio button for following text East Asia">
+							<input class="form-check-input mt-0 eastAsiaCheckBox Asia" type="checkbox" value="" aria-label="Radio button for following text East Asia">
 							<label class="form-check-label">East Asia</label>
-						</div>
-						</div>
-						<!---->
-						<div class="input-group" id="Central-Asia-selector" data-bs-theme="dark">
-						<div class="input-group-text">
-							<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Radio button for following text Central Asia">
-							<label class="form-check-label">Central Asia</label>
 						</div>
 						</div>
 						<!---->
 						<div class="input-group" id="Western-Asia-selector" data-bs-theme="dark">
 						<div class="input-group-text">
-							<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Radio button for following text Western Asia">
+							<input class="form-check-input mt-0 westernAsiaCheckBox Asia" type="checkbox" value="" aria-label="Radio button for following text Western Asia">
 							<label class="form-check-label">Western Asia</label>
 						</div>
 						</div>
-
 						<!---->
+						<div class="input-group" id="Central-Asia-selector" data-bs-theme="dark">
+						<div class="input-group-text">
+							<input class="form-check-input mt-0 centralAsiaCheckBox Asia" type="checkbox" value="" aria-label="Radio button for following text Central Asia">
+							<label class="form-check-label">Central Asia</label>
+						</div>
+						</div>
+
 						<div class="input-group" id="Africa-selector" data-bs-theme="dark">
 						<div class="input-group-text">
-							<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Radio button for following text Africa">
+							<input class="form-check-input mt-0 africaCheckBox Africa" type="checkbox" value="" aria-label="Radio button for following text Africa">
 							<label class="form-check-label">Africa</label>
 						</div>
 						</div>
 						<!---->
 						<div class="input-group" id="Northern-Africa-selector" data-bs-theme="dark">
 						<div class="input-group-text">
-							<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Radio button for following text Northern Africa">
+							<input class="form-check-input mt-0 northernAfricaCheckBox Africa" type="checkbox" value="" aria-label="Radio button for following text Northern Africa">
 							<label class="form-check-label">Northern Africa</label>
 						</div>
 						</div>
 						<!---->
 						<div class="input-group" id="Eastern-Africa-selector" data-bs-theme="dark">
 						<div class="input-group-text">
-							<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Radio button for following text Eastern Africa">
+							<input class="form-check-input mt-0 easternAfricaCheckBox Africa" type="checkbox" value="" aria-label="Radio button for following text Eastern Africa">
 							<label class="form-check-label">Eastern Africa</label>
 						</div>
 						</div>
 						<!---->
 						<div class="input-group" id="Western-Africa-selector" data-bs-theme="dark">
 						<div class="input-group-text">
-							<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Radio button for following text Western Africa">
+							<input class="form-check-input mt-0 westernAfricaCheckBox Africa" type="checkbox" value="" aria-label="Radio button for following text Western Africa">
 							<label class="form-check-label">Western Africa</label>
 						</div>
 						</div>
 						<!---->
 						<div class="input-group" id="Southern-Africa-selector" data-bs-theme="dark">
 						<div class="input-group-text">
-							<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Radio button for following text Southern Africa">
+							<input class="form-check-input mt-0 southernAfricaCheckBox Africa" type="checkbox" value="" aria-label="Radio button for following text Southern Africa">
 							<label class="form-check-label">Southern Africa</label>
 						</div>
 						</div>
 						<!---->
 						<div class="input-group" id="Central-Africa-selector" data-bs-theme="dark">
 						<div class="input-group-text">
-							<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Radio button for following text Central Africa">
+							<input class="form-check-input mt-0 centralAfricaCheckBox Africa" type="checkbox" value="" aria-label="Radio button for following text Central Africa">
 							<label class="form-check-label">Central Africa</label>
 						</div>
 						</div>
@@ -151,7 +150,7 @@
 						<!---->
 						<div class="input-group" id="Europe-selector" data-bs-theme="dark">
 						<div class="input-group-text">
-							<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Radio button for following text Europe">
+							<input class="form-check-input mt-0 europeCheckBox" type="checkbox" value="" aria-label="Radio button for following text Europe">
 							<label class="form-check-label">Europe</label>
 						</div>
 						</div>
@@ -159,21 +158,21 @@
 						<!---->
 						<div class="input-group" id="America-selector" data-bs-theme="dark">
 						<div class="input-group-text">
-							<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Radio button for following text America">
+							<input class="form-check-input mt-0 americaCheckBox America" type="checkbox" value="" aria-label="Radio button for following text America">
 							<label class="form-check-label">America</label>
 						</div>
 						</div>
 						<!---->
 						<div class="input-group" id="Northern-America-selector" data-bs-theme="dark">
 						<div class="input-group-text">
-							<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Radio button for following text Northern America">
+							<input class="form-check-input mt-0 northernAmericaCheckBox America" type="checkbox" value="" aria-label="Radio button for following text Northern America">
 							<label class="form-check-label">Northern America</label>
 						</div>
 						</div>
 						<!---->
 						<div class="input-group" id="Southern-America-selector" data-bs-theme="dark">
 						<div class="input-group-text">
-							<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Radio button for following text Southern America">
+							<input class="form-check-input mt-0 southernAmericaCheckBox America" type="checkbox" value="" aria-label="Radio button for following text Southern America">
 							<label class="form-check-label">Southern America</label>
 						</div>
 						</div>
@@ -181,7 +180,7 @@
 						<!---->
 						<div class="input-group" id="Oceania-selector" data-bs-theme="dark">
 						<div class="input-group-text">
-							<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Radio button for following text Oceania">
+							<input class="form-check-input mt-0 oceaniaCheckBox Oceania" type="checkbox" value="" aria-label="Radio button for following text Oceania">
 							<label class="form-check-label">Oceania</label>
 						</div>
 						</div>
@@ -197,7 +196,7 @@
 							<li>
 								<div class="input-group" data-bs-theme="dark">
 								<div class="input-group-text">
-									<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Radio button for following text Asia">
+									<input class="form-check-input mt-0 asiaCheckBox" type="checkbox" value="" aria-label="Radio button for following text Asia">
 									<label class="form-check-label">Asia</label>
 								</div>
 								</div>
@@ -206,7 +205,7 @@
 							<li>
 							<div class="input-group" data-bs-theme="dark">
 								<div class="input-group-text">
-									<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Radio button for following text East Asia">
+									<input class="form-check-input mt-0 eastAsiaCheckBox Asia" type="checkbox" value="" aria-label="Radio button for following text East Asia">
 									<label class="form-check-label">East Asia</label>
 								</div>
 								</div>
@@ -215,7 +214,7 @@
 							<li>
 							<div class="input-group" data-bs-theme="dark">
 								<div class="input-group-text">
-									<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Radio button for following text SouthEast Asia">
+									<input class="form-check-input mt-0 southEastAsiaCheckBox Asia" type="checkbox" value="" aria-label="Radio button for following text SouthEast Asia">
 									<label class="form-check-label">SouthEast Asia</label>
 								</div>
 								</div>
@@ -224,7 +223,7 @@
 							<li>
 							<div class="input-group" data-bs-theme="dark">
 								<div class="input-group-text">
-									<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Radio button for following text South Asia">
+									<input class="form-check-input mt-0 southAsiaCheckBox Asia" type="checkbox" value="" aria-label="Radio button for following text South Asia">
 									<label class="form-check-label">South Asia</label>
 								</div>
 								</div>
@@ -233,7 +232,7 @@
 							<li>
 							<div class="input-group" data-bs-theme="dark">
 								<div class="input-group-text">
-									<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Radio button for following text Western Asia">
+									<input class="form-check-input mt-0 westernAsiaCheckBox Asia" type="checkbox" value="" aria-label="Radio button for following text Western Asia">
 									<label class="form-check-label">Western Asia</label>
 								</div>
 								</div>
@@ -242,7 +241,7 @@
 							<li>
 							<div class="input-group" data-bs-theme="dark">
 								<div class="input-group-text">
-									<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Radio button for following text Central Asia">
+									<input class="form-check-input mt-0 centralAsiaCheckBox Asia" type="checkbox" value="" aria-label="Radio button for following text Central Asia">
 									<label class="form-check-label">Central Asia</label>
 								</div>
 								</div>
@@ -258,7 +257,7 @@
 							<li>
 								<div class="input-group" data-bs-theme="dark">
 								<div class="input-group-text">
-									<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Radio button for following text Africa">
+									<input class="form-check-input mt-0 africaCheckBox Africa" type="checkbox" value="" aria-label="Radio button for following text Africa">
 									<label class="form-check-label">Africa</label>
 								</div>
 								</div>
@@ -267,7 +266,7 @@
 							<li>
 							<div class="input-group" data-bs-theme="dark">
 								<div class="input-group-text">
-									<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Radio button for following text Northern Africa">
+									<input class="form-check-input mt-0 northernAfricaCheckBox Africa" type="checkbox" value="" aria-label="Radio button for following text Northern Africa">
 									<label class="form-check-label">Northern Africa</label>
 								</div>
 								</div>
@@ -276,7 +275,7 @@
 							<li>
 							<div class="input-group" data-bs-theme="dark">
 								<div class="input-group-text">
-									<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Radio button for following text Eastern Africa">
+									<input class="form-check-input mt-0 easternAfricaCheckBox Africa" type="checkbox" value="" aria-label="Radio button for following text Eastern Africa">
 									<label class="form-check-label">Eastern Africa</label>
 								</div>
 								</div>
@@ -285,7 +284,7 @@
 							<li>
 							<div class="input-group" data-bs-theme="dark">
 								<div class="input-group-text">
-									<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Radio button for following text Southern Africa">
+									<input class="form-check-input mt-0 southernAfricaCheckBox Africa" type="checkbox" value="" aria-label="Radio button for following text Southern Africa">
 									<label class="form-check-label">Southern Africa</label>
 								</div>
 								</div>
@@ -294,7 +293,7 @@
 							<li>
 							<div class="input-group" data-bs-theme="dark">
 								<div class="input-group-text">
-									<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Radio button for following text Western Africa">
+									<input class="form-check-input mt-0 westernAfricaCheckBox Africa" type="checkbox" value="" aria-label="Radio button for following text Western Africa">
 									<label class="form-check-label">Western Africa</label>
 								</div>
 								</div>
@@ -303,7 +302,7 @@
 							<li>
 							<div class="input-group" data-bs-theme="dark">
 								<div class="input-group-text">
-									<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Radio button for following text Central Africa">
+									<input class="form-check-input mt-0 centralAfricaCheckBox Africa" type="checkbox" value="" aria-label="Radio button for following text Central Africa">
 									<label class="form-check-label">Central Africa</label>
 								</div>
 								</div>
@@ -319,7 +318,7 @@
 							<li>
 								<div class="input-group" data-bs-theme="dark">
 								<div class="input-group-text">
-									<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Radio button for following text Europe">
+									<input class="form-check-input mt-0 europeCheckBox" type="checkbox" value="" aria-label="Radio button for following text Europe">
 									<label class="form-check-label">Europe</label>
 								</div>
 								</div>
@@ -335,7 +334,7 @@
 							<li>
 								<div class="input-group" data-bs-theme="dark">
 								<div class="input-group-text">
-									<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Radio button for following text America">
+									<input class="form-check-input mt-0 americaCheckBox" type="checkbox" value="" aria-label="Radio button for following text America">
 									<label class="form-check-label">America</label>
 								</div>
 								</div>
@@ -343,7 +342,7 @@
 							<li>
 								<div class="input-group" data-bs-theme="dark">
 								<div class="input-group-text">
-									<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Radio button for following text Northern America">
+									<input class="form-check-input mt-0 northernAmericaCheckBox" type="checkbox" value="" aria-label="Radio button for following text Northern America">
 									<label class="form-check-label">Northern America</label>
 								</div>
 								</div>
@@ -351,7 +350,7 @@
 							<li>
 								<div class="input-group" data-bs-theme="dark">
 								<div class="input-group-text">
-									<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Radio button for following text Sourthern America">
+									<input class="form-check-input mt-0 southernAmericaCheckBox America" type="checkbox" value="" aria-label="Radio button for following text Sourthern America">
 									<label class="form-check-label">Sourthern America</label>
 								</div>
 								</div>
@@ -367,7 +366,7 @@
 							<li>
 								<div class="input-group" data-bs-theme="dark">
 								<div class="input-group-text">
-									<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Radio button for following text Oceania">
+									<input class="form-check-input mt-0 oceaniaCheckBox" type="checkbox" value="" aria-label="Radio button for following text Oceania">
 									<label class="form-check-label">Oceania</label>
 								</div>
 								</div>
@@ -437,6 +436,9 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 	<script src="../../Components/Filter/Filter.js"></script>
 	<script src="../../Components/Sort/Sort.js"></script>
+	<script src="./common.js"></script>
+	<script src="./SortFunctions.js"></script>
+	<script src="./FilterFunctions.js"></script>
 	<script src="./CallingCodes.js"></script>
 </body>
 </html>

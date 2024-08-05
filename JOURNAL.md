@@ -124,3 +124,16 @@
 6. I was planning on designing everything and touching upon the functionalities in the end 
 7. but I decideed to tap on the functionalities for the first one (calling codes section) just to check if it was feasible
 8. I will also try adding the filter options for the calling codes section and once again begin focusing upon building of the other pages.
+
+05/08/2024
+
+1. I was able to complete the continents filter option so Iam able to filter all the continents
+2. The Java Script file also became very big and hard to navigate through so I seperated the code into 4 files
+3. For storing the filter functions, sorting functions, common variables, and one final one for connecting the HTML elements to the functions
+4. Iam also going to create another file for searching
+5. I still have to complete the filtering by digits option
+6. I found a way to filter by digits so that would not take much time either
+7. Their is a lot of JavaScript in this web application
+8. After I complete the search option I will go onto completing the other features in the countries link
+9. They will be completed quickly because majority of the logic needed has been done in the Calling Codes page
+10. I have also developed a scheduel for the past few days where I spend time from morning to 3:00PM on this web application
