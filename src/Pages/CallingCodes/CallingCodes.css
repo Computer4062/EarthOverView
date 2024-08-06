@@ -39,3 +39,14 @@ align-items: center;
 #callingcodes-banner p{
 margin: 0;
 }
+
+/* Search */
+
+.hidden{
+display: none;
+}
+
+.poll-bar{
+display: flex;
+justify-content: end;
+}

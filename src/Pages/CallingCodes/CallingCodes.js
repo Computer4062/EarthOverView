@@ -1,19 +1,18 @@
-/* modes */
-let ascendingCodeMode = false;
-let descendingCodeMode = false;
-let ascendingNamesMode = false;
-let descendingNamesMode = false;
+/*
+	Searching
+*/
 
-/* Renderer */
-function render()
-{
-	/* Sorting modes */
-	if(ascendingNamesMode) sortAscendingNames();
-	else if(descendingNamesMode) sortDescendingNames();
-	else if(ascendingCodeMode) sortAscendingCodes();
-	else if(descendingCodeMode) sortDescendingCodes();
-	else defaultRender();
-}
+const searchBtn = document.querySelector("#search-btn");
+const searchBox = document.querySelector("#search-box");
+const searchSection = document.querySelector("#search-section");
+
+const closeBtn = document.querySelector("");
+
+let displaySearchSection = false;
+
+searchBtn.addEventListener("click", () => {
+	search(searchBox.value);
+});
 
 /*
 	Sorting
@@ -84,13 +83,19 @@ const filterHundredsDigitBox = document.querySelector(".filterHundredsDigit");
 const filterTensDigitBox = document.querySelector(".filterTensDigit");
 const filterOnesDigitBox = document.querySelector(".filterOnesDigit");
 
-filterHundredsDigitBox.addEventListener('input', (event) => {
-	if(event.target.value !== "")
-	{
-		console.log("picked");
-		filterToHundreds(event.target.value);
-	}
-});
+for(let i = 0; i < 3; i++)
+{
+	document.querySelectorAll(".digit-filter")[i].addEventListener("input", () => {
+		let hundredsValue = (filterHundredsDigitBox.value === "") ? -1 : filterHundredsDigitBox.value;
+		let tensValue = (filterTensDigitBox.value === "") ? -1 : filterTensDigitBox.value;
+		let onesValue = (filterOnesDigitBox.value === "") ? -1 : filterOnesDigitBox.value;
+
+		if(hundredsValue === -1 && tensValue === -1 && onesValue === -1)
+			renderContinent();
+		else
+			filterToDigits(hundredsValue, tensValue, onesValue);
+	});
+}
 
 /*
 	Filtering continents
@@ -147,7 +152,7 @@ asiaCheckBox.addEventListener('change', (event)=>{
 		continentsToRender = removeItem(continentsToRender, "Central Asia");
 	}
 
-	render();
+	renderContinent();
 });
 
 eastAsiaCheckBox.addEventListener('change', (event) => {
@@ -158,7 +163,7 @@ eastAsiaCheckBox.addEventListener('change', (event) => {
 	else
 		continentsToRender = removeItem(continentsToRender, "East Asia");
 
-	render();
+	renderContinent();
 });
 
 southAsiaCheckBox.addEventListener('change', (event) => {
@@ -169,7 +174,8 @@ southAsiaCheckBox.addEventListener('change', (event) => {
 	else
 		continentsToRender = removeItem(continentsToRender, "South Asia");
 
-	render();
+	console.log(continentsToRender);
+	renderContinent();
 });
 
 southEastAsiaCheckBox.addEventListener('change', (event) => {
@@ -180,7 +186,7 @@ southEastAsiaCheckBox.addEventListener('change', (event) => {
 	else
 		continentsToRender = removeItem(continentsToRender, "South East Asia");
 
-	render();
+	renderContinent();
 });
 
 westernAsiaCheckBox.addEventListener('change', (event) => {
@@ -191,7 +197,7 @@ westernAsiaCheckBox.addEventListener('change', (event) => {
 	else
 		continentsToRender = removeItem(continentsToRender, "Western Asia");
 
-	render();
+	renderContinent();
 });
 
 centralAsiaCheckBox.addEventListener('change', (event) => {
@@ -202,7 +208,7 @@ centralAsiaCheckBox.addEventListener('change', (event) => {
 	else
 		continentsToRender = removeItem(continentsToRender, "Central Asia");
 
-	render();
+	renderContinent();
 });
 
 
@@ -228,7 +234,7 @@ africaCheckBox.addEventListener('change', (event)=>{
 		continentsToRender = removeItem(continentsToRender, "Central Africa");
 	}
 
-	render();
+	renderContinent();
 });
 
 northernAfricaCheckBox.addEventListener('change', (event) => {
@@ -239,7 +245,7 @@ northernAfricaCheckBox.addEventListener('change', (event) => {
 	else
 		continentsToRender = removeItem(continentsToRender, "Northern Africa");
 
-	render();
+	renderContinent();
 });
 
 easternAfricaCheckBox.addEventListener('change', (event) => {
@@ -250,7 +256,7 @@ easternAfricaCheckBox.addEventListener('change', (event) => {
 	else
 		continentsToRender = removeItem(continentsToRender, "Eastern Africa");
 
-	render();
+	renderContinent();
 });
 
 southernAfricaCheckBox.addEventListener('change', (event) => {
@@ -261,7 +267,7 @@ southernAfricaCheckBox.addEventListener('change', (event) => {
 	else
 		continentsToRender = removeItem(continentsToRender, "Southern Africa");
 
-	render();
+	renderContinent();
 });
 
 westernAfricaCheckBox.addEventListener('change', (event) => {
@@ -272,7 +278,7 @@ westernAfricaCheckBox.addEventListener('change', (event) => {
 	else
 		continentsToRender = removeItem(continentsToRender, "Western Africa");
 
-	render();
+	renderContinent();
 });
 
 centralAfricaCheckBox.addEventListener('change', (event) => {
@@ -283,7 +289,7 @@ centralAfricaCheckBox.addEventListener('change', (event) => {
 	else
 		continentsToRender = removeItem(continentsToRender, "Central Africa");
 
-	render();
+	renderContinent();
 });
 
 europeCheckBox.addEventListener('change', (event)=>{
@@ -292,7 +298,7 @@ europeCheckBox.addEventListener('change', (event)=>{
 	else
 		continentsToRender = removeItem(continentsToRender, "Europe");
 
-	render();
+	renderContinent();
 });
 
 americaCheckBox.addEventListener('change', (event)=>{
@@ -311,7 +317,7 @@ americaCheckBox.addEventListener('change', (event)=>{
 		continentsToRender = removeItem(continentsToRender, "Southern America");
 	}
 
-	render();
+	renderContinent();
 });
 
 northernAmericaCheckBox.addEventListener('change', (event) => {
@@ -322,7 +328,7 @@ northernAmericaCheckBox.addEventListener('change', (event) => {
 	else
 		continentsToRender = removeItem(continentsToRender, "Northern America");
 
-	render();
+	renderContinent();
 });
 
 southernAmericaCheckBox.addEventListener('change', (event) => {
@@ -333,7 +339,7 @@ southernAmericaCheckBox.addEventListener('change', (event) => {
 	else
 		continentsToRender = removeItem(continentsToRender, "Southern America");
 
-	render();
+	renderContinent();
 });
 
 oceaniaCheckBox.addEventListener('change', (event)=>{
@@ -342,7 +348,7 @@ oceaniaCheckBox.addEventListener('change', (event)=>{
 	else
 		continentsToRender = removeItem(continentsToRender, "Oceania");
 
-	render();
+	renderContinent();
 });
 
 defaultRender();     // Write the table

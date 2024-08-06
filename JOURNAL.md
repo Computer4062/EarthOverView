@@ -137,3 +137,9 @@
 8. After I complete the search option I will go onto completing the other features in the countries link
 9. They will be completed quickly because majority of the logic needed has been done in the Calling Codes page
 10. I have also developed a scheduel for the past few days where I spend time from morning to 3:00PM on this web application
+
+06/08/2024
+
+1. I had to rewrite the entier sort Functions file and most of the filter functions file
+2. In the process I completed the filter and sort options
+3. I also started coding the search bar which will be completed very quickly
