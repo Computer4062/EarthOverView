@@ -10,7 +10,7 @@ function renderContinent(){
 		.then(region => {
 			currentTableList = [];
 
-			fetch(codesJsonFileLocation)
+			fetch(jsonFileLocation)
 				.then(response => response.json())
 				.then(codes => {
 					continentsList.forEach(continent => {
@@ -31,7 +31,7 @@ function renderContinent(){
 }
 
 function filterToDigits(hDigit, tDigit, oDigit){
-	document.querySelector("tbody").innerHTML = "";
+	countriesTable.innerHTML = "";
 
 	let findId = -1;
 
@@ -62,7 +62,7 @@ function filterToDigits(hDigit, tDigit, oDigit){
 				`;
 
 				//currentTableList.push([countryData[0], countryData[1], countryData[2]]);
-				document.querySelector("tbody").innerHTML += htmlContent;
+				countriesTable.innerHTML += htmlContent;
 			}
 		}
 		break;
@@ -82,7 +82,7 @@ function filterToDigits(hDigit, tDigit, oDigit){
 				`;
 
 				//currentTableList.push([countryData[0], countryData[1], countryData[2]]);
-				document.querySelector("tbody").innerHTML += htmlContent;
+				countriesTable.innerHTML += htmlContent;
 			}
 		}
 		break;
@@ -102,7 +102,7 @@ function filterToDigits(hDigit, tDigit, oDigit){
 				`;
 
 				//currentTableList.push([countryData[0], countryData[1], countryData[2]]);
-				document.querySelector("tbody").innerHTML += htmlContent;
+				countriesTable.innerHTML += htmlContent;
 			}
 		}
 		break;
@@ -122,7 +122,7 @@ function filterToDigits(hDigit, tDigit, oDigit){
 				`;
 
 				//currentTableList.push([countryData[0], countryData[1], countryData[2]]);
-				document.querySelector("tbody").innerHTML += htmlContent;
+				countriesTable.innerHTML += htmlContent;
 			}
 		}
 		break;
@@ -142,7 +142,7 @@ function filterToDigits(hDigit, tDigit, oDigit){
 				`;
 
 				//currentTableList.push([countryData[0], countryData[1], countryData[2]]);
-				document.querySelector("tbody").innerHTML += htmlContent;
+				countriesTable.innerHTML += htmlContent;
 			}
 		}
 		break;
@@ -162,7 +162,7 @@ function filterToDigits(hDigit, tDigit, oDigit){
 				`;
 
 				//currentTableList.push([countryData[0], countryData[1], countryData[2]]);
-				document.querySelector("tbody").innerHTML += htmlContent;
+				countriesTable.innerHTML += htmlContent;
 			}
 		}
 		break;

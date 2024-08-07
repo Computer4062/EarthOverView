@@ -32,7 +32,7 @@
 
 	<main>
 		<section>
-			<div class="px-4 py-5 my-5 text-center" id="callingcodes-banner">
+			<div class="px-4 py-5 my-5 text-center" id="title-banner">
 				<h1 class="display-5 ">Calling Codes</h1>
 				<p>Type in the name of a country or the calling code of a country and press search!</p>
 				<p>Use the sort and filter options for indepth research; or just to have fun!</p>
@@ -417,9 +417,9 @@
 			</div>
 		</section>
 
-		<section id="search-section" class="my-5">
+		<section id="search-section" class="my-5 hidden">
 			<div class="poll-bar">
-				<button type="button" class="btn btn-dark"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/></svg></button>
+				<button id="close-button" type="button" class="btn btn-dark"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/></svg></button>
 			</div>
 			<p class="options-heading">Search Results</p>
 			<table class="table table-striped" data-bs-theme="dark">
@@ -431,9 +431,10 @@
 				<th scope="col">Calling Code</th>
 				</tr>
 			</thead>
-			<tbody id="search-table">
+			<tbody id="search-table-body">
 			</tbody>
 			</table>
+			<p id="search-section-notifier" class="options-text"><small>* Filter options affect the results *</small></p>
 		</section>
 
 		<section>
@@ -446,7 +447,7 @@
 				<th scope="col">Calling Code</th>
 				</tr>
 			</thead>
-			<tbody>
+			<tbody id="countries-list-table-body">
 			</tbody>
 			</table>
 		</section>

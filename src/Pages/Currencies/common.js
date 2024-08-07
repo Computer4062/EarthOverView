@@ -3,7 +3,7 @@ let continentsToRender = [];
 let currentTableList = [];
 
 const countriesJsonFileLocation = "../../Assets/Json/Countries.json";
-const jsonFileLocation = "../../Assets/Json/CallingCodes.json";
+const jsonFileLocation = "../../Assets/Json/Currencies.json";
 
 const searchTable = document.querySelector("#search-table-body");
 const searchNotifier = document.querySelector("#search-section-notifier");
@@ -11,18 +11,22 @@ const searchNotifier = document.querySelector("#search-section-notifier");
 const countriesTable = document.querySelector("#countries-list-table-body");
 
 /* modes */
-let ascendingCodeMode = false;
-let descendingCodeMode = false;
 let ascendingNamesMode = false;
 let descendingNamesMode = false;
+let ascendingUnitsMode = false;
+let descendingUnitsMode = false;
+let ascendingCodesMode = false;
+let descendingCodesMode = false;
 
 /* Renderer */
 function render()
 {
 	if(ascendingNamesMode) sortAscendingNames();
 	else if(descendingNamesMode) sortDescendingNames();
-	else if(ascendingCodeMode) sortAscendingCodes();
-	else if(descendingCodeMode) sortDescendingCodes();
+	else if(ascendingUnitsMode) sortAscendingUnits();
+	else if(descendingUnitsMode) sortDescendingUnits();
+	else if(ascendingCodesMode) sortAscendingCodes();
+	else if(descendingCodesMode) sortDescendingCodes();
 
 	countriesTable.innerHTML = "";
 
@@ -35,6 +39,9 @@ function render()
 			<td>${countryData[0]}</td>
 			<td>${countryData[1]}</td>
 			<td>${countryData[2]}</td>
+			<td>${countryData[3]}</td>
+			<td>${countryData[4]}</td>
+			<td>${countryData[5]}</td>
 			</tr>
 		`;
 
@@ -68,7 +75,7 @@ function defaultRender(){
 	var i = 0;
 	fetch(jsonFileLocation)
 		.then(response => response.json())
-		.then(code => {
+		.then(currency => {
 			countriesTable.innerHTML = "";
 
 			listOfCountries.forEach(countryData => {
@@ -78,12 +85,15 @@ function defaultRender(){
 					<th scope="row">${i}</th>
 					<td>${countryData[0]}</td>
 					<td>${countryData[1]}</td>
-					<td>${code[countryData[0]]}</td>
+					<td>${currency[countryData[0]].currency}</td>
+					<td>${currency[countryData[0]].unit}</td>
+					<td>${currency[countryData[0]].symbol}</td>
+					<td>${currency[countryData[0]].code}</td>
 					</tr>
 				`;
 
 				countriesTable.innerHTML += htmlContent;
-				currentTableList.push([countryData[0], countryData[1], code[countryData[0]]]);
+				currentTableList.push([countryData[0], countryData[1], currency[countryData[0]].currency, currency[countryData[0]].unit, currency[countryData[0]].symbol, currency[countryData[0]].code]);
 			});
 		})
 	.catch(error => {

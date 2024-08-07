@@ -3,7 +3,7 @@ let continentsToRender = [];
 let currentTableList = [];
 
 const countriesJsonFileLocation = "../../Assets/Json/Countries.json";
-const jsonFileLocation = "../../Assets/Json/CallingCodes.json";
+const jsonFileLocation = "../../Assets/Json/Demonyms.json";
 
 const searchTable = document.querySelector("#search-table-body");
 const searchNotifier = document.querySelector("#search-section-notifier");
@@ -11,18 +11,18 @@ const searchNotifier = document.querySelector("#search-section-notifier");
 const countriesTable = document.querySelector("#countries-list-table-body");
 
 /* modes */
-let ascendingCodeMode = false;
-let descendingCodeMode = false;
 let ascendingNamesMode = false;
 let descendingNamesMode = false;
+let ascendingDemonymsMode = false;
+let descendingDemonymsMode = false;
 
 /* Renderer */
 function render()
 {
 	if(ascendingNamesMode) sortAscendingNames();
 	else if(descendingNamesMode) sortDescendingNames();
-	else if(ascendingCodeMode) sortAscendingCodes();
-	else if(descendingCodeMode) sortDescendingCodes();
+	else if(ascendingDemonymsMode) sortAscendingDemonyms();
+	else if(descendingDemonymsMode) sortDescendingDemonyms();
 
 	countriesTable.innerHTML = "";
 
@@ -68,7 +68,7 @@ function defaultRender(){
 	var i = 0;
 	fetch(jsonFileLocation)
 		.then(response => response.json())
-		.then(code => {
+		.then(demonyms => {
 			countriesTable.innerHTML = "";
 
 			listOfCountries.forEach(countryData => {
@@ -78,12 +78,12 @@ function defaultRender(){
 					<th scope="row">${i}</th>
 					<td>${countryData[0]}</td>
 					<td>${countryData[1]}</td>
-					<td>${code[countryData[0]]}</td>
+					<td>${demonyms[countryData[0]]}</td>
 					</tr>
 				`;
 
 				countriesTable.innerHTML += htmlContent;
-				currentTableList.push([countryData[0], countryData[1], code[countryData[0]]]);
+				currentTableList.push([countryData[0], countryData[1], demonyms[countryData[0]]]);
 			});
 		})
 	.catch(error => {

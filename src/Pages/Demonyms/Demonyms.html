@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-	<link href="Currencies.css" rel="stylesheet" type="text/css" />
-	<title>World Currencies</title>
+	<link href="Demonyms.css" rel="stylesheet" type="text/css" />
+	<title>Demonyms</title>
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg w-100 fixed-top" data-bs-theme="dark" style="background-color: #2c2c2c;">
@@ -33,15 +33,15 @@
 	<main>
 		<section>
 			<div class="px-4 py-5 my-5 text-center" id="title-banner">
-				<h1 class="display-5 ">Currencies</h1>
-				<p>Type in the name of a country, currency, currency unit, currency code or even symbol and press search!</p>
+				<h1 class="display-5 ">Demonyms</h1>
+				<p>Find out what you call the native people of different countries!</p>
 				<p>Use the sort and filter options for indepth research; or just to have fun!</p>
 			</div>
 
 			<div class="input-group mb-3" data-bs-theme="dark">
 				<button id="filter-btn" class="btn btn-outline-light" type="button" id="inputGroupFileAddon03"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16"><path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2z"/></svg></button>
 				<button id="sort-btn" class="btn btn-outline-light" type="button" id="inputGroupFileAddon03"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sort-up" viewBox="0 0 16 16"><path d="M3.5 12.5a.5.5 0 0 1-1 0V3.707L1.354 4.854a.5.5 0 1 1-.708-.708l2-1.999.007-.007a.5.5 0 0 1 .7.006l2 2a.5.5 0 1 1-.707.708L3.5 3.707zm3.5-9a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5M7.5 6a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1z"/></svg></button>
-				<input id ="search-box" class="form-control border-white" style="background-color: #000" type="search" placeholder="Search by country, currency code, currency unit, symbol..." aria-describedby="search box" aria-label="Upload">
+				<input id ="search-box" class="form-control border-white" style="background-color: #000" type="search" placeholder="Search by country or demonym..." aria-describedby="search box" aria-label="Upload">
 				<button id="search-btn" class="btn btn-outline-light" type="button" id="inputGroupFileAddon03"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/></svg></button>
 			</div>
 		</section>
@@ -49,15 +49,6 @@
 		<section class="mb-5 hidden" id="filter-options-section">
 			<div id="filter-options">
 				<p class="options-heading">Filter Currencies</p>
-
-				<div id="options-section-1">
-					<p class="options-subtitle">Filter to Currency Units</p>
-
-					<div class="input-group mb-3" data-bs-theme="dark">
-					<span class="input-group-text" id="basic-addon1">unit</span>
-					<input id="currency-units-filter" type="text" class="form-control" placeholder="Enter a currency unit..." aria-label="currency unit input" aria-describedby="basic-addon1">
-					</div>
-				</div>
 
 				<div id="options-section-2" class="mt-3">
 					<p class="options-subtitle">Filter to Continent</p>
@@ -399,34 +390,17 @@
 				<div>
 
 				<div class="mt-3">
-					<p class="options-subtitle">Sort Currency Units</p>
+					<p class="options-subtitle">Sort Demonyms</p>
 					<div class="input-group" data-bs-theme="dark">
 					<div class="input-group-text">
-						<input id="ascending-units-btn" class="form-check-input mt-0" type="radio" name="sortBtnGrp-1" value="" aria-label="Radio button for following text: A to Z">
+						<input id="ascending-demonyms-btn" class="form-check-input mt-0" type="radio" name="sortBtnGrp-1" value="" aria-label="Radio button for following text: A to Z">
 						<label class="form-check-label">A - Z</label>
 					</div>
 					</div>
 
 					<div class="input-group" data-bs-theme="dark">
 					<div class="input-group-text">
-						<input id="descending-units-btn" class="form-check-input mt-0" type="radio" name="sortBtnGrp-1" value="" aria-label="Radio button for following text: Z to A">
-						<label class="form-check-label">Z - A</label>
-					</div>
-					</div>
-				</div>
-
-				<div class="mt-3">
-					<p class="options-subtitle">Sort Currency Codes</p>
-					<div class="input-group" data-bs-theme="dark">
-					<div class="input-group-text">
-						<input id="ascending-codes-btn" class="form-check-input mt-0" type="radio" name="sortBtnGrp-1" value="" aria-label="Radio button for following text: A to Z">
-						<label class="form-check-label">A - Z</label>
-					</div>
-					</div>
-
-					<div class="input-group" data-bs-theme="dark">
-					<div class="input-group-text">
-						<input id="descending-codes-btn" class="form-check-input mt-0" type="radio" name="sortBtnGrp-1" value="" aria-label="Radio button for following text: Z to A">
+						<input id="descending-demonyms-btn" class="form-check-input mt-0" type="radio" name="sortBtnGrp-1" value="" aria-label="Radio button for following text: Z to A">
 						<label class="form-check-label">Z - A</label>
 					</div>
 					</div>
@@ -445,10 +419,7 @@
 				<th scope="col">#</th>
 				<th scope="col">Country</th>
 				<th scope="col">Continent</th>
-				<th scope="col">Currency name</th>
-				<th scope="col">Currency unit</th>
-				<th scope="col">Currency symbol</th>
-				<th scope="col">Currency code</th>
+				<th scope="col">Demonyms</th>
 				</tr>
 			</thead>
 			<tbody id="search-table-body">
@@ -464,10 +435,7 @@
 				<th scope="col">#</th>
 				<th scope="col">Country</th>
 				<th scope="col">Continent</th>
-				<th scope="col">Currency name</th>
-				<th scope="col">Currency unit</th>
-				<th scope="col">Currency symbol</th>
-				<th scope="col">Currency code</th>
+				<th scope="col">Demonyms</th>
 				</tr>
 			</thead>
 			<tbody id="countries-list-table-body">
@@ -483,6 +451,6 @@
 	<script src="./SortFunctions.js"></script>
 	<script src="./FilterFunctions.js"></script>
 	<script src="./SearchFunctions.js"></script>
-	<script src="./Currencies.js"></script>
+	<script src="./Demonyms.js"></script>
 </body>
 </html>

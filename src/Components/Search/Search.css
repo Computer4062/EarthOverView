@@ -1,0 +1,21 @@
+.hidden{
+display: none;
+}
+
+.options-heading{
+text-align: center;
+font-size: 25px;
+}
+
+.options-subtitle{
+font-size: 20px;
+}
+
+.options-text{
+text-align: center;
+}
+
+.poll-bar{
+display: flex;
+justify-content: end;
+}

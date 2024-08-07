@@ -143,3 +143,16 @@
 1. I had to rewrite the entier sort Functions file and most of the filter functions file
 2. In the process I completed the filter and sort options
 3. I also started coding the search bar which will be completed very quickly
+
+4. Its 10:53pm and I just completed the CallingCodes page completely
+5. I have copied some files in as well
+6. I just have to implement the logic for the sorting, filtering, and searching
+
+07/08/2024
+
+1. I completed both the Currencies page and the Demonyms page more quickly than I thought
+2. Iam now in the time zones page
+3. I found out that we can find out the time in other countries without using an API
+4. So I created a JSON file with the IANA time formats of all the countries in the world
+5. I will begin on using this data to complete the time converter and the current country times table
+6. For the time conversions I will use an external JS library
