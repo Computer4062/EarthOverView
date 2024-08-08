@@ -3,12 +3,18 @@ let continentsToRender = [];
 let currentTableList = [];
 
 const countriesJsonFileLocation = "../../Assets/Json/Countries.json";
-const jsonFileLocation = "../../Assets/Json/Currencies.json";
+const jsonFileLocation = "../../Assets/Json/TimeZones.json";
+const countryCodesJsonFileLocation = "../../Assets/Json/CountryCodes.json";
 
 const searchTable = document.querySelector("#search-table-body");
 const searchNotifier = document.querySelector("#search-section-notifier");
 
 const countriesTable = document.querySelector("#countries-list-table-body");
+
+let inputTimeZone = "";
+let outputTimeZone = "";
+
+let amPmFormat = true;
 
 /* modes */
 let ascendingNamesMode = false;
@@ -41,7 +47,6 @@ function render()
 			<td>${countryData[2]}</td>
 			<td>${countryData[3]}</td>
 			<td>${countryData[4]}</td>
-			<td>${countryData[5]}</td>
 			</tr>
 		`;
 
@@ -75,25 +80,28 @@ function defaultRender(){
 	var i = 0;
 	fetch(jsonFileLocation)
 		.then(response => response.json())
-		.then(currency => {
+		.then(zone => {
 			countriesTable.innerHTML = "";
 
 			listOfCountries.forEach(countryData => {
+				// Use moment.js to get time data
+				// Skip any countries without time data
+
 				i++;
 				let htmlContent = `
 					<tr>
 					<th scope="row">${i}</th>
 					<td>${countryData[0]}</td>
 					<td>${countryData[1]}</td>
-					<td>${currency[countryData[0]].currency}</td>
-					<td>${currency[countryData[0]].unit}</td>
-					<td>${currency[countryData[0]].symbol}</td>
-					<td>${currency[countryData[0]].code}</td>
+					<td>${zone[countryData[0]]}</td>
+					<td>${timeData[0]}</td>
+					<td>${timeData[1]}</td>
+					<td>${timeData[2]}</td>
 					</tr>
 				`;
 
 				countriesTable.innerHTML += htmlContent;
-				currentTableList.push([countryData[0], countryData[1], currency[countryData[0]].currency, currency[countryData[0]].unit, currency[countryData[0]].symbol, currency[countryData[0]].code]);
+				currentTableList.push([countryData[0], countryData[1], countryData[2], countryData[3]]);
 			});
 		})
 	.catch(error => {

@@ -156,3 +156,14 @@
 4. So I created a JSON file with the IANA time formats of all the countries in the world
 5. I will begin on using this data to complete the time converter and the current country times table
 6. For the time conversions I will use an external JS library
+
+08/08/2024
+
+1. I completed the time conversion feature
+2. I used the Moment.js library to convert times
+3. I still have to complete the table rendering
+4. I figured out that the time zone for Qatar just does not work
+5. Because of this I stopped using Moment.js to get the current date and time and instead used pure JS
+6. But I encountered the same issue
+7. So now I am thinking of either finding a different time zone for those countries or just having to skip them
+8. I also have to recheck the time conversion feature to look out for invalid time zones

@@ -1,4 +1,89 @@
 /*
+	Time conversions
+*/
+
+getUserCountry();
+
+const inputTimeZoneDropDownList = document.querySelector(".input-countries-dropdown");
+const inputTimeZoneSearch = document.querySelector(".input-time-zone-search");
+const inputTimeZoneLabel = document.querySelector(".input-timezone-label");
+const countryBtns = document.getElementsByClassName("input-country-btn");
+
+inputTimeZoneSearch.addEventListener("input", (timeZoneEvent) => {
+	if(timeZoneEvent.target.value !== "")
+	{
+		returnTimeZones(true, timeZoneEvent.target.value);
+
+		for(let i = 0; i < countryBtns.length; i++)
+		{
+			countryBtns[i].addEventListener("click", () => {
+				inputTimeZoneLabel.innerHTML = countryBtns[i].innerHTML;
+			});
+		}
+	}
+	else
+		inputTimeZoneDropDownList.innerHTML = "";
+});
+
+const outputTimeZoneDropDownList = document.querySelector(".output-countries-dropdown");
+const outputTimeZoneLabel = document.querySelector(".output-timezone-label");
+const outputTimeZoneSearch = document.querySelector(".output-time-zone-search");
+
+outputTimeZoneSearch.addEventListener("input", (timeZoneEvent) => {
+	if(timeZoneEvent.target.value !== "")
+	{
+		returnTimeZones(false, timeZoneEvent.target.value);
+
+		for(let i = 0; i < countryBtns.length; i++)
+		{
+			countryBtns[i].addEventListener("click", () => {
+				outputTimeZoneLabel.innerHTML = countryBtns[i].innerHTML;
+
+				convertTimeToTimezone();
+			});
+		}
+	}
+	else
+		outputTimeZoneDropDownList.innerHTML = "";
+});
+
+const inputTimeFormatBtn = document.querySelectorAll(".input-time-format-btn");
+const inputTimeFormat = document.querySelector("#input-time-format");
+
+for(let i = 0; i < inputTimeFormatBtn.length; i++)
+{
+	inputTimeFormatBtn[i].addEventListener("click", () => {
+		inputTimeFormat.innerHTML = inputTimeFormatBtn[i].innerHTML;
+
+		if(inputTimeFormatBtn[i].innerHTML == "24-hour")
+		{
+			outputTimeFormat.innerHTML = "24-hour";
+			amPmFormat = false;
+		}
+
+		convertTimeToTimezone();
+	});
+}
+
+const outputTimeFormatBtn = document.querySelectorAll(".output-time-format-btn");
+const outputTimeFormat = document.querySelector("#output-time-format");
+
+const inputHour = document.querySelector("#input-hour");
+const inputMinute = document.querySelector("#input-minute");
+const outputHour = document.querySelector("#output-hour");
+const outputMinute = document.querySelector("#output-minute");
+
+inputHour.addEventListener("input", (event) => {	
+	if(event.target.value !== "")
+		convertTimeToTimezone();
+});
+
+inputMinute.addEventListener("input", (event) => {	
+	if(event.target.value !== "")
+		convertTimeToTimezone();
+});
+
+/*
 	Searching
 */
 
@@ -132,14 +217,13 @@ defaultRender();     // Write the table
 
 /* Tests */
 
-const currentDate = new Date(new Date().toLocaleString("en-US", {timeZone: "Asia/Ho_Chi_Minh"}));
+// const currentDate = new Date(new Date().toLocaleString("en-US", {timeZone: "Asia/Ho_Chi_Minh"}));
 
-// Extract time components
-const hours = currentDate.getHours();
-const minutes = currentDate.getMinutes();
-const seconds = currentDate.getSeconds();
+// // Extract time components
+// const hours = currentDate.getHours();
+// const minutes = currentDate.getMinutes();
+// const seconds = currentDate.getSeconds();
 
-const formattedTime = `${hours}:${minutes}:${seconds}`;
+// const formattedTime = `${hours}:${minutes}:${seconds}`;
 
-console.log(formattedTime);
-
+// console.log(formattedTime);

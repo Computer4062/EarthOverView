@@ -41,6 +41,8 @@ align-items: center;
 margin: 0;
 }
 
+/* Time section */
+
 #time-search-section{
 display: flex;
 justify-content: space-evenly;
@@ -57,4 +59,9 @@ align-items: center;
 	margin-top: 15px;
 	margin-bottom: 15px;
 	}
+}
+
+#countries-select-dropdown{
+	background-color: #000;
+	padding: 10px;
 }
