@@ -167,3 +167,8 @@
 6. But I encountered the same issue
 7. So now I am thinking of either finding a different time zone for those countries or just having to skip them
 8. I also have to recheck the time conversion feature to look out for invalid time zones
+
+09/08/2024
+
+1. I just removed off 4 countries from TimeZones.json file because information about them wasn't available at Moment.js
+2. I also obtained the time data from Moment.js instead of pure JS.

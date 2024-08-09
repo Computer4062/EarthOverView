@@ -84,24 +84,26 @@ function defaultRender(){
 			countriesTable.innerHTML = "";
 
 			listOfCountries.forEach(countryData => {
-				// Use moment.js to get time data
-				// Skip any countries without time data
+				if(zone[countryData[0]] != undefined)
+				{
+					timeData = getTimeData(zone[countryData[0]]);
 
-				i++;
-				let htmlContent = `
-					<tr>
-					<th scope="row">${i}</th>
-					<td>${countryData[0]}</td>
-					<td>${countryData[1]}</td>
-					<td>${zone[countryData[0]]}</td>
-					<td>${timeData[0]}</td>
-					<td>${timeData[1]}</td>
-					<td>${timeData[2]}</td>
-					</tr>
-				`;
+					i++;
+					let htmlContent = `
+						<tr>
+						<th scope="row">${i}</th>
+						<td>${countryData[0]}</td>
+						<td>${countryData[1]}</td>
+						<td>${zone[countryData[0]]}</td>
+						<td>${timeData[0]}</td>
+						<td>${timeData[1]}M</td>
+						<td>${timeData[2]}</td>
+						</tr>
+					`;
 
-				countriesTable.innerHTML += htmlContent;
-				currentTableList.push([countryData[0], countryData[1], countryData[2], countryData[3]]);
+					countriesTable.innerHTML += htmlContent;
+					currentTableList.push([countryData[0], countryData[1], countryData[2], countryData[3]]);
+				}
 			});
 		})
 	.catch(error => {
@@ -110,6 +112,15 @@ function defaultRender(){
 }
 
 /* Functions */
+function getTimeData(timeZone){
+  const now = moment().tz(timeZone);
+  const time = now.format("hh:mm A");
+  const date = now.format("DD/MM");
+  const amOrPm = time[6];
+
+  return [time, amOrPm, date];
+}
+
 function removeItem(list, itemToRemove) {
   const index = list.indexOf(itemToRemove);
   if (index !== -1) {

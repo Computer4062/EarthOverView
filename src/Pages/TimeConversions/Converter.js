@@ -54,27 +54,32 @@ function returnTimeZones(input, country){
 
 		if(found)
 		{
-			let timeZoneStr = `${countryList[x]} (${timeZoneList[x][1]})`
-
-			if(input)
+			if(timeZoneList[x][1] != undefined)
 			{
-				inputTimeZoneDropDownList.innerHTML += `
-					<li><button class="dropdown-item input-country-btn" type="button">${timeZoneStr}</button></li>
-				`
+				let timeZoneStr = `${countryList[x]} (${timeZoneList[x][1]})`
 
-				
-				inputTimeZone = timeZoneList[x][1];
+				if(input)
+				{
+					inputTimeZoneDropDownList.innerHTML += `
+						<li><button class="dropdown-item input-country-btn" type="button">${timeZoneStr}</button></li>
+					`
+
+					
+					inputTimeZone = timeZoneList[x][1];
+				}
+				else
+				{
+					outputTimeZoneDropDownList.innerHTML += `
+						<li><button class="dropdown-item input-country-btn" type="button">${timeZoneStr}</button></li>
+					`
+
+					outputTimeZone = timeZoneList[x][1];
+				}
+
+				noZonesFound = false;
 			}
-			else
-			{
-				outputTimeZoneDropDownList.innerHTML += `
-					<li><button class="dropdown-item input-country-btn" type="button">${timeZoneStr}</button></li>
-				`
 
-				outputTimeZone = timeZoneList[x][1];
-			}
-
-			noZonesFound = false;
+			found = false;
 		}
 
 		found = true;
