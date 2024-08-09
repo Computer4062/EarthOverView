@@ -55,11 +55,13 @@ for(let i = 0; i < inputTimeFormatBtn.length; i++)
 	inputTimeFormatBtn[i].addEventListener("click", () => {
 		inputTimeFormat.innerHTML = inputTimeFormatBtn[i].innerHTML;
 
-		if(inputTimeFormatBtn[i].innerHTML == "24-hour")
+		if(inputTimeFormatBtn[i].innerHTML === "24-hour")
 		{
 			outputTimeFormat.innerHTML = "24-hour";
 			amPmFormat = false;
 		}
+		else
+			amPmFormat = true;
 
 		convertTimeToTimezone();
 	});
@@ -196,34 +198,31 @@ descendingCodesBtn.addEventListener('change', function(event){
 		render();
 	}
 });
+
 /*
 	Filtering
 */
 
+const filterHoursValue = document.querySelector("#filterHoursValue");
+const filterMinutesValue = document.querySelector("#filterMinutesValue");
+const filterTimeValues = document.querySelectorAll(".time-filter");
+
+for(let i = 0; i < 2; i++)
+{
+	filterTimeValues[i].addEventListener("input", () => {
+		if(filterHoursValue.value == "" && filterMinutesValue.value == "")
+			render();
+		else
+		{
+			const hour = (filterHoursValue.value == "") ? -1 : filterHoursValue.value.padStart(2, '0');
+			const minute = (filterMinutesValue.value == "") ? -1 : filterMinutesValue.value.padStart(2, '0');
+			filterToTime(hour, minute);
+		}
+	});
+}
+
 /*
-	Filtering units
+	Write the table
 */
 
-const currencyUnitsFilter = document.querySelector("#currency-units-filter");
-
-currencyUnitsFilter.addEventListener('input', function(event){
-	if(event.target.value != "")
-		filterToUnits(event.target.value);
-	else
-		render();
-});
-
-defaultRender();     // Write the table
-
-/* Tests */
-
-// const currentDate = new Date(new Date().toLocaleString("en-US", {timeZone: "Asia/Ho_Chi_Minh"}));
-
-// // Extract time components
-// const hours = currentDate.getHours();
-// const minutes = currentDate.getMinutes();
-// const seconds = currentDate.getSeconds();
-
-// const formattedTime = `${hours}:${minutes}:${seconds}`;
-
-// console.log(formattedTime);
+defaultRender();

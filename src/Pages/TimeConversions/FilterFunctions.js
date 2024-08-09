@@ -12,10 +12,13 @@ function renderContinent(){
 
 			fetch(jsonFileLocation)
 				.then(response => response.json())
-				.then(currencies => {
+				.then(demoynms => {
 					continentsList.forEach(continent => {
 						region[continent].forEach(country => {
-							currentTableList.push([country, continent, currencies[country].currency, currencies[country].unit, currencies[country].symbol, currencies[country].code]);
+							/*
+								Write the time data
+							*/
+							currentTableList.push([country, continent, ]);
 						})
 					})
 
@@ -30,25 +33,85 @@ function renderContinent(){
 	});
 }
 
-function filterToUnits(currencyUnit){
+function filterToTime(hourDigits, minuteDigits){
 	countriesTable.innerHTML = "";
 
-	let counter = 0;
-	for(let i = 0; i < currentTableList.length; i++){
-		if(currentTableList[i][3].toLowerCase() === currencyUnit.toLowerCase())
+	let findId = -1;
+
+	if((hourDigits != - 1) && (minuteDigits == -1)) findId = 0;
+	else if((hourDigits == -1) && (minuteDigits != -1)) findId = 1;
+	else if((hourDigits != -1) && (minuteDigits != -1)) findId = 2;
+
+	var i = 0;
+	currentTableList.forEach(countryData => {
+		// Check if the digits are the same
+		switch(findId)
 		{
-			counter++;
-			countriesTable.innerHTML += `
-			<tr>
-			<th scope="row">${counter}</th>
-			<td>${currentTableList[i][0]}</td>
-			<td>${currentTableList[i][1]}</td>
-			<td>${currentTableList[i][2]}</td>
-			<td>${currentTableList[i][3]}</td>
-			<td>${currentTableList[i][4]}</td>
-			<td>${currentTableList[i][5]}</td>
-			</tr>
-			`
+		case 0:
+		{
+			if(`${countryData[3][0]}${countryData[3][1]}` == hourDigits)
+			{
+				i++;
+				let htmlContent = `
+					<tr>
+					<th scope="row">${i}</th>
+					<td>${countryData[0]}</td>
+					<td>${countryData[1]}</td>
+					<td>${countryData[2]}</td>
+					<td>${countryData[3]}</td>
+					<td>${countryData[4]}</td>
+					</tr>
+				`;
+
+				countriesTable.innerHTML += htmlContent;
+			}
 		}
-	};
+		break;
+
+		case 1:
+		{
+			if(`${countryData[3][3]}${countryData[3][4]}` == minuteDigits)
+			{
+				i++;
+				let htmlContent = `
+					<tr>
+					<th scope="row">${i}</th>
+					<td>${countryData[0]}</td>
+					<td>${countryData[1]}</td>
+					<td>${countryData[2]}</td>
+					<td>${countryData[3]}</td>
+					<td>${countryData[4]}</td>
+					</tr>
+				`;
+
+				countriesTable.innerHTML += htmlContent;
+			}
+		}
+		break;
+
+		case 2:
+		{
+			if((`${countryData[3][0]}${countryData[3][1]}` == hourDigits) && (`${countryData[3][3]}${countryData[3][4]}` == minuteDigits))
+			{
+				i++;
+				let htmlContent = `
+					<tr>
+					<th scope="row">${i}</th>
+					<td>${countryData[0]}</td>
+					<td>${countryData[1]}</td>
+					<td>${countryData[2]}</td>
+					<td>${countryData[3]}</td>
+					<td>${countryData[4]}</td>
+					</tr>
+				`;
+
+				countriesTable.innerHTML += htmlContent;
+			}
+		}
+		break;
+
+		default:
+			console.error(`Unidentified find ID: ${findId} \n`, error);
+		}
+	});
 }

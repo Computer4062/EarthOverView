@@ -173,6 +173,7 @@ function convertTimeToTimezone() {
 		outputMinute.value = `${convertedTime[3]}${convertedTime[4]}`;
 
 		outputTimeFormat.innerHTML = `${convertedTime[6]}${convertedTime[7]}`;
+		console.log(`${convertedTime[6]}${convertedTime[7]}`);
 	}
 	else
 	{

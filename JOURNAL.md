@@ -170,5 +170,6 @@
 
 09/08/2024
 
-1. I just removed off 4 countries from TimeZones.json file because information about them wasn't available at Moment.js
+1. I just removed off 5 countries from TimeZones.json file because information about them wasn't available at Moment.js
 2. I also obtained the time data from Moment.js instead of pure JS.
+3. I completed the filter times option and now I also have the filter continents option to complete.

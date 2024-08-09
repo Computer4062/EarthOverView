@@ -11,10 +11,13 @@ const searchNotifier = document.querySelector("#search-section-notifier");
 
 const countriesTable = document.querySelector("#countries-list-table-body");
 
+let backedUpCurrentTableList = [];
+
 let inputTimeZone = "";
 let outputTimeZone = "";
 
 let amPmFormat = true;
+let filterTimeFormat = "AM";
 
 /* modes */
 let ascendingNamesMode = false;
@@ -72,10 +75,6 @@ function defaultRender(){
 				listOfCountries.push([country, continent]);
 			});
 		});
-	})
-	.catch(error => {
-		console.error("Error:", error);
-	});
 
 	var i = 0;
 	fetch(jsonFileLocation)
@@ -96,18 +95,23 @@ function defaultRender(){
 						<td>${countryData[1]}</td>
 						<td>${zone[countryData[0]]}</td>
 						<td>${timeData[0]}</td>
-						<td>${timeData[1]}M</td>
-						<td>${timeData[2]}</td>
+						<td>${timeData[1]}</td>
 						</tr>
 					`;
 
 					countriesTable.innerHTML += htmlContent;
-					currentTableList.push([countryData[0], countryData[1], countryData[2], countryData[3]]);
+					currentTableList.push([countryData[0], countryData[1], zone[countryData[0]], timeData[0], timeData[1]]);
+					backedUpCurrentTableList.push([countryData[0], countryData[1], zone[countryData[0]], timeData[0], timeData[1]]);
 				}
 			});
 		})
 	.catch(error => {
 		console.error('Error:', error);
+	});
+
+	})
+	.catch(error => {
+		console.error("Error:", error);
 	});
 }
 
@@ -116,9 +120,8 @@ function getTimeData(timeZone){
   const now = moment().tz(timeZone);
   const time = now.format("hh:mm A");
   const date = now.format("DD/MM");
-  const amOrPm = time[6];
 
-  return [time, amOrPm, date];
+  return [time, date];
 }
 
 function removeItem(list, itemToRemove) {
