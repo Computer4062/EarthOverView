@@ -1,10 +1,8 @@
-function searchName(text){
-	searchTable.innerHTML = "";
-
+function searchName(name){
 	let countryData = "";
 	for(let i = 0; i < currentTableList.length; i++)
 	{
-		if(text.toLowerCase() == currentTableList[i][0].toLowerCase())
+		if(name.toLowerCase() == currentTableList[i][0].toLowerCase())
 		{
 			countryData = currentTableList[i];
 			break;
@@ -21,9 +19,6 @@ function searchName(text){
 			<td>${countryData[0]}</td>
 			<td>${countryData[1]}</td>
 			<td>${countryData[2]}</td>
-			<td>${countryData[3]}</td>
-			<td>${countryData[4]}</td>
-			<td>${countryData[5]}</td>
 			</tr>
 		`;
 
@@ -31,17 +26,18 @@ function searchName(text){
 	}
 	else
 	{
-		searchCode(text);
+		searchTable.innerHTML = "";
+		searchNotifier.innerHTML = "<small>Could not find search results (check spellings or filter options)</small>";
 	}
 }
 
-function searchCode(text){
+function searchCodes(code){
 	let countryData = [];
 	let countriesData = [];
 
 	for(let i = 0; i < currentTableList.length; i++)
 	{
-		if(text.toLowerCase() == currentTableList[i][5].toLowerCase())
+		if(code == currentTableList[i][2])
 		{
 			countryData = currentTableList[i];
 			countriesData.push(countryData);
@@ -63,52 +59,6 @@ function searchCode(text){
 				<td>${country[0]}</td>
 				<td>${country[1]}</td>
 				<td>${country[2]}</td>
-				<td>${country[3]}</td>
-				<td>${country[4]}</td>
-				<td>${country[5]}</td>
-				</tr>
-			`;
-		});
-
-		searchNotifier.innerHTML = "<small>* Filter options affect the results *</small>";
-	}
-	else
-	{
-		searchUnit(text);
-	}
-}
-
-function searchUnit(text){
-	let countryData = [];
-	let countriesData = [];
-
-	for(let i = 0; i < currentTableList.length; i++)
-	{
-		if(text.toLowerCase() == currentTableList[i][3].toLowerCase())
-		{
-			countryData = currentTableList[i];
-			countriesData.push(countryData);
-		}
-	}
-
-	searchSection.classList.remove("hidden");
-
-	if(countryData.length !== 0)
-	{
-		searchTable.innerHTML = "";
-
-		var i = 0;
-		countriesData.forEach(country => {
-			i++;
-			searchTable.innerHTML += `
-				<tr>
-				<th scope="row">${i}</th>
-				<td>${country[0]}</td>
-				<td>${country[1]}</td>
-				<td>${country[2]}</td>
-				<td>${country[3]}</td>
-				<td>${country[4]}</td>
-				<td>${country[5]}</td>
 				</tr>
 			`;
 		});
@@ -123,5 +73,8 @@ function searchUnit(text){
 }
 
 function search(text){
-	searchName(text);
+	if(/\d/.test(text))
+		searchCodes(text);
+	else
+		searchName(text);
 }

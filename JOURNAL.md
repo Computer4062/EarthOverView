@@ -173,3 +173,13 @@
 1. I just removed off 5 countries from TimeZones.json file because information about them wasn't available at Moment.js
 2. I also obtained the time data from Moment.js instead of pure JS.
 3. I completed the filter times option and now I also have the filter continents option to complete.
+
+10/08/2024
+
+1. I initially got almost all the features done upto the search level
+2. But then errors started to show up
+3. I had trouble figuring out how these errors even came up in the first place because of how "unclean" my code was
+4. So I decided to write the entier Time Conversions page functionality from the beginning
+5. I also figured out that there is an order which we should follow when writing these features that will yield the most out of our time
+6. I rewrote the filter continents and the filter time functions
+7. I used a lot of help from AI

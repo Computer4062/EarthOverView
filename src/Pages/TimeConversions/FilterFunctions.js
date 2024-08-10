@@ -12,13 +12,12 @@ function renderContinent(){
 
 			fetch(jsonFileLocation)
 				.then(response => response.json())
-				.then(demoynms => {
+				.then(timeData => {
 					continentsList.forEach(continent => {
 						region[continent].forEach(country => {
-							/*
-								Write the time data
-							*/
-							currentTableList.push([country, continent, ]);
+							const timeAndDate = getTimeAndDate(timeData[country])
+							if(timeAndDate !== undefined)
+								currentTableList.push([country, continent, timeData[country], timeAndDate[0], timeAndDate[1]]);
 						})
 					})
 
@@ -33,26 +32,27 @@ function renderContinent(){
 	});
 }
 
-function filterToTime(hourDigits, minuteDigits){
+function filterToTime(hDigits, mDigits)
+{
 	countriesTable.innerHTML = "";
-
 	let findId = -1;
 
-	if((hourDigits != - 1) && (minuteDigits == -1)) findId = 0;
-	else if((hourDigits == -1) && (minuteDigits != -1)) findId = 1;
-	else if((hourDigits != -1) && (minuteDigits != -1)) findId = 2;
+	if((hDigits != -1) && (mDigits != -1)) findId = 0;
+	else if((hDigits != -1) && (mDigits == -1)) findId = 1;
+	else if((hDigits == -1) && (mDigits != -1)) findId = 2;
+	else if((hDigits == -1) && (mDigits == -1)) findId = 3;
 
-	var i = 0;
-	currentTableList.forEach(countryData => {
-		// Check if the digits are the same
-		switch(findId)
-		{
-		case 0:
-		{
-			if(`${countryData[3][0]}${countryData[3][1]}` == hourDigits)
+	let i = 0;
+
+	switch(findId)
+	{
+	case 1:
+	{
+		currentTableList.forEach(countryData => {
+			if(`${countryData[3][0]}${countryData[3][1]}` == hDigits.padStart(2, '0'))
 			{
 				i++;
-				let htmlContent = `
+				const htmlContent = `
 					<tr>
 					<th scope="row">${i}</th>
 					<td>${countryData[0]}</td>
@@ -65,53 +65,14 @@ function filterToTime(hourDigits, minuteDigits){
 
 				countriesTable.innerHTML += htmlContent;
 			}
-		}
-		break;
+		});
+	}
+	break;
 
-		case 1:
-		{
-			if(`${countryData[3][3]}${countryData[3][4]}` == minuteDigits)
-			{
-				i++;
-				let htmlContent = `
-					<tr>
-					<th scope="row">${i}</th>
-					<td>${countryData[0]}</td>
-					<td>${countryData[1]}</td>
-					<td>${countryData[2]}</td>
-					<td>${countryData[3]}</td>
-					<td>${countryData[4]}</td>
-					</tr>
-				`;
-
-				countriesTable.innerHTML += htmlContent;
-			}
-		}
-		break;
-
-		case 2:
-		{
-			if((`${countryData[3][0]}${countryData[3][1]}` == hourDigits) && (`${countryData[3][3]}${countryData[3][4]}` == minuteDigits))
-			{
-				i++;
-				let htmlContent = `
-					<tr>
-					<th scope="row">${i}</th>
-					<td>${countryData[0]}</td>
-					<td>${countryData[1]}</td>
-					<td>${countryData[2]}</td>
-					<td>${countryData[3]}</td>
-					<td>${countryData[4]}</td>
-					</tr>
-				`;
-
-				countriesTable.innerHTML += htmlContent;
-			}
-		}
-		break;
-
-		default:
-			console.error(`Unidentified find ID: ${findId} \n`, error);
-		}
-	});
+	case 3:
+	{
+		renderContinent();
+	}
+	break;
+	}
 }

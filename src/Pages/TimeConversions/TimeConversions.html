@@ -130,17 +130,17 @@
 						<p class="options-subtitle">Filter to Time</p>
 
 						<div class="input-group" data-bs-theme="dark" style="width: 320px">
-							<input type="text" placeholder="hour" aria-label="hour value" id="filterHoursValue" class="form-control time-filter" />
+							<input type="text" placeholder="hour" aria-label="hour value" id="filter-hours-value" class="form-control time-filter" />
 							<span class="input-group-text">:</span>
-							<input type="text" placeholder="minute" aria-label="minute value" id="filterMinutesValue" class="form-control time-filter" />
+							<input type="text" placeholder="minute" aria-label="minute value" id="filter-minutes-value" class="form-control time-filter" />
 
 							<div class="dropdown">
-								<button class="btn btn-dark btn-outline-secondary dropdown-toggle" id="output-time-format" type="button" style="border-radius: 2px" data-bs-toggle="dropdown" aria-expanded="false">
+								<button class="btn btn-dark btn-outline-light dropdown-toggle" id="filter-day-time" type="button" style="border-radius: 2px; border-color: #495057" data-bs-toggle="dropdown" aria-expanded="false">
 									AM
 								</button>
 								<ul class="dropdown-menu">
-									<li><button class="dropdown-item filter-time-format-selector" type="button">AM</button></li>
-									<li><button class="dropdown-item filter-time-format-selector" type="button">PM</button></li>
+									<li><button class="dropdown-item filter-day-time-selector" type="button">AM</button></li>
+									<li><button class="dropdown-item filter-day-time-selector" type="button">PM</button></li>
 								</ul>
 							</div>
 						</div>
@@ -150,14 +150,14 @@
 					<p class="options-subtitle">Filter to AM/PM</p>
 					<div class="input-group" data-bs-theme="dark">
 					<div class="input-group-text">
-						<input class="form-check-input mt-0 filter-to-ampm" type="checkbox" value="" aria-label="Check box following text: AM">
+						<input class="form-check-input mt-0 filter-to-ampm" id="filter-to-am" type="checkbox" value="" aria-label="Check box following text: AM">
 						<label class="form-check-label">AM</label>
 					</div>
 					</div>
 
 					<div class="input-group mt-2" data-bs-theme="dark">
 					<div class="input-group-text">
-						<input class="form-check-input mt-0 filter-to-ampm" type="checkbox" value="" aria-label="Check box following text: PM">
+						<input class="form-check-input mt-0 filter-to-ampm" id="filter-to-pm" type="checkbox" value="" aria-label="Check box following text: PM">
 						<label class="form-check-label">PM</label>
 					</div>
 					</div>
@@ -482,57 +482,58 @@
 			</div>
 		</section>
 
+		<!-- Sort -->
 		<section class="mb-5 hidden" id="sort-options-section">
 			<div id="sort-options">
-				<p class="options-heading">Sort Currencies</p>
+				<p class="options-heading">Sort Time Conversions</p>
 
 				<div>
 					<p class="options-subtitle">Sort Country names</p>
 					<div class="input-group" data-bs-theme="dark">
 					<div class="input-group-text">
 						<input id="ascending-names-btn" class="form-check-input mt-0" type="radio" name="sortBtnGrp-1" value="" aria-label="Radio button for following text: A to Z">
-						<label class="form-check-label">A - Z</label>
+						<label class="form-check-label">A -> Z</label>
 					</div>
 					</div>
 
 					<div class="input-group" data-bs-theme="dark">
 					<div class="input-group-text">
 						<input id="descending-names-btn" class="form-check-input mt-0" type="radio" name="sortBtnGrp-1" value="" aria-label="Radio button for following text: Z to A">
-						<label class="form-check-label">Z - A</label>
+						<label class="form-check-label">Z -> A</label>
 					</div>
 					</div>
 				<div>
 
 				<div class="mt-3">
-					<p class="options-subtitle">Sort Currency Units</p>
+					<p class="options-subtitle">Sort Times</p>
 					<div class="input-group" data-bs-theme="dark">
 					<div class="input-group-text">
-						<input id="ascending-units-btn" class="form-check-input mt-0" type="radio" name="sortBtnGrp-1" value="" aria-label="Radio button for following text: A to Z">
-						<label class="form-check-label">A - Z</label>
+						<input id="ascending-times-btn" class="form-check-input mt-0" type="radio" name="sortBtnGrp-1" value="" aria-label="Radio button for following text: A to Z">
+						<label class="form-check-label">1 -> 12</label>
 					</div>
 					</div>
 
 					<div class="input-group" data-bs-theme="dark">
 					<div class="input-group-text">
-						<input id="descending-units-btn" class="form-check-input mt-0" type="radio" name="sortBtnGrp-1" value="" aria-label="Radio button for following text: Z to A">
-						<label class="form-check-label">Z - A</label>
+						<input id="descending-times-btn" class="form-check-input mt-0" type="radio" name="sortBtnGrp-1" value="" aria-label="Radio button for following text: Z to A">
+						<label class="form-check-label">12 -> 1</label>
 					</div>
 					</div>
 				</div>
 
 				<div class="mt-3">
-					<p class="options-subtitle">Sort Currency Codes</p>
+					<p class="options-subtitle">Sort Dates</p>
 					<div class="input-group" data-bs-theme="dark">
 					<div class="input-group-text">
-						<input id="ascending-codes-btn" class="form-check-input mt-0" type="radio" name="sortBtnGrp-1" value="" aria-label="Radio button for following text: A to Z">
-						<label class="form-check-label">A - Z</label>
+						<input id="ascending-dates-btn" class="form-check-input mt-0" type="radio" name="sortBtnGrp-1" value="" aria-label="Radio button for following text: A to Z">
+						<label class="form-check-label">1 -> 30</label>
 					</div>
 					</div>
 
 					<div class="input-group" data-bs-theme="dark">
 					<div class="input-group-text">
-						<input id="descending-codes-btn" class="form-check-input mt-0" type="radio" name="sortBtnGrp-1" value="" aria-label="Radio button for following text: Z to A">
-						<label class="form-check-label">Z - A</label>
+						<input id="descending-dates-btn" class="form-check-input mt-0" type="radio" name="sortBtnGrp-1" value="" aria-label="Radio button for following text: Z to A">
+						<label class="form-check-label">30 -> 1</label>
 					</div>
 					</div>
 				</div>

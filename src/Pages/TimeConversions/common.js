@@ -4,42 +4,34 @@ let currentTableList = [];
 
 const countriesJsonFileLocation = "../../Assets/Json/Countries.json";
 const jsonFileLocation = "../../Assets/Json/TimeZones.json";
-const countryCodesJsonFileLocation = "../../Assets/Json/CountryCodes.json";
 
 const searchTable = document.querySelector("#search-table-body");
 const searchNotifier = document.querySelector("#search-section-notifier");
 
 const countriesTable = document.querySelector("#countries-list-table-body");
 
-let backedUpCurrentTableList = [];
-
-let inputTimeZone = "";
-let outputTimeZone = "";
-
-let amPmFormat = true;
-let filterTimeFormat = "AM";
-
 /* modes */
+let ascendingCodeMode = false;
+let descendingCodeMode = false;
 let ascendingNamesMode = false;
 let descendingNamesMode = false;
-let ascendingUnitsMode = false;
-let descendingUnitsMode = false;
-let ascendingCodesMode = false;
-let descendingCodesMode = false;
 
 /* Renderer */
 function render()
 {
+	/*
 	if(ascendingNamesMode) sortAscendingNames();
 	else if(descendingNamesMode) sortDescendingNames();
-	else if(ascendingUnitsMode) sortAscendingUnits();
-	else if(descendingUnitsMode) sortDescendingUnits();
-	else if(ascendingCodesMode) sortAscendingCodes();
-	else if(descendingCodesMode) sortDescendingCodes();
+	else if(ascendingCodeMode) sortAscendingCodes();
+	else if(descendingCodeMode) sortDescendingCodes();
+	*/
 
 	countriesTable.innerHTML = "";
-
 	var i = 0;
+
+	// Clean the list
+	currentTableList = removeDuplicateElements(currentTableList);
+
 	currentTableList.forEach(countryData => {
 		i++;
 		let htmlContent = `
@@ -66,68 +58,83 @@ function defaultRender(){
 	countriesTable.innerHTML = "";
 	currentTableList = [];
 
-	let listOfCountries = [];
-	fetch(countriesJsonFileLocation)
-	.then(response => response.json())
-	.then(countries => {
-		continents.forEach(continent => {
-			countries[continent].forEach(country => {
-				listOfCountries.push([country, continent]);
-			});
-		});
+	// Clean the list
+	currentTableList = removeDuplicateElements(currentTableList);
 
-	var i = 0;
+	let i = 0;
 	fetch(jsonFileLocation)
 		.then(response => response.json())
-		.then(zone => {
-			countriesTable.innerHTML = "";
+		.then(timeData => {			
+			fetch(countriesJsonFileLocation)
+				.then(response => response.json())
+				.then(countries => {
 
-			listOfCountries.forEach(countryData => {
-				if(zone[countryData[0]] != undefined)
-				{
-					timeData = getTimeData(zone[countryData[0]]);
+					continents.forEach(continent => {
+					countries[continent].forEach(country => {
 
-					i++;
-					let htmlContent = `
-						<tr>
-						<th scope="row">${i}</th>
-						<td>${countryData[0]}</td>
-						<td>${countryData[1]}</td>
-						<td>${zone[countryData[0]]}</td>
-						<td>${timeData[0]}</td>
-						<td>${timeData[1]}</td>
-						</tr>
-					`;
+						const timeAndDate = getTimeAndDate(timeData[country]);
 
-					countriesTable.innerHTML += htmlContent;
-					currentTableList.push([countryData[0], countryData[1], zone[countryData[0]], timeData[0], timeData[1]]);
-					backedUpCurrentTableList.push([countryData[0], countryData[1], zone[countryData[0]], timeData[0], timeData[1]]);
-				}
+						if(timeAndDate !== undefined)
+						{
+							i++;
+							htmlContent = `
+								<tr>
+								<td>${i}</td>
+								<td>${country}</td>
+								<td>${continent}</td>
+								<td>${timeData[country]}</td>
+								<td>${timeAndDate[0]}</td>
+								<td>${timeAndDate[1]}</td>
+								</tr>
+							`;
+
+							countriesTable.innerHTML += htmlContent;
+							currentTableList.push([country, continent, timeData[country], timeAndDate[0], timeAndDate[1]]);
+						}
+					});
+				});
+			})
+			.catch(error => {
+				console.error("Error:", error);
 			});
 		})
 	.catch(error => {
 		console.error('Error:', error);
 	});
-
-	})
-	.catch(error => {
-		console.error("Error:", error);
-	});
 }
 
-/* Functions */
-function getTimeData(timeZone){
-  const now = moment().tz(timeZone);
-  const time = now.format("hh:mm A");
-  const date = now.format("DD/MM");
+/* 
+	Functions 
+*/
 
-  return [time, date];
-}
+function getTimeAndDate(timezone)
+{
+  try
+  {
+  const now = moment().tz(timezone);
+  const formattedDate = now.format('DD/MM');
+  const formattedTime = now.format('hh:mm A');
 
-function removeItem(list, itemToRemove) {
-  const index = list.indexOf(itemToRemove);
-  if (index !== -1) {
-    list.splice(index, 1);
+  return [formattedTime, formattedDate];
   }
-  return list;
+  catch(error)
+  {
+	return undefined;
+  }
+}
+
+function removeDuplicateElements(array) {
+  const elementCounts = new Map();
+  const result = [];
+
+  for (const subArray of array) {
+    const firstElement = subArray[0];
+    elementCounts.set(firstElement, (elementCounts.get(firstElement) || 0) + 1);
+
+    if (elementCounts.get(firstElement) <= 2) {
+      result.push(subArray);
+    }
+  }
+
+  return result;
 }

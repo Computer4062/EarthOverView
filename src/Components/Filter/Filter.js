@@ -267,3 +267,11 @@ oceaniaCheckBox.addEventListener('change', (event)=>{
 
 	renderContinent();
 });
+
+function removeItem(list, itemToRemove) {
+  const index = list.indexOf(itemToRemove);
+  if (index !== -1) {
+    list.splice(index, 1);
+  }
+  return list;
+}
