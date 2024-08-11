@@ -18,6 +18,8 @@ let descendingUnitsMode = false;
 let ascendingCodesMode = false;
 let descendingCodesMode = false;
 
+let filterToUnitsFlag = false;
+
 /* Renderer */
 function render()
 {
@@ -28,25 +30,33 @@ function render()
 	else if(ascendingCodesMode) sortAscendingCodes();
 	else if(descendingCodesMode) sortDescendingCodes();
 
-	countriesTable.innerHTML = "";
+	if(filterToUnitsFlag)
+	{
+		filterUnitsCaller();
+	}
+	else
+	{
+		countriesTable.innerHTML = "";
 
-	var i = 0;
-	currentTableList.forEach(countryData => {
-		i++;
-		let htmlContent = `
-			<tr>
-			<th scope="row">${i}</th>
-			<td>${countryData[0]}</td>
-			<td>${countryData[1]}</td>
-			<td>${countryData[2]}</td>
-			<td>${countryData[3]}</td>
-			<td>${countryData[4]}</td>
-			<td>${countryData[5]}</td>
-			</tr>
-		`;
+		var i = 0;
+		currentTableList.forEach(countryData => {
+			i++;
+			let htmlContent = `
+				<tr>
+				<th scope="row">${i}</th>
+				<td>${countryData[0]}</td>
+				<td>${countryData[1]}</td>
+				<td>${countryData[2]}</td>
+				<td>${countryData[3]}</td>
+				<td>${countryData[4]}</td>
+				<td>${countryData[5]}</td>
+				</tr>
+			`;
 
-		countriesTable.innerHTML += htmlContent;
-	});
+			countriesTable.innerHTML += htmlContent;
+		});
+	}
+
 
 	/* Reload the search section if it is activated so that it will also be sorted or filtered */
 	if(!searchSection.classList.contains("hidden"))

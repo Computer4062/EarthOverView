@@ -86,17 +86,25 @@ const filterHundredsDigitBox = document.querySelector(".filterHundredsDigit");
 const filterTensDigitBox = document.querySelector(".filterTensDigit");
 const filterOnesDigitBox = document.querySelector(".filterOnesDigit");
 
+function filterDigitsCaller(){
+	let hundredsValue = (filterHundredsDigitBox.value === "") ? -1 : filterHundredsDigitBox.value;
+	let tensValue = (filterTensDigitBox.value === "") ? -1 : filterTensDigitBox.value;
+	let onesValue = (filterOnesDigitBox.value === "") ? -1 : filterOnesDigitBox.value;
+
+	if(hundredsValue === -1 && tensValue === -1 && onesValue === -1)
+	{
+		filterToCallingCodes = false;
+		renderContinent();
+	}
+	else
+		filterToDigits(hundredsValue, tensValue, onesValue);
+}
+
 for(let i = 0; i < 3; i++)
 {
 	document.querySelectorAll(".digit-filter")[i].addEventListener("input", () => {
-		let hundredsValue = (filterHundredsDigitBox.value === "") ? -1 : filterHundredsDigitBox.value;
-		let tensValue = (filterTensDigitBox.value === "") ? -1 : filterTensDigitBox.value;
-		let onesValue = (filterOnesDigitBox.value === "") ? -1 : filterOnesDigitBox.value;
-
-		if(hundredsValue === -1 && tensValue === -1 && onesValue === -1)
-			renderContinent();
-		else
-			filterToDigits(hundredsValue, tensValue, onesValue);
+		filterToCallingCodes = true;
+		render();
 	});
 }
 

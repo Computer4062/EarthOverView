@@ -2,20 +2,48 @@
 	Time Conversions
 */
 
-const timeFormatValues = ["AM", "PM", "24-hour"];
-
-const inputTimeZoneLabel = document.querySelector(".input-timezone-label");
+const inputTimeZoneLabel = document.querySelector(".input-time-zone-label");
 const inputTimeZoneSearch = document.querySelector(".input-time-zone-search");
 const inputCountriesDropDown = document.querySelector(".input-countries-dropdown");
 const inputHourBox = document.querySelector("#input-hour");
 const inputMinuteBox = document.querySelector("#input-minute");
-const timeFormatBtns = document.querySelectorAll(".input-time-format-btn");
+const inputTimeFormatsBtns = document.querySelectorAll(".input-time-format-btn");
+const inputTimeFormatLabel = document.querySelector("#input-time-format-label");
 
-const outputTimeZoneLabel = document.querySelector(".input-timezone-label");
-const outputTimeZoneSearch = document.querySelector(".input-time-zone-search");
-const outputCountriesDropDown = document.querySelector(".input-countries-dropdown");
-const outputHourBox = document.querySelector("#input-hour");
-const outputMinuteBox = document.querySelector("#input-minute");
+const outputTimeZoneLabel = document.querySelector(".output-time-zone-label");
+const outputTimeZoneSearch = document.querySelector(".output-time-zone-search");
+const outputCountriesDropDown = document.querySelector(".output-countries-dropdown");
+const outputHourBox = document.querySelector("#output-hour");
+const outputMinuteBox = document.querySelector("#output-minute");
+const outputTimeFormatsBtns = document.querySelectorAll(".output-time-format-btn");
+const outputTimeFormatLabel = document.querySelector("#output-time-format-label");
+
+const inputCountryBtns = document.querySelectorAll(".input-country-btn");
+
+inputTimeZoneSearch.addEventListener("input", (event) => {
+	if(event.target.value !== "")
+	{
+		returnTimeZones(true, event.target.value);
+
+		for(let i = 0; i < inputCountryBtns.length; i++)
+		{
+			inputCountryBtns[i].addEventListener("click", () => {
+				inputTimeZoneLabel.innerHTML = inputCountryBtns[i].innerHTML;
+				console.log(inputCountryBtns[i].innerHTML);
+			});
+		}
+	}
+	else
+		inputCountriesDropDown.innerHTML = "";
+});
+
+
+outputTimeZoneSearch.addEventListener("input", (event) => {
+	if(event.target.value !== "")
+		returnTimeZones(false, event.target.value);
+	else
+		outputCountriesDropDown.innerHTML = "";
+});
 
 /*
 	Searching
@@ -38,61 +66,98 @@ searchBtn.addEventListener("click", () => {
 
 /*
 	Sorting
+*/
 
-const ascendingNamesBtn = document.querySelector("#ascendingNamesBtn");
-const descendingNamesBtn = document.querySelector("#descendingNamesBtn");
-const ascendingCodesBtn = document.querySelector("#ascendingCodesBtn");
-const descendingCodesBtn = document.querySelector("#descendingCodesBtn");
+const ascendingNamesBtn = document.querySelector("#ascending-names-btn");
+const descendingNamesBtn = document.querySelector("#descending-names-btn");
+const ascendingTimesBtn = document.querySelector("#ascending-times-btn");
+const descendingTimesBtn = document.querySelector("#descending-times-btn");
+const ascendingDatesBtn = document.querySelector("#ascending-dates-btn");
+const descendingDatesBtn = document.querySelector("#descending-dates-btn");
 
-ascendingNamesBtn.addEventListener('change', function(){
-	if(ascendingNamesBtn.checked)
+ascendingNamesBtn.addEventListener('change', function(event){
+	if(event.target.checked)
 	{
-		ascendingCodeMode = false;
-		descendingCodeMode = false;
 		ascendingNamesMode = true;
 		descendingNamesMode = false;
+		ascendingTimeMode = false;
+		descendingTimeMode = false;
+		ascendingDateMode = false;
+		descendingDateMode = false;
 
 		render();
 	}
 });
 
-descendingNamesBtn.addEventListener('change', function(){
-	if(descendingNamesBtn.checked)
+descendingNamesBtn.addEventListener('change', function(event){
+	if(event.target.checked)
 	{
-		ascendingCodeMode = false;
-		descendingCodeMode = false;
 		ascendingNamesMode = false;
 		descendingNamesMode = true;
+		ascendingTimeMode = false;
+		descendingTimeMode = false;
+		ascendingDateMode = false;
+		descendingDateMode = false;
 
 		render();
 	}
 });
 
-ascendingCodesBtn.addEventListener('change', function(){
-	if(ascendingCodesBtn.checked)
+ascendingTimesBtn.addEventListener('change', function(event){
+	if(event.target.checked)
 	{
-		ascendingCodeMode = true;
-		descendingCodeMode = false;
 		ascendingNamesMode = false;
 		descendingNamesMode = false;
+		ascendingTimeMode = true;
+		descendingTimeMode = false;
+		ascendingDateMode = false;
+		descendingDateMode = false;
 
 		render();
 	}
 });
 
-descendingCodesBtn.addEventListener('change', function(){
-	if(descendingCodesBtn.checked)
+descendingTimesBtn.addEventListener('change', function(event){
+	if(event.target.checked)
 	{
-		ascendingCodeMode = false;
-		descendingCodeMode = true;
 		ascendingNamesMode = false;
 		descendingNamesMode = false;
+		ascendingTimeMode = false;
+		descendingTimeMode = true;
+		ascendingDateMode = false;
+		descendingDateMode = false;
 
 		render();
 	}
 });
 
-*/
+ascendingDatesBtn.addEventListener('change', function(event){
+	if(event.target.checked)
+	{
+		ascendingNamesMode = false;
+		descendingNamesMode = false;
+		ascendingTimeMode = false;
+		descendingTimeMode = false;
+		ascendingDateMode = true;
+		descendingDateMode = false;
+
+		render();
+	}
+});
+
+descendingDatesBtn.addEventListener('change', function(event){
+	if(event.target.checked)
+	{
+		ascendingNamesMode = false;
+		descendingNamesMode = false;
+		ascendingTimeMode = false;
+		descendingTimeMode = false;
+		ascendingDateMode = false;
+		descendingDateMode = true;
+
+		render();
+	}
+});
 
 /*
 	Filtering
@@ -102,19 +167,43 @@ descendingCodesBtn.addEventListener('change', function(){
 	Filter time
 */
 
+const timeFilterBoxes = document.querySelectorAll(".time-filter");
 const filterHoursBox = document.querySelector("#filter-hours-value");
 const filterMinutesBox = document.querySelector("#filter-minutes-value");
 
-filterHoursBox.addEventListener("input", (event) => {
-	const hour = (event.target.value === "") ? -1 : event.target.value;
-	const minute = (filterMinutesBox.value === "") ? -1 : filterMinutesBox.value;
-	filterToTime(hour, minute);
-});
+const filterDayTimeSelector = document.querySelectorAll(".filter-day-time-selector");
+const dayTimeSelector = document.querySelector("#day-time-selector");
+const amOption = document.querySelector("#am-day-time-selector");
+const pmOption = document.querySelector("#pm-day-time-selector");
+const anyOption = document.querySelector("#any-day-time-selector");
 
-filterMinutesBox.addEventListener("input", (event) => {
-	const hour = (filterHoursBox.value === "") ? -1 : filterHoursBox.value;
-	const minute = (event.target.value === "") ? -1 : event.target.value;
-	filterToTime(hour, minute);
-});
+function callTimeFilter(hourValue, minuteValue, dayTimeValue){
+	const hour = (hourValue === "") ? -1 : hourValue;
+	const minute = (minuteValue === "") ? -1 : minuteValue;
+	filterToTime(hour, minute, dayTimeValue);
+}
 
+dayTimeSelector.value = anyOption.value;
+dayTimeSelector.innerHTML = anyOption.innerHTML;
+
+for(let i = 0; i < timeFilterBoxes.length; i++)
+{
+	timeFilterBoxes[i].addEventListener("input", () => {
+		filterTimeMode = true;
+		render();
+	});
+}
+
+for(let i = 0; i < filterDayTimeSelector.length; i++)
+{
+	filterDayTimeSelector[i].addEventListener("click", (event) => {
+		dayTimeSelector.value = event.target.value;
+		dayTimeSelector.innerHTML = event.target.innerHTML;
+
+		filterTimeMode = true;
+		render();
+	});
+}
+
+getUserCountry();    // Write time conversion values
 defaultRender();     // Write the table

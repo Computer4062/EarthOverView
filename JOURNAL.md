@@ -183,3 +183,13 @@
 5. I also figured out that there is an order which we should follow when writing these features that will yield the most out of our time
 6. I rewrote the filter continents and the filter time functions
 7. I used a lot of help from AI
+
+11/08/2024
+
+1. I made it so that when the render function is called the table will be generated, sorted and filtered
+2. This way everything worked really smoothly
+3. I also completed the search function very quickly
+4. I now have to do the time conversions feature
+5. Most of the neccessary logic is completed
+6. Now I just have to link the interface to that logic
+7. It turned out this way because I decided to rewrite everything except the Converter.js file which holds the functions for time conversion logic

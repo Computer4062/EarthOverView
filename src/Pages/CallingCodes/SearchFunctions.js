@@ -32,21 +32,17 @@ function searchName(name){
 }
 
 function searchCodes(code){
-	let countryData = [];
 	let countriesData = [];
 
 	for(let i = 0; i < currentTableList.length; i++)
 	{
 		if(code == currentTableList[i][2])
-		{
-			countryData = currentTableList[i];
-			countriesData.push(countryData);
-		}
+			countriesData.push(currentTableList[i]);
 	}
 
 	searchSection.classList.remove("hidden");
 
-	if(countryData.length !== 0)
+	if(countriesData.length !== 0)
 	{
 		searchTable.innerHTML = "";
 

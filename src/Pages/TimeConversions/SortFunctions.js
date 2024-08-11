@@ -22,46 +22,20 @@ function sortDescendingNames(){
 }
 
 function sortAscendingTimes(){
-	currentTableList.sort((a, b) => {
-  		const timeA = a[3].replace(/\s+/g, '');
-    	const timeB = b[3].replace(/\s+/g, '');
+ 	currentTableList.sort((a, b) => {
+    	const timeA = moment(`${a[4]} ${a[3]}`, "DD/MM hh:mm A");
+    	const timeB = moment(`${b[4]} ${b[3]}`, "DD/MM hh:mm A");
 
-    	const [hoursA, minutesA] = timeA.split(':');
-    	const [hoursB, minutesB] = timeB.split(':');
-
-    	const isAMa = timeA.includes('AM');
-    	const isAMb = timeB.includes('AM');
-
-    	// Convert hours to 24-hour format
-    	const adjustedHoursA = isAMa ? parseInt(hoursA, 10) : (hoursA === '12' ? 0 : parseInt(hoursA, 10) + 12);
-    	const adjustedHoursB = isAMb ? parseInt(hoursB, 10) : (hoursB === '12' ? 0 : parseInt(hoursB, 10) + 12);
-
-    	const totalMinutesA = adjustedHoursA * 60 + parseInt(minutesA, 10);
-    	const totalMinutesB = adjustedHoursB * 60 + parseInt(minutesB, 10);
-
-    	return totalMinutesA - totalMinutesB;
-	});
+    	return timeA.diff(timeB);
+  	});
 }
 function sortDescendingTimes(){
-	currentTableList.sort((a, b) => {
-  		const timeA = a[3].replace(/\s+/g, '');
-    	const timeB = b[3].replace(/\s+/g, '');
+ 	currentTableList.sort((a, b) => {
+    	const timeA = moment(`${a[4]} ${a[3]}`, "DD/MM hh:mm A");
+    	const timeB = moment(`${b[4]} ${b[3]}`, "DD/MM hh:mm A");
 
-    	const [hoursA, minutesA] = timeA.split(':');
-    	const [hoursB, minutesB] = timeB.split(':');
-
-    	const isAMa = timeA.includes('AM');
-    	const isAMb = timeB.includes('AM');
-
-    	// Convert hours to 24-hour format
-    	const adjustedHoursA = isAMa ? parseInt(hoursA, 10) : (hoursA === '12' ? 0 : parseInt(hoursA, 10) + 12);
-    	const adjustedHoursB = isAMb ? parseInt(hoursB, 10) : (hoursB === '12' ? 0 : parseInt(hoursB, 10) + 12);
-
-    	const totalMinutesA = adjustedHoursA * 60 + parseInt(minutesA, 10);
-    	const totalMinutesB = adjustedHoursB * 60 + parseInt(minutesB, 10);
-
-    	return totalMinutesB - totalMinutesA;
-	});
+    	return timeB.diff(timeA);
+  	});
 }
 
 function sortAscendingDates(){

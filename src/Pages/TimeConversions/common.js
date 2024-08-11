@@ -3,6 +3,7 @@ let continentsToRender = [];
 let currentTableList = [];
 
 const countriesJsonFileLocation = "../../Assets/Json/Countries.json";
+const countryCodesJsonFileLocation = "../../Assets/Json/CountryCodes.json";
 const jsonFileLocation = "../../Assets/Json/TimeZones.json";
 
 const searchTable = document.querySelector("#search-table-body");
@@ -11,42 +12,52 @@ const searchNotifier = document.querySelector("#search-section-notifier");
 const countriesTable = document.querySelector("#countries-list-table-body");
 
 /* modes */
-let ascendingCodeMode = false;
-let descendingCodeMode = false;
 let ascendingNamesMode = false;
 let descendingNamesMode = false;
+let ascendingTimeMode = false;
+let descendingTimeMode = false;
+let ascendingDateMode = false;
+let descendingDateMode = false;
+
+let filterTimeMode = false;
 
 /* Renderer */
 function render()
 {
-	/*
+	/* Do the sorting */
 	if(ascendingNamesMode) sortAscendingNames();
 	else if(descendingNamesMode) sortDescendingNames();
-	else if(ascendingCodeMode) sortAscendingCodes();
-	else if(descendingCodeMode) sortDescendingCodes();
-	*/
+	else if(ascendingTimeMode) sortAscendingTimes();
+	else if(descendingTimeMode) sortDescendingTimes();
+	else if(ascendingDateMode) sortAscendingDates();
+	else if(descendingDateMode) sortDescendingDates();
+	
+	/* Do the filtering */
+	if(filterTimeMode)
+	{
+		callTimeFilter(filterHoursBox.value, filterMinutesBox.value, dayTimeSelector.value);
+	} /* If there is no filtering */
+	else
+	{
+		countriesTable.innerHTML = "";
+		var i = 0;
 
-	countriesTable.innerHTML = "";
-	var i = 0;
+		currentTableList.forEach(countryData => {
+			i++;
+			let htmlContent = `
+				<tr>
+				<th scope="row">${i}</th>
+				<td>${countryData[0]}</td>
+				<td>${countryData[1]}</td>
+				<td>${countryData[2]}</td>
+				<td>${countryData[3]}</td>
+				<td>${countryData[4]}</td>
+				</tr>
+			`;
 
-	// Clean the list
-	currentTableList = removeDuplicateElements(currentTableList);
-
-	currentTableList.forEach(countryData => {
-		i++;
-		let htmlContent = `
-			<tr>
-			<th scope="row">${i}</th>
-			<td>${countryData[0]}</td>
-			<td>${countryData[1]}</td>
-			<td>${countryData[2]}</td>
-			<td>${countryData[3]}</td>
-			<td>${countryData[4]}</td>
-			</tr>
-		`;
-
-		countriesTable.innerHTML += htmlContent;
-	});
+			countriesTable.innerHTML += htmlContent;
+		});
+	}
 
 	/* Reload the search section if it is activated so that it will also be sorted or filtered */
 	if(!searchSection.classList.contains("hidden"))

@@ -35,9 +35,9 @@ fetch(countriesJsonFileLocation)
 
 function returnTimeZones(input, country){
 	if(input)
-		inputTimeZoneDropDownList.innerHTML = "";
+		inputCountriesDropDown.innerHTML = "";
 	else
-		outputTimeZoneDropDownList.innerHTML = "";
+		outputCountriesDropDown.innerHTML = "";
 
 	let found = true;
 	let noZonesFound = true;
@@ -52,45 +52,43 @@ function returnTimeZones(input, country){
 			}
 		}
 
-		if(found)
+		if(found) // country found
 		{
-			if(timeZoneList[x][1] != undefined)
+			if(timeZoneList[x][1] != undefined) // time zone exsists in the json file for the country
 			{
 				let timeZoneStr = `${countryList[x]} (${timeZoneList[x][1]})`
 
-				if(input)
+				if(input) // If it is in the input section
 				{
-					inputTimeZoneDropDownList.innerHTML += `
-						<li><button class="dropdown-item input-country-btn" type="button">${timeZoneStr}</button></li>
+					inputCountriesDropDown.innerHTML += `
+						<li><button class="dropdown-item input-country-btn" type="button" value="${timeZoneStr}">${timeZoneStr}</button></li>
 					`
 
 					
 					inputTimeZone = timeZoneList[x][1];
 				}
-				else
+				else  // If it is in the output section
 				{
-					outputTimeZoneDropDownList.innerHTML += `
-						<li><button class="dropdown-item input-country-btn" type="button">${timeZoneStr}</button></li>
+					outputCountriesDropDown.innerHTML += `
+						<li><button class="dropdown-item output-country-btn" type="button")" value="${timeZoneStr}">${timeZoneStr}</button></li>
 					`
 
 					outputTimeZone = timeZoneList[x][1];
 				}
 
-				noZonesFound = false;
+				noZonesFound = false; // zone was found
 			}
-
-			found = false;
 		}
 
-		found = true;
+		found = true; // reset found value
 	}
 
-	if(noZonesFound)
+	if(noZonesFound) // tell user if no zone was found
 	{
 		if(input)
-			inputTimeZoneDropDownList.innerHTML = "<small>Could not find country (check spellings)</small>";
+			inputCountriesDropDown.innerHTML = "<small>Could not find country (check spellings)</small>";
 		else
-			outputTimeZoneDropDownList.innerHTML = "<small>Could not find country (check spellings)</small>";
+			outputCountriesDropDown.innerHTML = "<small>Could not find country (check spellings)</small>";
 	}
 }
 
@@ -139,13 +137,13 @@ function getUserCountry() {
 
 						const currentTime = currentTime12HourFormat();
 
-						inputHour.value = currentTime[0];
-						inputMinute.value = currentTime[1];
-						inputTimeFormat.innerHTML = currentTime[2];
+						inputHourBox.value = currentTime[0];
+						inputMinuteBox.value = currentTime[1];
+						inputTimeFormatLabel.innerHTML = currentTime[2];
 
-						outputHour.value = currentTime[0];
-						outputMinute.value = currentTime[1];
-						outputTimeFormat.innerHTML = currentTime[2];
+						outputHourBox.value = currentTime[0];
+						outputMinuteBox.value = currentTime[1];
+						outputTimeFormatLabel.innerHTML = currentTime[2];
 
 						break;
 					}
@@ -161,7 +159,7 @@ function getUserCountry() {
 	Time conversion between countries
 */
 
-function convertTimeToTimezone() {
+function convertTime() {
 	if(amPmFormat)
 	{
 		inputTime = `${inputHour.value}:${inputMinute.value} ${inputTimeFormat.innerHTML}`;

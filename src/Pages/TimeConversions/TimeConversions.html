@@ -43,8 +43,8 @@
 		<section id="time-search-section" class="my-5">
 			<div id="time-search-1">
 				<div class="dropdown mb-3" data-bs-theme="dark">
-					<button class="btn btn-dark border-white dropdown-toggle input-timezone-label" type="button" style="border-radius: 2px; width: 100%" data-bs-toggle="dropdown" aria-expanded="false">
-						Country Name
+					<button class="btn btn-dark border-white dropdown-toggle input-time-zone-label" type="button" style="border-radius: 2px; width: 100%" data-bs-toggle="dropdown" aria-expanded="false">
+						
 					</button>
 					<ul id="countries-select-dropdown" class="dropdown-menu">
 						<div class="input-group mb-3" data-bs-theme="dark">
@@ -62,7 +62,7 @@
 					<input type="text" aria-label="minute input" class="form-control border-white" id="input-minute">
 					
 					<div class="dropdown">
-						<button class="btn btn-dark border-white dropdown-toggle" id="input-time-format" type="button" style="border-radius: 2px" data-bs-toggle="dropdown" aria-expanded="false">
+						<button class="btn btn-dark border-white dropdown-toggle" id="input-time-format-label" type="button" style="border-radius: 2px" data-bs-toggle="dropdown" aria-expanded="false">
 							AM
 						</button>
 						<ul class="dropdown-menu">
@@ -80,8 +80,8 @@
 
 			<div id="time-search-2">
 				<div class="dropdown mb-3" data-bs-theme="dark">
-					<button class="btn btn-dark border-white dropdown-toggle output-timezone-label" type="button" style="border-radius: 2px; width: 100%" data-bs-toggle="dropdown" aria-expanded="false">
-						Country Name
+					<button class="btn btn-dark border-white dropdown-toggle output-time-zone-label" type="button" style="border-radius: 2px; width: 100%" data-bs-toggle="dropdown" aria-expanded="false">
+						
 					</button>
 					<ul id="countries-select-dropdown" class="dropdown-menu">
 						<div class="input-group mb-3" data-bs-theme="dark">
@@ -99,13 +99,13 @@
 					<input type="text" aria-label="minute input" class="form-control border-white" id="output-minute" style="background-color: #000" disabled >
 					
 					<div class="dropdown">
-						<button class="btn btn-dark border-white dropdown-toggle" id="output-time-format" type="button" style="border-radius: 2px" data-bs-toggle="dropdown" aria-expanded="false" disabled>
+						<button class="btn btn-dark border-white dropdown-toggle" id="output-time-format-label" type="button" style="border-radius: 2px" data-bs-toggle="dropdown" aria-expanded="false" disabled>
 							AM
 						</button>
 						<ul class="dropdown-menu">
-							<li><button class="dropdown-item output-time-format-btn" type="button">AM</button></li>
-							<li><button class="dropdown-item output-time-format-btn" type="button">PM</button></li>
-							<li><button class="dropdown-item output-time-format-btn" type="button">24-hour</button></li>
+							<li><button class="dropdown-item output-time-format-btn" id="am-option" type="button">AM</button></li>
+							<li><button class="dropdown-item output-time-format-btn" id="pm-option" type="button">PM</button></li>
+							<li><button class="dropdown-item output-time-format-btn" id="24-hour" type="button">24-hour</button></li>
 						</ul>
 					</div>
 				</div>
@@ -116,7 +116,7 @@
 			<div class="input-group mb-3" data-bs-theme="dark">
 				<button id="filter-btn" class="btn btn-outline-light" type="button" id="inputGroupFileAddon03"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16"><path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2z"/></svg></button>
 				<button id="sort-btn" class="btn btn-outline-light" type="button" id="inputGroupFileAddon03"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sort-up" viewBox="0 0 16 16"><path d="M3.5 12.5a.5.5 0 0 1-1 0V3.707L1.354 4.854a.5.5 0 1 1-.708-.708l2-1.999.007-.007a.5.5 0 0 1 .7.006l2 2a.5.5 0 1 1-.707.708L3.5 3.707zm3.5-9a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5M7.5 6a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1z"/></svg></button>
-				<input id ="search-box" class="form-control border-white" style="background-color: #000" type="search" placeholder="Search by country, currency code, currency unit, symbol..." aria-describedby="search box" aria-label="Upload">
+				<input id ="search-box" class="form-control border-white" style="background-color: #000" type="search" placeholder="Search by country, time zone, date..." aria-describedby="search box" aria-label="Upload">
 				<button id="search-btn" class="btn btn-outline-light" type="button" id="inputGroupFileAddon03"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/></svg></button>
 			</div>
 		</section>
@@ -135,33 +135,17 @@
 							<input type="text" placeholder="minute" aria-label="minute value" id="filter-minutes-value" class="form-control time-filter" />
 
 							<div class="dropdown">
-								<button class="btn btn-dark btn-outline-light dropdown-toggle" id="filter-day-time" type="button" style="border-radius: 2px; border-color: #495057" data-bs-toggle="dropdown" aria-expanded="false">
-									AM
+								<button class="btn btn-dark btn-outline-light dropdown-toggle" id="day-time-selector" type="button" value="AM" style="border-radius: 2px; border-color: #495057" data-bs-toggle="dropdown" aria-expanded="false">
+									
 								</button>
 								<ul class="dropdown-menu">
-									<li><button class="dropdown-item filter-day-time-selector" type="button">AM</button></li>
-									<li><button class="dropdown-item filter-day-time-selector" type="button">PM</button></li>
+									<li><button class="dropdown-item filter-day-time-selector" id="am-day-time-selector" value="A" type="button">AM</button></li>
+									<li><button class="dropdown-item filter-day-time-selector" id="pm-day-time-selector" value="P" type="button">PM</button></li>
+									<li><button class="dropdown-item filter-day-time-selector" id="any-day-time-selector" value="ANY" type="button">ANY</button></li>
 								</ul>
 							</div>
 						</div>
 					</div>
-
-				<div class="mt-3">
-					<p class="options-subtitle">Filter to AM/PM</p>
-					<div class="input-group" data-bs-theme="dark">
-					<div class="input-group-text">
-						<input class="form-check-input mt-0 filter-to-ampm" id="filter-to-am" type="checkbox" value="" aria-label="Check box following text: AM">
-						<label class="form-check-label">AM</label>
-					</div>
-					</div>
-
-					<div class="input-group mt-2" data-bs-theme="dark">
-					<div class="input-group-text">
-						<input class="form-check-input mt-0 filter-to-ampm" id="filter-to-pm" type="checkbox" value="" aria-label="Check box following text: PM">
-						<label class="form-check-label">PM</label>
-					</div>
-					</div>
-				<div>
 				</div>
 
 				<div id="options-section-2" class="mt-3">

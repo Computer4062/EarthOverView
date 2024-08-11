@@ -1,8 +1,8 @@
-function searchName(name){
+function searchName(text){
 	let countryData = "";
 	for(let i = 0; i < currentTableList.length; i++)
 	{
-		if(name.toLowerCase() == currentTableList[i][0].toLowerCase())
+		if(text.toLowerCase() == currentTableList[i][0].toLowerCase())
 		{
 			countryData = currentTableList[i];
 			break;
@@ -19,6 +19,42 @@ function searchName(name){
 			<td>${countryData[0]}</td>
 			<td>${countryData[1]}</td>
 			<td>${countryData[2]}</td>
+			<td>${countryData[3]}</td>
+			<td>${countryData[4]}</td>
+			</tr>
+		`;
+
+		searchNotifier.innerHTML = "<small>* Filter options affect the results *</small>";
+	}
+	else
+	{
+		searchZone(text);
+	}
+}
+
+function searchZone(text){
+	let countryData = "";
+	for(let i = 0; i < currentTableList.length; i++)
+	{
+		if(text.toLowerCase() == currentTableList[i][2].toLowerCase())
+		{
+			countryData = currentTableList[i];
+			break;
+		}
+	}
+
+	searchSection.classList.remove("hidden");
+
+	if(countryData)
+	{
+		searchTable.innerHTML = `
+			<tr>
+			<th scope="row">${1}</th>
+			<td>${countryData[0]}</td>
+			<td>${countryData[1]}</td>
+			<td>${countryData[2]}</td>
+			<td>${countryData[3]}</td>
+			<td>${countryData[4]}</td>
 			</tr>
 		`;
 
@@ -31,22 +67,18 @@ function searchName(name){
 	}
 }
 
-function searchCodes(code){
-	let countryData = [];
+function searchDate(text){
 	let countriesData = [];
 
 	for(let i = 0; i < currentTableList.length; i++)
 	{
-		if(code == currentTableList[i][2])
-		{
-			countryData = currentTableList[i];
-			countriesData.push(countryData);
-		}
+		if(text == currentTableList[i][4])
+			countriesData.push(currentTableList[i]);
 	}
 
 	searchSection.classList.remove("hidden");
 
-	if(countryData.length !== 0)
+	if(countriesData.length !== 0)
 	{
 		searchTable.innerHTML = "";
 
@@ -59,6 +91,8 @@ function searchCodes(code){
 				<td>${country[0]}</td>
 				<td>${country[1]}</td>
 				<td>${country[2]}</td>
+				<td>${country[3]}</td>
+				<td>${country[4]}</td>
 				</tr>
 			`;
 		});
@@ -74,7 +108,7 @@ function searchCodes(code){
 
 function search(text){
 	if(/\d/.test(text))
-		searchCodes(text);
+		searchDate(text);
 	else
 		searchName(text);
 }

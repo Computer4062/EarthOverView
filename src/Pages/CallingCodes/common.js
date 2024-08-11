@@ -16,30 +16,41 @@ let descendingCodeMode = false;
 let ascendingNamesMode = false;
 let descendingNamesMode = false;
 
+let filterToCallingCodes = false;
+
 /* Renderer */
 function render()
 {
+	/* Do the sorting */
 	if(ascendingNamesMode) sortAscendingNames();
 	else if(descendingNamesMode) sortDescendingNames();
 	else if(ascendingCodeMode) sortAscendingCodes();
 	else if(descendingCodeMode) sortDescendingCodes();
 
-	countriesTable.innerHTML = "";
+	/* Do the filtering */
+	if(filterToCallingCodes)
+	{
+		filterDigitsCaller();
+	} /* No filters */
+	else
+	{
+		countriesTable.innerHTML = "";
 
-	var i = 0;
-	currentTableList.forEach(countryData => {
-		i++;
-		let htmlContent = `
-			<tr>
-			<th scope="row">${i}</th>
-			<td>${countryData[0]}</td>
-			<td>${countryData[1]}</td>
-			<td>${countryData[2]}</td>
-			</tr>
-		`;
+		var i = 0;
+		currentTableList.forEach(countryData => {
+			i++;
+			let htmlContent = `
+				<tr>
+				<th scope="row">${i}</th>
+				<td>${countryData[0]}</td>
+				<td>${countryData[1]}</td>
+				<td>${countryData[2]}</td>
+				</tr>
+			`;
 
-		countriesTable.innerHTML += htmlContent;
-	});
+			countriesTable.innerHTML += htmlContent;
+		});
+	}
 
 	/* Reload the search section if it is activated so that it will also be sorted or filtered */
 	if(!searchSection.classList.contains("hidden"))

@@ -36,21 +36,17 @@ function searchName(text){
 }
 
 function searchCode(text){
-	let countryData = [];
 	let countriesData = [];
 
 	for(let i = 0; i < currentTableList.length; i++)
 	{
 		if(text.toLowerCase() == currentTableList[i][5].toLowerCase())
-		{
-			countryData = currentTableList[i];
-			countriesData.push(countryData);
-		}
+			countriesData.push(currentTableList[i]);
 	}
 
 	searchSection.classList.remove("hidden");
 
-	if(countryData.length !== 0)
+	if(countriesData.length !== 0)
 	{
 		searchTable.innerHTML = "";
 
@@ -79,21 +75,19 @@ function searchCode(text){
 }
 
 function searchUnit(text){
-	let countryData = [];
 	let countriesData = [];
 
 	for(let i = 0; i < currentTableList.length; i++)
 	{
 		if(text.toLowerCase() == currentTableList[i][3].toLowerCase())
 		{
-			countryData = currentTableList[i];
-			countriesData.push(countryData);
+			countriesData.push(currentTableList[i]);
 		}
 	}
 
 	searchSection.classList.remove("hidden");
 
-	if(countryData.length !== 0)
+	if(countriesData.length !== 0)
 	{
 		searchTable.innerHTML = "";
 

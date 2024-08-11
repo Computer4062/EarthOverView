@@ -121,11 +121,21 @@ descendingCodesBtn.addEventListener('change', function(event){
 
 const currencyUnitsFilter = document.querySelector("#currency-units-filter");
 
-currencyUnitsFilter.addEventListener('input', function(event){
-	if(event.target.value != "")
-		filterToUnits(event.target.value);
+function filterUnitsCaller(){
+	if(currencyUnitsFilter.value !== "")
+	{
+		filterToUnits(currencyUnitsFilter.value);
+	}
 	else
-		render();
+	{
+		filterToUnitsFlag = false;
+		renderContinent();
+	}
+}
+
+currencyUnitsFilter.addEventListener('input', function(){
+	filterToUnitsFlag = true;
+	render();
 });
 
 defaultRender();     // Write the table
