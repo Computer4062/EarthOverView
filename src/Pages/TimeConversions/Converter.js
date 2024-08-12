@@ -61,19 +61,14 @@ function returnTimeZones(input, country){
 				if(input) // If it is in the input section
 				{
 					inputCountriesDropDown.innerHTML += `
-						<li><button class="dropdown-item input-country-btn" type="button" value="${timeZoneStr}">${timeZoneStr}</button></li>
+						<li><button class="dropdown-item input-country-btn" type="button" value="${timeZoneList[x][1]}">${timeZoneStr}</button></li>
 					`
-
-					
-					inputTimeZone = timeZoneList[x][1];
 				}
 				else  // If it is in the output section
 				{
 					outputCountriesDropDown.innerHTML += `
-						<li><button class="dropdown-item output-country-btn" type="button")" value="${timeZoneStr}">${timeZoneStr}</button></li>
+						<li><button class="dropdown-item output-country-btn" type="button" value="${timeZoneList[x][1]}">${timeZoneStr}</button></li>
 					`
-
-					outputTimeZone = timeZoneList[x][1];
 				}
 
 				noZonesFound = false; // zone was found
@@ -132,18 +127,20 @@ function getUserCountry() {
 						inputTimeZoneLabel.innerHTML = `${countryList[i]} (${timeZoneList[i][1]})`;
 						outputTimeZoneLabel.innerHTML = `${countryList[i]} (${timeZoneList[i][1]})`;
 
-						inputTimeZone = timeZoneList[i][1];
-						outputTimeZone = timeZoneList[i][1];
+						inputTimeZoneLabel.value = `${timeZoneList[i][1]}`;
+						outputTimeZoneLabel.value = `${timeZoneList[i][1]}`;
 
 						const currentTime = currentTime12HourFormat();
 
 						inputHourBox.value = currentTime[0];
 						inputMinuteBox.value = currentTime[1];
 						inputTimeFormatLabel.innerHTML = currentTime[2];
+						inputTimeFormatLabel.value = currentTime[2][0];
 
 						outputHourBox.value = currentTime[0];
 						outputMinuteBox.value = currentTime[1];
 						outputTimeFormatLabel.innerHTML = currentTime[2];
+						outputTimeFormatLabel.value = currentTime[2][0];
 
 						break;
 					}
@@ -160,27 +157,32 @@ function getUserCountry() {
 */
 
 function convertTime() {
-	if(amPmFormat)
+	/* Use 24 hour format */
+	if(inputTimeFormatLabel.innerHTML === "24-hour")
 	{
-		inputTime = `${inputHour.value}:${inputMinute.value} ${inputTimeFormat.innerHTML}`;
-
-		const timeMoment = moment(inputTime, 'hh:mm A');
-		const convertedTime = timeMoment.tz(outputTimeZone).format('hh:mm A');
-
-		outputHour.value = `${convertedTime[0]}${convertedTime[1]}`;
-		outputMinute.value = `${convertedTime[3]}${convertedTime[4]}`;
-
-		outputTimeFormat.innerHTML = `${convertedTime[6]}${convertedTime[7]}`;
-		console.log(`${convertedTime[6]}${convertedTime[7]}`);
-	}
-	else
-	{
-		inputTime = `${inputHour.value}:${inputMinute.value}`;
+		const inputTime = `${inputHourBox.value}:${inputMinuteBox.value}`;
 
 		const timeMoment = moment(inputTime, 'HH:mm');
-		const convertedTime = timeMoment.tz(outputTimeZone).format('HH:mm');
+		const convertedTime = timeMoment.tz(outputTimeZoneLabel.value).format('HH:mm');
 
-		outputHour.value = `${convertedTime[0]}${convertedTime[1]}`;
-		outputMinute.value = `${convertedTime[3]}${convertedTime[4]}`;
+		outputHourBox.value = `${convertedTime[0]}${convertedTime[1]}`;
+		outputMinuteBox.value = `${convertedTime[3]}${convertedTime[4]}`;
+	}
+	/* Use AM/PM format */
+	else
+	{
+		const inputTime = `${inputHourBox.value}:${inputMinuteBox.value} ${inputTimeFormatLabel.innerHTML}`;
+
+		console.log(inputTime);
+
+		const timeMoment = moment.tz(inputTime, 'hh:mm A', inputTimeZoneLabel.value);
+		const convertedTime = timeMoment.tz(outputTimeZoneLabel.value).format('hh:mm A');
+
+		console.log(convertedTime);
+
+		outputHourBox.value = `${convertedTime[0]}${convertedTime[1]}`;
+		outputMinuteBox.value = `${convertedTime[3]}${convertedTime[4]}`;
+
+		outputTimeFormatLabel.innerHTML = `${convertedTime[6]}${convertedTime[7]}`;
 	}
 }

@@ -40,38 +40,3 @@ align-items: center;
 #title-banner p{
 margin: 0;
 }
-
-/* Time section */
-
-#time-search-section{
-margin-top: 9vh;
-margin-bottom: 12vh;
-}
-
-#arrow{
-margin-right: 15px;
-margin-left: 15px;
-}
-
-#time-search-section{
-display: flex;
-justify-content: center;
-align-items: center;
-}
-
-@media (max-width: 650px){
-	#time-search-section{
-	flex-direction: column;
-	}
-
-	#arrow{
-	transform: rotate(90deg);
-	margin-top: 15px;
-	margin-bottom: 15px;
-	}
-}
-
-#countries-select-dropdown{
-	background-color: #000;
-	padding: 10px;
-}

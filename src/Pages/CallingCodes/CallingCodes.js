@@ -17,6 +17,11 @@ searchBtn.addEventListener("click", () => {
 	search(searchBox.value);
 });
 
+searchBox.addEventListener("keyup", (event) => {
+	if(event.keyCode === 13)
+		search(searchBox.value);
+});
+
 /*
 	Sorting
 */

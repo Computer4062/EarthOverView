@@ -186,10 +186,14 @@
 
 11/08/2024
 
-1. I made it so that when the render function is called the table will be generated, sorted and filtered
-2. This way everything worked really smoothly
-3. I also completed the search function very quickly
-4. I now have to do the time conversions feature
-5. Most of the neccessary logic is completed
-6. Now I just have to link the interface to that logic
-7. It turned out this way because I decided to rewrite everything except the Converter.js file which holds the functions for time conversion logic
+1. I made it so that when the render function is called the table will be generated, sorted and filtered.
+2. This way everything worked really smoothly.
+3. I also edited all the other pages under the countries section to work this way.
+4. I also completed the search function very quickly.
+5. I now have to do the time conversions feature.
+6. Most of the neccessary logic is completed.
+7. Now I just have to link the interface to that logic.
+8. It turned out this way because I decided to rewrite everything except the Converter.js file which holds the functions for time conversion logic.
+10. I decided to spend the night completing the rest of the time conversions page.
+11. The entier conversions page was completed.
+12. I also started on the languages spoken page and it is more challenging than I thought.

@@ -18,18 +18,23 @@ const outputMinuteBox = document.querySelector("#output-minute");
 const outputTimeFormatsBtns = document.querySelectorAll(".output-time-format-btn");
 const outputTimeFormatLabel = document.querySelector("#output-time-format-label");
 
-const inputCountryBtns = document.querySelectorAll(".input-country-btn");
-
+/* Input time zone find */
 inputTimeZoneSearch.addEventListener("input", (event) => {
 	if(event.target.value !== "")
 	{
 		returnTimeZones(true, event.target.value);
 
+		const inputCountryBtns = document.querySelectorAll(".input-country-btn");
 		for(let i = 0; i < inputCountryBtns.length; i++)
 		{
 			inputCountryBtns[i].addEventListener("click", () => {
 				inputTimeZoneLabel.innerHTML = inputCountryBtns[i].innerHTML;
-				console.log(inputCountryBtns[i].innerHTML);
+				inputTimeZoneLabel.value = inputCountryBtns[i].value;
+
+				console.log("OUTPUT:", outputTimeZoneLabel.value);
+				console.log("INPUT:", inputTimeZoneLabel.value);
+
+				convertTime();
 			});
 		}
 	}
@@ -37,12 +42,52 @@ inputTimeZoneSearch.addEventListener("input", (event) => {
 		inputCountriesDropDown.innerHTML = "";
 });
 
-
+/* Output time zone find */
 outputTimeZoneSearch.addEventListener("input", (event) => {
 	if(event.target.value !== "")
+	{
 		returnTimeZones(false, event.target.value);
+
+		const outputCountryBtns = document.querySelectorAll(".output-country-btn");
+		for(let i = 0; i < outputCountryBtns.length; i++)
+		{
+			outputCountryBtns[i].addEventListener("click", () => {
+				outputTimeZoneLabel.innerHTML = outputCountryBtns[i].innerHTML;
+				outputTimeZoneLabel.value = outputCountryBtns[i].value;
+
+				console.log("OUTPUT:", outputTimeZoneLabel.value);
+				console.log("INPUT:", inputTimeZoneLabel.value);
+
+				convertTime();
+			});
+		}
+	}
 	else
 		outputCountriesDropDown.innerHTML = "";
+});
+
+/* Input time format button pressed */
+for(let i = 0; i < inputTimeFormatsBtns.length; i++)
+{
+	inputTimeFormatsBtns[i].addEventListener("click", () => {	
+		inputTimeFormatLabel.innerHTML = inputTimeFormatsBtns[i].innerHTML;
+
+		if(inputTimeFormatLabel.innerHTML === "24-hour")
+			outputTimeFormatLabel.innerHTML = "24-hour";
+
+		convertTime();
+	});
+}
+
+/* Input time boxes content changed */
+inputHourBox.addEventListener("input", (event) => {
+	if(event.target.value !== "")
+		convertTime();
+});
+
+inputMinuteBox.addEventListener("input", (event) => {
+	if(event.target.value !== "")
+		convertTime();
 });
 
 /*
@@ -62,6 +107,11 @@ closeBtn.addEventListener("click", () => {
 
 searchBtn.addEventListener("click", () => {
 	search(searchBox.value);
+});
+
+searchBox.addEventListener("keyup", (event) => {
+	if(event.keyCode === 13)
+		search(searchBox.value);
 });
 
 /*
