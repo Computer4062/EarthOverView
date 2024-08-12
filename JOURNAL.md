@@ -197,3 +197,12 @@
 10. I decided to spend the night completing the rest of the time conversions page.
 11. The entier conversions page was completed.
 12. I also started on the languages spoken page and it is more challenging than I thought.
+
+12/08/2024
+
+1. I completed the languages spoken page
+2. I also updated the search bar in every page to have some level of live search
+3. The columns in the tables actually looks misaligned and now I need to focus on fixing that
+4. I think it would have been much better if I had drawn the flow charts of how the sort, filter and search options work way before I started coding
+5. I also have to update the Figma prototypes
+6. I can now get started on the rest of the pages

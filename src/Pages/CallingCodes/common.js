@@ -9,6 +9,7 @@ const searchTable = document.querySelector("#search-table-body");
 const searchNotifier = document.querySelector("#search-section-notifier");
 
 const countriesTable = document.querySelector("#countries-list-table-body");
+const tableColumns = {"country": 0, "code": 1, "continent": 2};
 
 /* modes */
 let ascendingCodeMode = false;
@@ -42,9 +43,9 @@ function render()
 			let htmlContent = `
 				<tr>
 				<th scope="row">${i}</th>
-				<td>${countryData[0]}</td>
-				<td>${countryData[1]}</td>
-				<td>${countryData[2]}</td>
+				<td>${countryData[tableColumns.country]}</td>
+				<td>${countryData[tableColumns.code]}</td>
+				<td>${countryData[tableColumns.continent]}</td>
 				</tr>
 			`;
 
@@ -54,7 +55,7 @@ function render()
 
 	/* Reload the search section if it is activated so that it will also be sorted or filtered */
 	if(!searchSection.classList.contains("hidden"))
-		search(searchBox.value);
+		searchCaller();
 }
 
 /* Default renderer - played at the beginning */
@@ -88,13 +89,13 @@ function defaultRender(){
 					<tr>
 					<th scope="row">${i}</th>
 					<td>${countryData[0]}</td>
-					<td>${countryData[1]}</td>
 					<td>${code[countryData[0]]}</td>
+					<td>${countryData[1]}</td>
 					</tr>
 				`;
 
 				countriesTable.innerHTML += htmlContent;
-				currentTableList.push([countryData[0], countryData[1], code[countryData[0]]]);
+				currentTableList.push([countryData[0], code[countryData[0]], countryData[1]]);
 			});
 		})
 	.catch(error => {

@@ -9,30 +9,23 @@ const searchTable = document.querySelector("#search-table-body");
 const searchNotifier = document.querySelector("#search-section-notifier");
 
 const countriesTable = document.querySelector("#countries-list-table-body");
+const tableColumns = {"country": 0, "lang": 1, "code": 2, "continent": 3};
 
 /* modes */
-let ascendingNamesMode = false;
-let descendingNamesMode = false;
-let ascendingUnitsMode = false;
-let descendingUnitsMode = false;
-let ascendingCodesMode = false;
-let descendingCodesMode = false;
+let ascendingCountryNamesMode = false;
+let descendingCountryNamesMode = false;
 
-let filterToUnitsFlag = false;
+let filterToLanguageNameFlag = false;
 
 /* Renderer */
 function render()
 {
-	if(ascendingNamesMode) sortAscendingNames();
-	else if(descendingNamesMode) sortDescendingNames();
-	else if(ascendingUnitsMode) sortAscendingUnits();
-	else if(descendingUnitsMode) sortDescendingUnits();
-	else if(ascendingCodesMode) sortAscendingCodes();
-	else if(descendingCodesMode) sortDescendingCodes();
+	if(ascendingCountryNamesMode) sortAscendingNames();
+	else if(descendingCountryNamesMode) sortDescendingNames();
 
-	if(filterToUnitsFlag)
+	if(filterToLanguageNameFlag)
 	{
-		filterUnitsCaller();
+		filterLanguageNameCaller();
 	}
 	else
 	{
@@ -44,11 +37,18 @@ function render()
 			let htmlContent = `
 				<tr>
 				<th scope="row">${i}</th>
-				<td>${countryData[0]}</td>
-				<td>${countryData[1]}</td>
-				<td>${countryData[2]}</td>
-				<td>${countryData[3]}</td>
-				<td>${countryData[4]}</td>
+				<td>${countryData[tableColumns.country]}</td>
+				<td>
+					<ul>
+						${countryData[2].map(lang => `<li>${lang}</li>`).join('')}
+					</ul>					
+					</td>
+				<td>
+					<ul>
+						${countryData[3].map(code => `<li>${code}</li>`).join('')}
+					</ul>
+				</td>
+				<td>${countryData[tableColumns.continent]}</td>
 				</tr>
 			`;
 
@@ -59,7 +59,7 @@ function render()
 
 	/* Reload the search section if it is activated so that it will also be sorted or filtered */
 	if(!searchSection.classList.contains("hidden"))
-		search(searchBox.value);
+		searchCaller();
 }
 
 /* Default renderer - played at the beginning */
@@ -88,23 +88,27 @@ function defaultRender(){
 			countriesTable.innerHTML = "";
 
 			listOfCountries.forEach(countryData => {
-				
-
-				const filteredCodes = codes.filter(code => code.startsWith('c'));
-				const joinedCodes = filteredCodes.join(' / ');
-
 				i++;
 				let htmlContent = `
 					<tr>
 					<th scope="row">${i}</th>
 					<td>${countryData[0]}</td>
+					<td>
+						<ul>
+							${languages[countryData[0]].language.map(lang => `<li>${lang}</li>`).join('')}
+						</ul>
+					</td>
+					<td>
+						<ul>
+							${languages[countryData[0]].iso639_1.map(code => `<li>${code}</li>`).join('')}
+						</ul>
+					</td>
 					<td>${countryData[1]}</td>
-					<td>${languages[countryData[0]].language.join(" / ")}</td>
 					</tr>
 				`;
 
 				countriesTable.innerHTML += htmlContent;
-				currentTableList.push([countryData[0], countryData[1], languages[countryData[0]].language, languages[countryData[0]].iso639_1, languages[countryData[0]].iso639_2]);
+				currentTableList.push([countryData[0], languages[countryData[0]].language, languages[countryData[0]].iso639_1, countryData[1]]);
 			});
 		})
 	.catch(error => {

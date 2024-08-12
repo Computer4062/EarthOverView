@@ -12,12 +12,12 @@ function renderContinent(){
 
 			fetch(jsonFileLocation)
 				.then(response => response.json())
-				.then(currencies => {
+				.then(language => {
 					continentsList.forEach(continent => {
 						region[continent].forEach(country => {
-							currentTableList.push([country, continent, currencies[country].currency, currencies[country].unit, currencies[country].symbol, currencies[country].code]);
-						})
-					})
+							currentTableList.push([country, language[country].language, language[country].iso639_1, continent]);
+						});
+					});
 
 					render();
 				})
@@ -30,25 +30,59 @@ function renderContinent(){
 	});
 }
 
-function filterToUnits(currencyUnit){
-	countriesTable.innerHTML = "";
+function filterToLanguageName(languageName){
+	countriesTable.innerHTML = ""; // Clear the table
 
 	let counter = 0;
-	for(let i = 0; i < currentTableList.length; i++){
-		if(currentTableList[i][3].toLowerCase() === currencyUnit.toLowerCase())
+	for(let i = 0; i < currentTableList.length; i++){ // Iterate through the current elements
+		let found = false;
+		for(let x = 0; x < currentTableList[i][tableColumns.lang].length; x++){ // Iterate through the language names
+			if(currentTableList[i][tableColumns.lang][x].length >= languageName.length)
+			{
+				for(let j = 0; j < languageName.length; j++) // Iterate through the search box value
+				{
+					/* Check if search results are similar */
+					if(languageName[j].toLowerCase() === currentTableList[i][tableColumns.lang][x][j].toLowerCase())
+					{
+						found = true;
+					}
+					else
+					{
+						found = false;
+						break;
+					}
+				}
+
+				if(found)
+					break;
+			}
+			else
+			{
+				found = false;
+			}
+		}
+
+		if(found) // Search results found
 		{
+			nothingFound = false;
 			counter++;
 			countriesTable.innerHTML += `
-			<tr>
-			<th scope="row">${counter}</th>
-			<td>${currentTableList[i][0]}</td>
-			<td>${currentTableList[i][1]}</td>
-			<td>${currentTableList[i][2]}</td>
-			<td>${currentTableList[i][3]}</td>
-			<td>${currentTableList[i][4]}</td>
-			<td>${currentTableList[i][5]}</td>
-			</tr>
-			`
+				<tr>
+				<th scope="row">${counter}</th>
+				<td>${currentTableList[i][tableColumns.country]}</td>
+				<td>
+					<ul>
+						${currentTableList[i][tableColumns.lang].map(lang => `<li>${lang}</li>`).join('')}
+					</ul>					
+					</td>
+				<td>
+					<ul>
+						${currentTableList[i][tableColumns.code].map(code => `<li>${code}</li>`).join('')}
+					</ul>
+				</td>
+				<td>${currentTableList[i][tableColumns.continent]}</td>
+				</tr>
+			`;
 		}
-	};
+	}
 }

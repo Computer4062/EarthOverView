@@ -7,20 +7,22 @@ const searchBox = document.querySelector("#search-box");
 const searchSection = document.querySelector("#search-section");
 const closeBtn = document.querySelector("#close-button");
 
-let displaySearchSection = false;
-
 closeBtn.addEventListener("click", () => {
 	searchSection.classList.add("hidden");
 });
 
-searchBtn.addEventListener("click", () => {
-	search(searchBox.value);
+searchBox.addEventListener("input", (event) => {
+	searchCaller();
 });
 
-searchBox.addEventListener("keyup", (event) => {
-	if(event.keyCode === 13)
+function searchCaller(){
+	if(searchBox.value !== ""){
 		search(searchBox.value);
-});
+	}else{
+		searchSection.classList.add("hidden");
+		searchTable.innerHTML = "";
+	}
+}
 
 /*
 	Sorting

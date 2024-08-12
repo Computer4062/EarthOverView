@@ -15,7 +15,7 @@ function renderContinent(){
 				.then(demoynms => {
 					continentsList.forEach(continent => {
 						region[continent].forEach(country => {
-							currentTableList.push([country, continent, demoynms[country]]);
+							currentTableList.push([country, demoynms[country], continent]);
 						})
 					})
 

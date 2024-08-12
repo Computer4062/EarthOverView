@@ -6,116 +6,72 @@ const searchBtn = document.querySelector("#search-btn");
 const searchBox = document.querySelector("#search-box");
 const searchSection = document.querySelector("#search-section");
 const closeBtn = document.querySelector("#close-button");
+const searchOptionLabel = document.querySelector("#search-option-label")
+const searchOptions = document.querySelectorAll(".search-options");
 
-let displaySearchSection = false;
+const searchOptionPlaceHolders = ["Country Name", "Language Name", "Language Code"];
+
+searchOptionLabel.innerHTML = searchOptions[0].value;
+searchBox.placeholder = "Search by " + searchOptionPlaceHolders[0] + "...";
+searchOption = 0;
+
+for(let i = 0; i < searchOptions.length; i++)
+{
+	searchOptions[i].addEventListener("click", () => {
+		searchOptionLabel.innerHTML = searchOptions[i].value;
+		searchBox.placeholder = "Search by " + searchOptionPlaceHolders[i] + "...";
+		searchOption = i;
+
+		searchCaller();
+	});
+}
 
 closeBtn.addEventListener("click", () => {
 	searchSection.classList.add("hidden");
 });
 
-searchBtn.addEventListener("click", () => {
-	search(searchBox.value);
+searchBox.addEventListener('input', () => {
+	searchCaller();
 });
 
-searchBox.addEventListener("keyup", (event) => {
-	if(event.keyCode === 13)
+function searchCaller()
+{
+	if(searchBox.value !== "")
 		search(searchBox.value);
-});
+	else
+	{
+		searchTable.innerHTML = "";
+		searchSection.classList.add("hidden");
+	}
+}
 
 /*
 	Sorting
 */
 
-const ascendingNamesBtn = document.querySelector("#ascending-names-btn");
-const descendingNamesBtn = document.querySelector("#descending-names-btn");
-const ascendingUnitsBtn = document.querySelector("#ascending-units-btn");
-const descendingUnitsBtn = document.querySelector("#descending-units-btn");
-const ascendingCodesBtn = document.querySelector("#ascending-codes-btn");
-const descendingCodesBtn = document.querySelector("#descending-codes-btn");
+const ascendingCountryNamesBtn = document.querySelector("#ascending-country-names-btn");
+const descendingCountryNamesBtn = document.querySelector("#descending-country-names-btn");
 
-ascendingNamesBtn.addEventListener('change', function(event){
+ ascendingCountryNamesBtn.addEventListener('change', function(event){
 	if(event.target.checked)
 	{
-		ascendingCodesMode = false;
-		descendingCodesMode = false;
-		ascendingNamesMode = true;
-		descendingNamesMode = false;
-		ascendingUnitsMode = false;
-		descendingUnitsMode = false;
+		ascendingCountryNamesMode = true;
+		descendingCountryNamesMode = false;
 
 		render();
 	}
 });
 
-descendingNamesBtn.addEventListener('change', function(event){
+descendingCountryNamesBtn.addEventListener('change', function(event){
 	if(event.target.checked)
 	{
-		ascendingCodesMode = false;
-		descendingCodesMode = false;
-		ascendingNamesMode = false;
-		descendingNamesMode = true;
-		ascendingUnitsMode = false;
-		descendingUnitsMode = false;
+		ascendingCountryNamesMode = false;
+		descendingCountryNamesMode = true;
 
 		render();
 	}
 });
 
-ascendingUnitsBtn.addEventListener('change', function(event){
-	if(event.target.checked)
-	{
-		ascendingCodesMode = false;
-		descendingCodesMode = false;
-		ascendingNamesMode = false;
-		descendingNamesMode = false;
-		ascendingUnitsMode = true;
-		descendingUnitsMode = false;
-
-		render();
-	}
-});
-
-descendingUnitsBtn.addEventListener('change', function(event){
-	if(event.target.checked)
-	{
-		ascendingCodesMode = false;
-		descendingCodesMode = false;
-		ascendingNamesMode = false;
-		descendingNamesMode = false;
-		ascendingUnitsMode = false;
-		descendingUnitsMode = true;
-
-		render();
-	}
-});
-
-ascendingCodesBtn.addEventListener('change', function(event){
-	if(event.target.checked)
-	{
-		ascendingCodesMode = true;
-		descendingCodesMode = false;
-		ascendingNamesMode = false
-		descendingNamesMode = false;
-		ascendingUnitsMode = false;
-		descendingUnitsMode = false;
-
-		render();
-	}
-});
-
-descendingCodesBtn.addEventListener('change', function(event){
-	if(event.target.checked)
-	{
-		ascendingCodesMode = false;
-		descendingCodesMode = true;
-		ascendingNamesMode = false;
-		descendingNamesMode = false;
-		ascendingUnitsMode = false;
-		descendingUnitsMode = false;
-
-		render();
-	}
-});
 /*
 	Filtering
 */
@@ -124,22 +80,22 @@ descendingCodesBtn.addEventListener('change', function(event){
 	Filtering units
 */
 
-const currencyUnitsFilter = document.querySelector("#currency-units-filter");
+const languageNameFilter = document.querySelector("#language-name-filter");
 
-function filterUnitsCaller(){
-	if(currencyUnitsFilter.value !== "")
+function filterLanguageNameCaller(){
+	if(languageNameFilter.value !== "")
 	{
-		filterToUnits(currencyUnitsFilter.value);
+		filterToLanguageName(languageNameFilter.value);
 	}
 	else
 	{
-		filterToUnitsFlag = false;
+		filterToLanguageNameFlag = false;
 		renderContinent();
 	}
 }
 
-currencyUnitsFilter.addEventListener('input', function(){
-	filterToUnitsFlag = true;
+languageNameFilter.addEventListener('input', function(){
+	filterToLanguageNameFlag = true;
 	render();
 });
 

@@ -15,7 +15,7 @@ function renderContinent(){
 				.then(currencies => {
 					continentsList.forEach(continent => {
 						region[continent].forEach(country => {
-							currentTableList.push([country, continent, currencies[country].currency, currencies[country].unit, currencies[country].symbol, currencies[country].code]);
+							currentTableList.push([country, currencies[country].unit, currencies[country].currency, currencies[country].symbol, currencies[country].code, continent]);
 						})
 					})
 
@@ -31,24 +31,48 @@ function renderContinent(){
 }
 
 function filterToUnits(currencyUnit){
-	countriesTable.innerHTML = "";
+	countriesTable.innerHTML = ""; // Clear the table
 
 	let counter = 0;
-	for(let i = 0; i < currentTableList.length; i++){
-		if(currentTableList[i][3].toLowerCase() === currencyUnit.toLowerCase())
+	let nothingFound = true;
+
+	for(let i = 0; i < currentTableList.length; i++){ // Iterate through the current elements
+		let found = false;
+		if(currentTableList[i][tableColumns.unit].length >= currencyUnit.length){
+			for(let j = 0; j < currencyUnit.length; j++) // Iterate through the search box value
+			{
+				/* Check if search results are similar */
+					if(currencyUnit[j].toLowerCase() === currentTableList[i][tableColumns.unit][j].toLowerCase())
+					{
+						found = true;
+					}
+					else
+					{
+						found = false;
+						break;
+					}
+			}
+		} else {
+			found = false;
+		}
+
+		if(found) // Search results found
 		{
+			nothingFound = false;
 			counter++;
 			countriesTable.innerHTML += `
-			<tr>
-			<th scope="row">${counter}</th>
-			<td>${currentTableList[i][0]}</td>
-			<td>${currentTableList[i][1]}</td>
-			<td>${currentTableList[i][2]}</td>
-			<td>${currentTableList[i][3]}</td>
-			<td>${currentTableList[i][4]}</td>
-			<td>${currentTableList[i][5]}</td>
-			</tr>
-			`
+				<tr>
+				<th scope="row">${counter}</th>
+				<td>${currentTableList[i][tableColumns.country]}</td>
+				<td>${currentTableList[i][tableColumns.unit]}</td>
+				<td>${currentTableList[i][tableColumns.name]}</td>
+				<td>${currentTableList[i][tableColumns.symbol]}</td>
+				<td>${currentTableList[i][tableColumns.code]}</td>
+				<td>${currentTableList[i][tableColumns.continent]}</td>
+				</tr>
+			`;
+
+			searchNotifier.innerHTML = "<small>* Filter options affect the results *</small>";
 		}
-	};
+	}
 }

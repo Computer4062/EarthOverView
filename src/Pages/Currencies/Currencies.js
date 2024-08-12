@@ -6,21 +6,42 @@ const searchBtn = document.querySelector("#search-btn");
 const searchBox = document.querySelector("#search-box");
 const searchSection = document.querySelector("#search-section");
 const closeBtn = document.querySelector("#close-button");
+const searchOptionLabel = document.querySelector("#search-option-label")
+const searchOptions = document.querySelectorAll(".search-options");
 
-let displaySearchSection = false;
+const searchOptionPlaceHolders = ["Country Name", "Currency Unit", "Currency Code"];
+
+searchOptionLabel.innerHTML = searchOptions[0].value;
+searchBox.placeholder = "Search by " + searchOptionPlaceHolders[0] + "...";
+searchOption = 0;
+
+for(let i = 0; i < searchOptions.length; i++)
+{
+	searchOptions[i].addEventListener("click", () => {
+		searchOptionLabel.innerHTML = searchOptions[i].value;
+		searchBox.placeholder = "Search by " + searchOptionPlaceHolders[i] + "...";
+		searchOption = i;
+
+		searchCaller();
+	});
+}
 
 closeBtn.addEventListener("click", () => {
 	searchSection.classList.add("hidden");
 });
 
-searchBtn.addEventListener("click", () => {
-	search(searchBox.value);
+searchBox.addEventListener("input", () => {
+	searchCaller();
 });
 
-searchBox.addEventListener("keyup", (event) => {
-	if(event.keyCode === 13)
+function searchCaller(){
+	if(searchBox.value !== ""){
 		search(searchBox.value);
-});
+	}else{
+		searchSection.classList.add("hidden");
+		searchTable.innerHTML = "";
+	}
+}
 
 /*
 	Sorting

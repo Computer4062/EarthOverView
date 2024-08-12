@@ -9,6 +9,7 @@ const searchTable = document.querySelector("#search-table-body");
 const searchNotifier = document.querySelector("#search-section-notifier");
 
 const countriesTable = document.querySelector("#countries-list-table-body");
+const tableColumns = {"country": 0, "unit": 1, "name": 2, "symbol": 3, "code": 4, "continent": 5};
 
 /* modes */
 let ascendingNamesMode = false;
@@ -44,12 +45,12 @@ function render()
 			let htmlContent = `
 				<tr>
 				<th scope="row">${i}</th>
-				<td>${countryData[0]}</td>
-				<td>${countryData[1]}</td>
-				<td>${countryData[2]}</td>
-				<td>${countryData[3]}</td>
-				<td>${countryData[4]}</td>
-				<td>${countryData[5]}</td>
+				<td>${countryData[tableColumns.country]}</td>
+				<td>${countryData[tableColumns.unit]}</td>
+				<td>${countryData[tableColumns.name]}</td>
+				<td>${countryData[tableColumns.symbol]}</td>
+				<td>${countryData[tableColumns.code]}</td>
+				<td>${countryData[tableColumns.continent]}</td>
 				</tr>
 			`;
 
@@ -60,7 +61,7 @@ function render()
 
 	/* Reload the search section if it is activated so that it will also be sorted or filtered */
 	if(!searchSection.classList.contains("hidden"))
-		search(searchBox.value);
+		searchCaller();
 }
 
 /* Default renderer - played at the beginning */
@@ -94,16 +95,16 @@ function defaultRender(){
 					<tr>
 					<th scope="row">${i}</th>
 					<td>${countryData[0]}</td>
-					<td>${countryData[1]}</td>
-					<td>${currency[countryData[0]].currency}</td>
 					<td>${currency[countryData[0]].unit}</td>
+					<td>${currency[countryData[0]].currency}</td>
 					<td>${currency[countryData[0]].symbol}</td>
 					<td>${currency[countryData[0]].code}</td>
+					<td>${countryData[1]}</td>
 					</tr>
 				`;
 
 				countriesTable.innerHTML += htmlContent;
-				currentTableList.push([countryData[0], countryData[1], currency[countryData[0]].currency, currency[countryData[0]].unit, currency[countryData[0]].symbol, currency[countryData[0]].code]);
+				currentTableList.push([countryData[0], currency[countryData[0]].unit, currency[countryData[0]].currency, currency[countryData[0]].symbol, currency[countryData[0]].code, countryData[1]]);
 			});
 		})
 	.catch(error => {

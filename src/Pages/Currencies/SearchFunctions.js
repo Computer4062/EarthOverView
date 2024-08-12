@@ -1,121 +1,173 @@
 function searchName(text){
-	searchTable.innerHTML = "";
+	searchTable.innerHTML = ""; // Clear the table
 
-	let countryData = "";
-	for(let i = 0; i < currentTableList.length; i++)
-	{
-		if(text.toLowerCase() == currentTableList[i][0].toLowerCase())
+	let counter = 0;
+	let nothingFound = true;
+
+	searchSection.classList.remove("hidden");
+
+	for(let i = 0; i < currentTableList.length; i++){ // Iterate through the current elements
+		let found = false;
+		if(currentTableList[i][tableColumns.country].length >= text.length){
+			for(let j = 0; j < text.length; j++) // Iterate through the search box value
+			{
+				/* Check if search results are similar */
+					if(text[j].toLowerCase() === currentTableList[i][tableColumns.country][j].toLowerCase())
+					{
+						found = true;
+					}
+					else
+					{
+						found = false;
+						break;
+					}
+			}
+		} else {
+			found = false;
+		}
+
+		if(found) // Search results found
 		{
-			countryData = currentTableList[i];
-			break;
+			nothingFound = false;
+			counter++;
+			searchTable.innerHTML += `
+				<tr>
+				<th scope="row">${counter}</th>
+				<td>${currentTableList[i][tableColumns.country]}</td>
+				<td>${currentTableList[i][tableColumns.unit]}</td>
+				<td>${currentTableList[i][tableColumns.name]}</td>
+				<td>${currentTableList[i][tableColumns.symbol]}</td>
+				<td>${currentTableList[i][tableColumns.code]}</td>
+				<td>${currentTableList[i][tableColumns.continent]}</td>
+				</tr>
+			`;
+
+			searchNotifier.innerHTML = "<small>* Filter options affect the results *</small>";
 		}
 	}
 
-	searchSection.classList.remove("hidden");
-
-	if(countryData)
-	{
-		searchTable.innerHTML = `
-			<tr>
-			<th scope="row">${1}</th>
-			<td>${countryData[0]}</td>
-			<td>${countryData[1]}</td>
-			<td>${countryData[2]}</td>
-			<td>${countryData[3]}</td>
-			<td>${countryData[4]}</td>
-			<td>${countryData[5]}</td>
-			</tr>
-		`;
-
-		searchNotifier.innerHTML = "<small>* Filter options affect the results *</small>";
-	}
-	else
-	{
-		searchCode(text);
-	}
-}
-
-function searchCode(text){
-	let countriesData = [];
-
-	for(let i = 0; i < currentTableList.length; i++)
-	{
-		if(text.toLowerCase() == currentTableList[i][5].toLowerCase())
-			countriesData.push(currentTableList[i]);
-	}
-
-	searchSection.classList.remove("hidden");
-
-	if(countriesData.length !== 0)
-	{
-		searchTable.innerHTML = "";
-
-		var i = 0;
-		countriesData.forEach(country => {
-			i++;
-			searchTable.innerHTML += `
-				<tr>
-				<th scope="row">${i}</th>
-				<td>${country[0]}</td>
-				<td>${country[1]}</td>
-				<td>${country[2]}</td>
-				<td>${country[3]}</td>
-				<td>${country[4]}</td>
-				<td>${country[5]}</td>
-				</tr>
-			`;
-		});
-
-		searchNotifier.innerHTML = "<small>* Filter options affect the results *</small>";
-	}
-	else
-	{
-		searchUnit(text);
-	}
-}
-
-function searchUnit(text){
-	let countriesData = [];
-
-	for(let i = 0; i < currentTableList.length; i++)
-	{
-		if(text.toLowerCase() == currentTableList[i][3].toLowerCase())
-		{
-			countriesData.push(currentTableList[i]);
-		}
-	}
-
-	searchSection.classList.remove("hidden");
-
-	if(countriesData.length !== 0)
-	{
-		searchTable.innerHTML = "";
-
-		var i = 0;
-		countriesData.forEach(country => {
-			i++;
-			searchTable.innerHTML += `
-				<tr>
-				<th scope="row">${i}</th>
-				<td>${country[0]}</td>
-				<td>${country[1]}</td>
-				<td>${country[2]}</td>
-				<td>${country[3]}</td>
-				<td>${country[4]}</td>
-				<td>${country[5]}</td>
-				</tr>
-			`;
-		});
-
-		searchNotifier.innerHTML = "<small>* Filter options affect the results *</small>";
-	}
-	else
+	if(nothingFound)
 	{
 		searchTable.innerHTML = "";
 		searchNotifier.innerHTML = "<small>Could not find search results (check spellings or filter options)</small>";
 	}
 }
 
+function searchCode(text){
+	searchTable.innerHTML = ""; // Clear the table
+
+	let counter = 0;
+	let nothingFound = true;
+
+	searchSection.classList.remove("hidden");
+
+	for(let i = 0; i < currentTableList.length; i++){ // Iterate through the current elements
+		let found = false;
+		if(currentTableList[i][tableColumns.code].length >= text.length){
+			for(let j = 0; j < text.length; j++) // Iterate through the search box value
+			{
+				/* Check if search results are similar */
+					if(text[j].toLowerCase() === currentTableList[i][tableColumns.code][j].toLowerCase())
+					{
+						found = true;
+					}
+					else
+					{
+						found = false;
+						break;
+					}
+			}
+		} else {
+			found = false;
+		}
+
+		if(found) // Search results found
+		{
+			nothingFound = false;
+			counter++;
+			searchTable.innerHTML += `
+				<tr>
+				<th scope="row">${counter}</th>
+				<td>${currentTableList[i][tableColumns.country]}</td>
+				<td>${currentTableList[i][tableColumns.unit]}</td>
+				<td>${currentTableList[i][tableColumns.name]}</td>
+				<td>${currentTableList[i][tableColumns.symbol]}</td>
+				<td>${currentTableList[i][tableColumns.code]}</td>
+				<td>${currentTableList[i][tableColumns.continent]}</td>
+				</tr>
+			`;
+
+			searchNotifier.innerHTML = "<small>* Filter options affect the results *</small>";
+		}
+	}
+
+	if(nothingFound)
+	{
+		searchTable.innerHTML = "";
+		searchNotifier.innerHTML = "<small>Could not find search results (check spellings or filter options)</small>";
+	}
+}
+
+function searchUnit(text){
+	searchTable.innerHTML = ""; // Clear the table
+
+	let counter = 0;
+	let nothingFound = true;
+
+	searchSection.classList.remove("hidden");
+
+	for(let i = 0; i < currentTableList.length; i++){ // Iterate through the current elements
+		let found = false;
+		if(currentTableList[i][tableColumns.unit].length >= text.length){
+			for(let j = 0; j < text.length; j++) // Iterate through the search box value
+			{
+				/* Check if search results are similar */
+					if(text[j].toLowerCase() === currentTableList[i][tableColumns.unit][j].toLowerCase())
+					{
+						found = true;
+					}
+					else
+					{
+						found = false;
+						break;
+					}
+			}
+		} else {
+			found = false;
+		}
+
+		if(found) // Search results found
+		{
+			nothingFound = false;
+			counter++;
+			searchTable.innerHTML += `
+				<tr>
+				<th scope="row">${counter}</th>
+				<td>${currentTableList[i][tableColumns.country]}</td>
+				<td>${currentTableList[i][tableColumns.unit]}</td>
+				<td>${currentTableList[i][tableColumns.name]}</td>
+				<td>${currentTableList[i][tableColumns.symbol]}</td>
+				<td>${currentTableList[i][tableColumns.code]}</td>
+				<td>${currentTableList[i][tableColumns.continent]}</td>
+				</tr>
+			`;
+
+			searchNotifier.innerHTML = "<small>* Filter options affect the results *</small>";
+		}
+	}
+
+	if(nothingFound)
+	{
+		searchTable.innerHTML = "";
+		searchNotifier.innerHTML = "<small>Could not find search results (check spellings or filter options)</small>";
+	}
+}
+
+let searchOption = 0;
+
 function search(text){
-	searchName(text);
+	if(searchOption === 0) searchName(text);
+	else if(searchOption === 1) searchUnit(text);
+	else if(searchOption === 2) searchCode(text);
+	else console.log(searchOption);
 }

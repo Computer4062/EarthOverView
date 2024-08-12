@@ -10,6 +10,7 @@ const searchTable = document.querySelector("#search-table-body");
 const searchNotifier = document.querySelector("#search-section-notifier");
 
 const countriesTable = document.querySelector("#countries-list-table-body");
+const tableColumns = {"country": 0, "time": 1, "date": 2, "timezone": 3, "continent": 4};
 
 /* modes */
 let ascendingNamesMode = false;
@@ -61,7 +62,7 @@ function render()
 
 	/* Reload the search section if it is activated so that it will also be sorted or filtered */
 	if(!searchSection.classList.contains("hidden"))
-		search(searchBox.value);
+		searchCaller();
 }
 
 /* Default renderer - played at the beginning */
@@ -92,15 +93,15 @@ function defaultRender(){
 								<tr>
 								<td>${i}</td>
 								<td>${country}</td>
-								<td>${continent}</td>
-								<td>${timeData[country]}</td>
 								<td>${timeAndDate[0]}</td>
 								<td>${timeAndDate[1]}</td>
+								<td>${timeData[country]}</td>
+								<td>${continent}</td>
 								</tr>
 							`;
 
 							countriesTable.innerHTML += htmlContent;
-							currentTableList.push([country, continent, timeData[country], timeAndDate[0], timeAndDate[1]]);
+							currentTableList.push([country, timeAndDate[0], timeAndDate[1], timeData[country], continent]);
 						}
 					});
 				});

@@ -17,7 +17,7 @@ function renderContinent(){
 						region[continent].forEach(country => {
 							const timeAndDate = getTimeAndDate(timeData[country])
 							if(timeAndDate !== undefined)
-								currentTableList.push([country, continent, timeData[country], timeAndDate[0], timeAndDate[1]]);
+								currentTableList.push([country,  timeAndDate[0], timeAndDate[1], timeData[country], continent]);
 						})
 					})
 
@@ -39,11 +39,11 @@ function AddToTable(condition, countryData, i)
 		const htmlContent = `
 			<tr>
 			<th scope="row">${i}</th>
-			<td>${countryData[0]}</td>
-			<td>${countryData[1]}</td>
-			<td>${countryData[2]}</td>
-			<td>${countryData[3]}</td>
-			<td>${countryData[4]}</td>
+			<td>${countryData[tableColumns.country]}</td>
+			<td>${countryData[tableColumns.time]}</td>
+			<td>${countryData[tableColumns.date]}</td>
+			<td>${countryData[tableColumns.timezone]}</td>
+			<td>${countryData[tableColumns.continent]}</td>
 			</tr>
 		`;
 
@@ -71,9 +71,9 @@ function filterToTime(hDigits, mDigits, dayTime)
 	{
 		currentTableList.forEach(countryData => {
 			i++;
-			AddToTable(`${countryData[3][0]}${countryData[3][1]}` == hDigits.padStart(2, '0') &&
-					   `${countryData[3][3]}${countryData[3][4]}` == mDigits.padStart(2, '0') &&
-						(countryData[3][6] === dayTime || dayTime == "ANY"), countryData, i);
+			AddToTable(`${countryData[tableColumns.time][0]}${countryData[tableColumns.time][1]}` == hDigits.padStart(2, '0') &&
+					   `${countryData[tableColumns.time][3]}${countryData[tableColumns.time][4]}` == mDigits.padStart(2, '0') &&
+						(countryData[tableColumns.time][6] === dayTime || dayTime == "ANY"), countryData, i);
 		});
 	}
 	break;
@@ -82,8 +82,8 @@ function filterToTime(hDigits, mDigits, dayTime)
 	{
 		currentTableList.forEach(countryData => {
 			i++;
-			AddToTable(`${countryData[3][0]}${countryData[3][1]}` == hDigits.padStart(2, '0') && 
-						(countryData[3][6] === dayTime || dayTime == "ANY"), countryData, i);
+			AddToTable(`${countryData[tableColumns.time][0]}${countryData[tableColumns.time][1]}` == hDigits.padStart(2, '0') && 
+						(countryData[tableColumns.time][6] === dayTime || dayTime == "ANY"), countryData, i);
 		});
 	}
 	break;
@@ -92,8 +92,8 @@ function filterToTime(hDigits, mDigits, dayTime)
 	{
 		currentTableList.forEach(countryData => {
 			i++;
-			AddToTable(`${countryData[3][3]}${countryData[3][4]}` == mDigits.padStart(2, '0') &&
-						(countryData[3][6] === dayTime || dayTime === "ANY"), countryData, i);
+			AddToTable(`${countryData[tableColumns.time][3]}${countryData[tableColumns.time][4]}` == mDigits.padStart(2, '0') &&
+						(countryData[tableColumns.time][6] === dayTime || dayTime === "ANY"), countryData, i);
 		});
 	}
 	break;
@@ -102,7 +102,7 @@ function filterToTime(hDigits, mDigits, dayTime)
 	{
 		currentTableList.forEach(countryData => {
 			i++;
-			AddToTable(countryData[3][6] === dayTime, countryData, i);
+			AddToTable(countryData[tableColumns.time][6] === dayTime, countryData, i);
 		});
 	}
 	break;
@@ -111,7 +111,7 @@ function filterToTime(hDigits, mDigits, dayTime)
 	{
 		currentTableList.forEach(countryData => {
 			i++;
-			AddToTable(countryData[3][6] === dayTime, countryData, i);
+			AddToTable(countryData[tableColumns.time][6] === dayTime, countryData, i);
 		});
 	}
 	break;

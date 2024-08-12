@@ -15,7 +15,7 @@ function renderContinent(){
 				.then(codes => {
 					continentsList.forEach(continent => {
 						region[continent].forEach(country => {
-							currentTableList.push([country, continent, codes[country]]);
+							currentTableList.push([country, codes[country], continent]);
 						})
 					})
 
@@ -49,19 +49,18 @@ function filterToDigits(hDigit, tDigit, oDigit){
 		{
 		case 0:
 		{
-			if(Math.floor(countryData[2] / 100) % 10 == hDigit)
+			if(Math.floor(countryData[tableColumns.code] / 100) % 10 == hDigit)
 			{
 				i++;
 				let htmlContent = `
 					<tr>
 					<th scope="row">${i}</th>
-					<td>${countryData[0]}</td>
-					<td>${countryData[1]}</td>
-					<td>${countryData[2]}</td>
+					<td>${countryData[tableColumns.country]}</td>
+					<td>${countryData[tableColumns.code]}</td>
+					<td>${countryData[tableColumns.continent]}</td>
 					</tr>
 				`;
 
-				//currentTableList.push([countryData[0], countryData[1], countryData[2]]);
 				countriesTable.innerHTML += htmlContent;
 			}
 		}
@@ -69,19 +68,18 @@ function filterToDigits(hDigit, tDigit, oDigit){
 
 		case 1:
 		{
-			if(Math.floor(countryData[2] / 10) % 10 == tDigit)
+			if(Math.floor(countryData[tableColumns.code] / 10) % 10 == tDigit)
 			{
 				i++;
 				let htmlContent = `
 					<tr>
 					<th scope="row">${i}</th>
-					<td>${countryData[0]}</td>
-					<td>${countryData[1]}</td>
-					<td>${countryData[2]}</td>
+					<td>${countryData[tableColumns.country]}</td>
+					<td>${countryData[tableColumns.code]}</td>
+					<td>${countryData[tableColumns.continent]}</td>
 					</tr>
 				`;
 
-				//currentTableList.push([countryData[0], countryData[1], countryData[2]]);
 				countriesTable.innerHTML += htmlContent;
 			}
 		}
@@ -89,19 +87,18 @@ function filterToDigits(hDigit, tDigit, oDigit){
 
 		case 2:
 		{
-			if(Math.floor(countryData[2]) % 10 == oDigit)
+			if(Math.floor(countryData[tableColumns.code]) % 10 == oDigit)
 			{
 				i++;
 				let htmlContent = `
 					<tr>
 					<th scope="row">${i}</th>
-					<td>${countryData[0]}</td>
-					<td>${countryData[1]}</td>
-					<td>${countryData[2]}</td>
+					<td>${countryData[tableColumns.country]}</td>
+					<td>${countryData[tableColumns.code]}</td>
+					<td>${countryData[tableColumns.continent]}</td>
 					</tr>
 				`;
 
-				//currentTableList.push([countryData[0], countryData[1], countryData[2]]);
 				countriesTable.innerHTML += htmlContent;
 			}
 		}
@@ -109,19 +106,18 @@ function filterToDigits(hDigit, tDigit, oDigit){
 
 		case 3:
 		{
-			if((Math.floor(countryData[2] / 100) % 10 == hDigit) && (Math.floor(countryData[2] / 10) % 10 == tDigit))
+			if((Math.floor(countryData[tableColumns.code] / 100) % 10 == hDigit) && (Math.floor(countryData[tableColumns.code] / 10) % 10 == tDigit))
 			{
 				i++;
 				let htmlContent = `
 					<tr>
 					<th scope="row">${i}</th>
-					<td>${countryData[0]}</td>
-					<td>${countryData[1]}</td>
-					<td>${countryData[2]}</td>
+					<td>${countryData[tableColumns.country]}</td>
+					<td>${countryData[tableColumns.code]}</td>
+					<td>${countryData[tableColumns.continent]}</td>
 					</tr>
 				`;
 
-				//currentTableList.push([countryData[0], countryData[1], countryData[2]]);
 				countriesTable.innerHTML += htmlContent;
 			}
 		}
@@ -129,19 +125,18 @@ function filterToDigits(hDigit, tDigit, oDigit){
 
 		case 4:
 		{
-			if((Math.floor(countryData[2] / 100) % 10 == hDigit) && (Math.floor(countryData[2]) % 10 == oDigit))
+			if((Math.floor(countryData[tableColumns.code] / 100) % 10 == hDigit) && (Math.floor(countryData[tableColumns.code]) % 10 == oDigit))
 			{
 				i++;
 				let htmlContent = `
 					<tr>
 					<th scope="row">${i}</th>
-					<td>${countryData[0]}</td>
-					<td>${countryData[1]}</td>
-					<td>${countryData[2]}</td>
+					<td>${countryData[tableColumns.country]}</td>
+					<td>${countryData[tableColumns.code]}</td>
+					<td>${countryData[tableColumns.continent]}</td>
 					</tr>
 				`;
 
-				//currentTableList.push([countryData[0], countryData[1], countryData[2]]);
 				countriesTable.innerHTML += htmlContent;
 			}
 		}
@@ -149,19 +144,18 @@ function filterToDigits(hDigit, tDigit, oDigit){
 
 		case 5:
 		{
-			if((Math.floor(countryData[2] / 10) % 10 == tDigit) && (Math.floor(countryData[2]) % 10 == oDigit))
+			if((Math.floor(countryData[tableColumns.code] / 10) % 10 == tDigit) && (Math.floor(countryData[tableColumns.code]) % 10 == oDigit))
 			{
 				i++;
 				let htmlContent = `
 					<tr>
 					<th scope="row">${i}</th>
-					<td>${countryData[0]}</td>
-					<td>${countryData[1]}</td>
-					<td>${countryData[2]}</td>
+					<td>${countryData[tableColumns.country]}</td>
+					<td>${countryData[tableColumns.code]}</td>
+					<td>${countryData[tableColumns.continent]}</td>
 					</tr>
 				`;
 
-				//currentTableList.push([countryData[0], countryData[1], countryData[2]]);
 				countriesTable.innerHTML += htmlContent;
 			}
 		}

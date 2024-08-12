@@ -1,8 +1,8 @@
 function sortAscendingNames(){
 	currentTableList.sort((a, b) => {
-		if (a[0] < b[0]) {
+		if (a[tableColumns.country] < b[tableColumns.country]) {
 			return -1;
-		} else if (a[0] > b[0]) {
+		} else if (a[tableColumns.country] > b[tableColumns.country]) {
 			return 1;
 		} else {
 			return 0;
@@ -12,9 +12,9 @@ function sortAscendingNames(){
 
 function sortDescendingNames(){
 	currentTableList.sort((a, b) => {
-		if (a[0] > b[0]) {
+		if (a[tableColumns.country] > b[tableColumns.country]) {
 			return -1;
-		} else if (a[0] < b[0]) {
+		} else if (a[tableColumns.country] < b[tableColumns.country]) {
 			return 1;
 		} else {
 			return 0;
@@ -23,9 +23,9 @@ function sortDescendingNames(){
 }
 function sortAscendingDemonyms(){
 	currentTableList.sort((a, b) => {
-		if (a[2] < b[2]) {
+		if (a[tableColumns.demonyms] < b[tableColumns.demonyms]) {
 			return -1;
-		} else if (a[2] > b[2]) {
+		} else if (a[tableColumns.demonyms] > b[tableColumns.demonyms]) {
 			return 1;
 		} else {
 			return 0;
@@ -35,9 +35,9 @@ function sortAscendingDemonyms(){
 
 function sortDescendingDemonyms(){
 	currentTableList.sort((a, b) => {
-		if (a[2] > b[2]) {
+		if (a[tableColumns.demonyms] > b[tableColumns.demonyms]) {
 			return -1;
-		} else if (a[2] < b[2]) {
+		} else if (a[tableColumns.demonyms] < b[tableColumns.demonyms]) {
 			return 1;
 		} else {
 			return 0;

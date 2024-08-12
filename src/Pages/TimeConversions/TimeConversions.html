@@ -112,15 +112,16 @@
 			</div>
 		</section>
 
+		<!-- Search -->
 		<section>
 			<div class="input-group mb-3" data-bs-theme="dark">
 				<button id="filter-btn" class="btn btn-outline-light" type="button" id="inputGroupFileAddon03"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16"><path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2z"/></svg></button>
 				<button id="sort-btn" class="btn btn-outline-light" type="button" id="inputGroupFileAddon03"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sort-up" viewBox="0 0 16 16"><path d="M3.5 12.5a.5.5 0 0 1-1 0V3.707L1.354 4.854a.5.5 0 1 1-.708-.708l2-1.999.007-.007a.5.5 0 0 1 .7.006l2 2a.5.5 0 1 1-.707.708L3.5 3.707zm3.5-9a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5M7.5 6a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1z"/></svg></button>
 				<input id ="search-box" class="form-control border-white" style="background-color: #000" type="search" placeholder="Search by country, time zone, date..." aria-describedby="search box" aria-label="Upload">
-				<button id="search-btn" class="btn btn-outline-light" type="button" id="inputGroupFileAddon03"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/></svg></button>
 			</div>
 		</section>
 
+		<!-- Filter card -->
 		<section class="mb-5 hidden" id="filter-options-section">
 			<div id="filter-options">
 				<p class="options-heading">Filter Time Conversions</p>
@@ -524,6 +525,7 @@
 			</div>
 		</section>
 
+		<!--Search section-->
 		<section id="search-section" class="my-5 hidden">
 			<div class="poll-bar">
 				<button id="close-button" type="button" class="btn btn-dark"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/></svg></button>
@@ -533,11 +535,11 @@
 			<thead>
 				<tr>
 				<th scope="col">#</th>
-				<th scope="col">Country</th>
-				<th scope="col">Continent</th>
-				<th scope="col">Time zone</th>
-				<th scope="col">Time</th>
-				<th scope="col">Date</th>
+				<th scope="col" style="width:20vw">Country</th>
+				<th scope="col" style="width:20vw">Time</th>
+				<th scope="col" style="width:20vw">Date</th>
+				<th scope="col" style="width:20vw">Time zone</th>
+				<th scope="col" style="width:20vw">Continent</th>
 				</tr>
 			</thead>
 			<tbody id="search-table-body">
@@ -551,11 +553,11 @@
 			<thead>
 				<tr>
 				<th scope="col">#</th>
-				<th scope="col">Country</th>
-				<th scope="col">Continent</th>
-				<th scope="col">Time zone</th>
-				<th scope="col">Time</th>
-				<th scope="col">Date</th>
+				<th scope="col" style="width:20vw">Country</th>
+				<th scope="col" style="width:20vw">Time</th>
+				<th scope="col" style="width:20vw">Date</th>
+				<th scope="col" style="width:20vw">Time zone</th>
+				<th scope="col" style="width:20vw">Continent</th>
 				</tr>
 			</thead>
 			<tbody id="countries-list-table-body">

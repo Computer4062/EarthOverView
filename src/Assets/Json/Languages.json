@@ -1,970 +1,779 @@
 {
   "China": {
     "language": ["Mandarin Chinese"],
-    "iso639_1": ["zh-Hans-CN"],
-    "iso639_2": ["zho"]
+    "iso639_1": ["zh-Hans-CN"]
   },
   "Japan": {
     "language": ["Japanese"],
-    "iso639_1": ["ja-JP"],
-    "iso639_2": ["jpn"]
+    "iso639_1": ["ja-JP"]
   },
   "Mongolia": {
     "language": ["Mongolian"],
-    "iso639_1": ["mn"],
-    "iso639_2": ["mon"]
+    "iso639_1": ["mn"]
   },
   "North Korea": {
     "language": ["Korean"],
-    "iso639_1": ["ko-KP"],
-    "iso639_2": ["kor"]
+    "iso639_1": ["ko-KP"]
   },
   "South Korea": {
     "language": ["Korean"],
-    "iso639_1": ["ko-KR"],
-    "iso639_2": ["kor"]
+    "iso639_1": ["ko-KR"]
   },
   "Taiwan": {
     "language": ["Mandarin Chinese", "Taiwanese Hokkien", "Hakka"],
-    "iso639_1": ["zh-TW", "nan", "hak"],
-    "iso639_2": ["zho", "nan", "hak"]
+    "iso639_1": ["zh-TW", "nan", "hak"]
   },
 
   "Afghanistan": {
     "language": ["Pashto", "Dari"],
-    "iso639_1": ["ps", "prs"],
-    "iso639_2": ["pus", "prs"]
+    "iso639_1": ["ps", "prs"]
   },
   "Bangladesh": {
     "language": ["Bengali"],
-    "iso639_1": ["bn-BD"],
-    "iso639_2": ["ben"]
+    "iso639_1": ["bn-BD"]
   },
   "Bhutan": {
     "language": ["Dzongkha"],
-    "iso639_1": ["dz"],
-    "iso639_2": ["dzn"]
+    "iso639_1": ["dz"]
   },
   "India": {
     "language": ["Hindi", "English"],
-    "iso639_1": ["hi-IN", "en-IN"],
-    "iso639_2": ["hin", "eng"]
+    "iso639_1": ["hi-IN", "en-IN"]
   },
   "Maldives": {
     "language": ["Divehi"],
-    "iso639_1": ["dv"],
-    "iso639_2": ["div"]
+    "iso639_1": ["dv"]
   },
   "Nepal": {
     "language": ["Nepali"],
-    "iso639_1": ["ne-NP"],
-    "iso639_2": ["nep"]
+    "iso639_1": ["ne-NP"]
   },
   "Pakistan": {
     "language": ["Urdu", "English"],
-    "iso639_1": ["ur", "en-PK"],
-    "iso639_2": ["urd", "eng"]
+    "iso639_1": ["ur", "en-PK"]
   },
   "Sri Lanka": {
     "language": ["Sinhala", "Tamil"],
-    "iso639_1": ["si", "ta-LK"],
-    "iso639_2": ["sin", "tam"]
+    "iso639_1": ["si", "ta-LK"]
   },
 
   "Brunei": {
     "language": ["Malay"],
-    "iso639_1": ["ms-BN"],
-    "iso639_2": ["mal"]
+    "iso639_1": ["ms-BN"]
   },
   "Cambodia": {
     "language": ["Khmer"],
-    "iso639_1": ["km-KH"],
-    "iso639_2": ["khm"]
+    "iso639_1": ["km-KH"]
   },
   "Indonesia": {
     "language": ["Indonesian"],
-    "iso639_1": ["id-ID"],
-    "iso639_2": ["ind"]
+    "iso639_1": ["id-ID"]
   },
   "Laos": {
     "language": ["Lao"],
-    "iso639_1": ["lo-LA"],
-    "iso639_2": ["lao"]
+    "iso639_1": ["lo-LA"]
   },
   "Malaysia": {
     "language": ["Malay"],
-    "iso639_1": ["ms-MY"],
-    "iso639_2": ["mal"]
+    "iso639_1": ["ms-MY"]
   },
   "Myanmar (Burma)": {
     "language": ["Burmese"],
-    "iso639_1": ["my-MM"],
-    "iso639_2": ["mya"]
+    "iso639_1": ["my-MM"]
   },
   "Philippines": {
     "language": ["Tagalog", "English"],
-    "iso639_1": ["tl", "en-PH"],
-    "iso639_2": ["tgl", "eng"]
+    "iso639_1": ["tl", "en-PH"]
   },
   "Singapore": {
     "language": ["Malay", "Mandarin Chinese", "Tamil", "English"],
-    "iso639_1": ["ms", "zh", "ta", "en"],
-    "iso639_2": ["mal", "zho", "tam", "eng"]
+    "iso639_1": ["ms", "zh", "ta", "en"]
   },
   "Thailand": {
     "language": ["Thai"],
-    "iso639_1": ["th-TH"],
-    "iso639_2": ["tha"]
+    "iso639_1": ["th-TH"]
   },
   "Timor-Leste": {
     "language": ["Tetum", "Portuguese"],
-    "iso639_1": ["tet", "pt-TL"],
-    "iso639_2": ["tet"]
+    "iso639_1": ["tet", "pt-TL"]
   },
   "Vietnam": {
     "language": ["Vietnamese"],
-    "iso639_1": ["vi-VN"],
-    "iso639_2": ["vie"]
+    "iso639_1": ["vi-VN"]
   },
 
   "Kazakhstan": {
     "language": ["Kazakh", "Russian"],
-    "iso639_1": ["kk-KZ", "ru-KZ"],
-    "iso639_2": ["kaz", "rus"]
+    "iso639_1": ["kk-KZ", "ru-KZ"]
   },
   "Kyrgyzstan": {
     "language": ["Kyrgyz"],
-    "iso639_1": ["ky-KG"],
-    "iso639_2": ["kir"]
+    "iso639_1": ["ky-KG"]
   },
   "Tajikistan": {
     "language": ["Tajiki"],
-    "iso639_1": ["tg-TJ"],
-    "iso639_2": ["tgk"]
+    "iso639_1": ["tg-TJ"]
   },
   "Turkmenistan": {
     "language": ["Turkmen"],
-    "iso639_1": ["tk-TM"],
-    "iso639_2": ["tuk"]
+    "iso639_1": ["tk-TM"]
   },
   "Uzbekistan": {
     "language": ["Uzbek", "Russian"],
-    "iso639_1": ["uz-UZ", "ru-UZ"],
-    "iso639_2": ["uzb", "rus"]
+    "iso639_1": ["uz-UZ", "ru-UZ"]
   },
 
   "Armenia": {
     "language": ["Armenian"],
-    "iso639_1": ["hy-AM"],
-    "iso639_2": ["hye"]
+    "iso639_1": ["hy-AM"]
   },
   "Azerbaijan": {
     "language": ["Azerbaijani"],
-    "iso639_1": ["az-AZ"],
-    "iso639_2": ["aze"]
+    "iso639_1": ["az-AZ"]
   },
   "Bahrain": {
     "language": ["Arabic"],
-    "iso639_1": ["ar-BH"],
-    "iso639_2": ["ara"]
+    "iso639_1": ["ar-BH"]
   },
   "Cyprus": {
     "language": ["Greek", "Turkish"],
-    "iso639_1": ["el-CY", "tr-CY"],
-    "iso639_2": ["gre", "tur"]
+    "iso639_1": ["el-CY", "tr-CY"]
   },
   "Georgia": {
     "language": ["Georgian"],
-    "iso639_1": ["ka-GE"],
-    "iso639_2": ["kat"]
+    "iso639_1": ["ka-GE"]
   },
   "Iraq": {
     "language": ["Arabic", "Kurdish"],
-    "iso639_1": ["ar-IQ", "ku"],
-    "iso639_2": ["ara", "kur"]
+    "iso639_1": ["ar-IQ", "ku"]
   },
   "Israel": {
     "language": ["Hebrew", "Arabic"],
-    "iso639_1": ["he", "ar-IL"],
-    "iso639_2": ["heb", "ara"]
+    "iso639_1": ["he", "ar-IL"]
   },
   "Jordan": {
     "language": ["Arabic"],
-    "iso639_1": ["ar-JO"],
-    "iso639_2": ["ara"]
+    "iso639_1": ["ar-JO"]
   },
   "Kuwait": {
     "language": ["Arabic"],
-    "iso639_1": ["ar-KW"],
-    "iso639_2": ["ara"]
+    "iso639_1": ["ar-KW"]
   },
   "Lebanon": {
     "language": ["Arabic"],
-    "iso639_1": ["ar-LB"],
-    "iso639_2": ["ara"]
+    "iso639_1": ["ar-LB"]
   },
   "Oman": {
     "language": ["Arabic"],
-    "iso639_1": ["ar-OM"],
-    "iso639_2": ["ara"]
+    "iso639_1": ["ar-OM"]
   },
   "Qatar": {
     "language": ["Arabic"],
-    "iso639_1": ["ar-QA"],
-    "iso639_2": ["ara"]
+    "iso639_1": ["ar-QA"]
   },
   "Saudi Arabia": {
     "language": ["Arabic"],
-    "iso639_1": ["ar-SA"],
-    "iso639_2": ["ara"]
+    "iso639_1": ["ar-SA"]
   },
   "Syria": {
     "language": ["Arabic", "Kurdish"],
-    "iso639_1": ["ar-SY", "ku"],
-    "iso639_2": ["ara", "kur"]
+    "iso639_1": ["ar-SY", "ku"]
   },
   "Turkey": {
     "language": ["Turkish"],
-    "iso639_1": ["tr-TR"],
-    "iso639_2": ["tur"]
+    "iso639_1": ["tr-TR"]
   },
   "United Arab Emirates": {
     "language": ["Arabic"],
-    "iso639_1": ["ar-AE"],
-    "iso639_2": ["ara"]
+    "iso639_1": ["ar-AE"]
   },
   "Yemen": {
     "language": ["Arabic"],
-    "iso639_1": ["ar-YE"],
-    "iso639_2": ["ara"]
+    "iso639_1": ["ar-YE"]
   },
 
   "Algeria": {
     "language": ["Arabic"],
-    "iso639_1": ["ar-DZ"],
-    "iso639_2": ["ara"]
+    "iso639_1": ["ar-DZ"]
   },
   "Egypt": {
     "language": ["Arabic"],
-    "iso639_1": ["ar-EG"],
-    "iso639_2": ["ara"]
+    "iso639_1": ["ar-EG"]
   },
   "Libya": {
     "language": ["Arabic"],
-    "iso639_1": ["ar-LY"],
-    "iso639_2": ["ara"]
+    "iso639_1": ["ar-LY"]
   },
   "Morocco": {
     "language": ["Arabic"],
-    "iso639_1": ["ar-MA"],
-    "iso639_2": ["ara"]
+    "iso639_1": ["ar-MA"]
   },
   "Tunisia": {
     "language": ["Arabic"],
-    "iso639_1": ["ar-TN"],
-    "iso639_2": ["ara"]
+    "iso639_1": ["ar-TN"]
   },
 
   "Benin": {
     "language": ["French"],
-    "iso639_1": ["fr-BJ"],
-    "iso639_2": ["fra"]
+    "iso639_1": ["fr-BJ"]
   },
   "Burkina Faso": {
     "language": ["French"],
-    "iso639_1": ["fr-BF"],
-    "iso639_2": ["fra"]
+    "iso639_1": ["fr-BF"]
   },
   "Cape Verde": {
     "language": ["Portuguese"],
-    "iso639_1": ["pt-CV"],
-    "iso639_2": ["por"]
+    "iso639_1": ["pt-CV"]
   },
   "Côte d'Ivoire": {
     "language": ["French"],
-    "iso639_1": ["fr-CI"],
-    "iso639_2": ["fra"]
+    "iso639_1": ["fr-CI"]
   },
   "Gambia": {
     "language": ["English"],
-    "iso639_1": ["en-GM"],
-    "iso639_2": ["eng"]
+    "iso639_1": ["en-GM"]
   },
   "Ghana": {
     "language": ["English"],
-    "iso639_1": ["en-GH"],
-    "iso639_2": ["eng"]
+    "iso639_1": ["en-GH"]
   },
   "Guinea": {
     "language": ["French"],
-    "iso639_1": ["fr-GN"],
-    "iso639_2": ["fra"]
+    "iso639_1": ["fr-GN"]
   },
   "Guinea-Bissau": {
     "language": ["Portuguese"],
-    "iso639_1": ["pt-GW"],
-    "iso639_2": ["por"]
+    "iso639_1": ["pt-GW"]
   },
   "Liberia": {
     "language": ["English"],
-    "iso639_1": ["en-LR"],
-    "iso639_2": ["eng"]
+    "iso639_1": ["en-LR"]
   },
   "Mali": {
     "language": ["French"],
-    "iso639_1": ["fr-ML"],
-    "iso639_2": ["fra"]
+    "iso639_1": ["fr-ML"]
   },
   "Mauritania": {
     "language": ["Arabic"],
-    "iso639_1": ["ar-MR"],
-    "iso639_2": ["ara"]
+    "iso639_1": ["ar-MR"]
   },
   "Niger": {
     "language": ["French"],
-    "iso639_1": ["fr-NE"],
-    "iso639_2": ["fra"]
+    "iso639_1": ["fr-NE"]
   },
   "Nigeria": {
     "language": ["English"],
-    "iso639_1": ["en-NG"],
-    "iso639_2": ["eng"]
+    "iso639_1": ["en-NG"]
   },
   "Senegal": {
     "language": ["French"],
-    "iso639_1": ["fr-SN"],
-    "iso639_2": ["fra"]
+    "iso639_1": ["fr-SN"]
   },
   "Sierra Leone": {
     "language": ["English"],
-    "iso639_1": ["en-SL"],
-    "iso639_2": ["eng"]
+    "iso639_1": ["en-SL"]
   },
   "Togo": {
     "language": ["French"],
-    "iso639_1": ["fr-TG"],
-    "iso639_2": ["fra"]
+    "iso639_1": ["fr-TG"]
   },
 
   "Burundi": {
     "language": ["Kirundi", "French"],
-    "iso639_1": ["rn", "fr-BI"],
-    "iso639_2": ["run", "fra"]
+    "iso639_1": ["rn", "fr-BI"]
   },
   "Djibouti": {
     "language": ["French", "Arabic"],
-    "iso639_1": ["fr-DJ", "ar-DJ"],
-    "iso639_2": ["fra", "ara"]
+    "iso639_1": ["fr-DJ", "ar-DJ"]
   },
   "Eritrea": {
     "language": ["Tigrinya", "Arabic", "English"],
-    "iso639_1": ["ti", "ar-ER", "en-ER"],
-    "iso639_2": ["tir", "ara", "eng"]
+    "iso639_1": ["ti", "ar-ER", "en-ER"]
   },
   "Ethiopia": {
     "language": ["Amharic", "Oromifa", "Tigrinya", "Somali"],
-    "iso639_1": ["am", "or", "ti", "so"],
-    "iso639_2": ["amh", "orm", "tir", "som"]
+    "iso639_1": ["am", "or", "ti", "so"]
   },
   "Kenya": {
     "language": ["English", "Swahili"],
-    "iso639_1": ["en-KE", "sw-KE"],
-    "iso639_2": ["eng", "swa"]
+    "iso639_1": ["en-KE", "sw-KE"]
   },
   "Madagascar": {
     "language": ["Malagasy", "French"],
-    "iso639_1": ["mg", "fr-MG"],
-    "iso639_2": ["mlg", "fra"]
+    "iso639_1": ["mg", "fr-MG"]
   },
   "Malawi": {
     "language": ["English", "Chichewa"],
-    "iso639_1": ["en-MW", "ny"],
-    "iso639_2": ["eng", "nya"]
+    "iso639_1": ["en-MW", "ny"]
   },
   "Mauritius": {
     "language": ["English", "French", "Mauritian Creole"],
-    "iso639_1": ["en-MU", "fr-MU", "mfe"],
-    "iso639_2": ["eng", "fra", "mfe"]
+    "iso639_1": ["en-MU", "fr-MU", "mfe"]
   },
   "Mozambique": {
     "language": ["Portuguese"],
-    "iso639_1": ["pt-MZ"],
-    "iso639_2": ["por"]
+    "iso639_1": ["pt-MZ"]
   },
   "Rwanda": {
     "language": ["Kinyarwanda", "French", "English"],
-    "iso639_1": ["rw", "fr-RW", "en-RW"],
-    "iso639_2": ["kin", "fra", "eng"]
+    "iso639_1": ["rw", "fr-RW", "en-RW"]
   },
   "Seychelles": {
     "language": ["English", "French", "Seychellois Creole"],
-    "iso639_1": ["en-SC", "fr-SC", "crs"],
-    "iso639_2": ["eng", "fra", "crs"]
+    "iso639_1": ["en-SC", "fr-SC", "crs"]
   },
   "Somalia": {
     "language": ["Somali", "Arabic"],
-    "iso639_1": ["so", "ar-SO"],
-    "iso639_2": ["som", "ara"]
+    "iso639_1": ["so", "ar-SO"]
   },
   "South Sudan": {
     "language": ["English"],
-    "iso639_1": ["en-SS"],
-    "iso639_2": ["eng"]
+    "iso639_1": ["en-SS"]
   },
   "Sudan": {
     "language": ["Arabic"],
-    "iso639_1": ["ar-SD"],
-    "iso639_2": ["ara"]
+    "iso639_1": ["ar-SD"]
   },
   "Tanzania": {
     "language": ["Swahili", "English"],
-    "iso639_1": ["sw-TZ", "en-TZ"],
-    "iso639_2": ["swa", "eng"]
+    "iso639_1": ["sw-TZ", "en-TZ"]
   },
   "Uganda": {
     "language": ["English", "Swahili"],
-    "iso639_1": ["en-UG", "sw-UG"],
-    "iso639_2": ["eng", "swa"]
+    "iso639_1": ["en-UG", "sw-UG"]
   },
   "Zambia": {
     "language": ["English"],
-    "iso639_1": ["en-ZM"],
-    "iso639_2": ["eng"]
+    "iso639_1": ["en-ZM"]
   },
   "Zimbabwe": {
     "language": ["English", "Shona", "Ndebele"],
-    "iso639_1": ["en-ZW", "sn", "nd"],
-    "iso639_2": ["eng", "sna", "nde"]
+    "iso639_1": ["en-ZW", "sn", "nd"]
   },
 
   "Angola": {
     "language": ["Portuguese"],
-    "iso639_1": ["pt-AO"],
-    "iso639_2": ["por"]
+    "iso639_1": ["pt-AO"]
   },
   "Botswana": {
     "language": ["English", "Tswana"],
-    "iso639_1": ["en-BW", "tn"],
-    "iso639_2": ["eng", "tsn"]
+    "iso639_1": ["en-BW", "tn"]
   },
   "Eswatini (Swaziland)": {
     "language": ["Swazi", "English"],
-    "iso639_1": ["ss", "en-SZ"],
-    "iso639_2": ["ssw", "eng"]
+    "iso639_1": ["ss", "en-SZ"]
   },
   "Lesotho": {
     "language": ["Sesotho", "English"],
-    "iso639_1": ["st", "en-LS"],
-    "iso639_2": ["sot", "eng"]
+    "iso639_1": ["st", "en-LS"]
   },
   "Namibia": {
     "language": ["English", "Afrikaans"],
-    "iso639_1": ["en-NA", "af"],
-    "iso639_2": ["eng", "afr"]
+    "iso639_1": ["en-NA", "af"]
   },
   "South Africa": {
     "language": ["Afrikaans", "English", "IsiZulu", "IsiXhosa", "Sesotho", "Setswana", "Northern Sotho", "Venda", "Xitsonga"],
-    "iso639_1": ["af", "en-ZA", "zu", "xh", "st", "tn", "nso", "ve", "ts"],
-    "iso639_2": ["afr", "eng", "zul", "xho", "sot", "tsn", "nso", "ven", "tso"]
+    "iso639_1": ["af", "en-ZA", "zu", "xh", "st", "tn", "nso", "ve", "ts"]
   },
 
-  "Cameroon": {
+   "Cameroon": {
     "language": ["English", "French"],
-    "iso639_1": ["en-CM", "fr-CM"],
-    "iso639_2": ["eng", "fra"]
+    "iso639_1": ["en-CM", "fr-CM"]
   },
   "Central African Republic": {
     "language": ["French", "Sango"],
-    "iso639_1": ["fr-CF", "sag"],
-    "iso639_2": ["fra", "sag"]
+    "iso639_1": ["fr-CF", "sag"]
   },
   "Chad": {
     "language": ["French", "Arabic"],
-    "iso639_1": ["fr-TD", "ar-TD"],
-    "iso639_2": ["fra", "ara"]
+    "iso639_1": ["fr-TD", "ar-TD"]
   },
   "Democratic Republic of the Congo": {
     "language": ["French", "Congolese (Kinshasa)"],
-    "iso639_1": ["fr-CD", "ln"],
-    "iso639_2": ["fra", "lin"]
+    "iso639_1": ["fr-CD", "ln"]
   },
   "Equatorial Guinea": {
     "language": ["Spanish", "French", "Portuguese"],
-    "iso639_1": ["es-GQ", "fr-GQ", "pt-GQ"],
-    "iso639_2": ["spa", "fra", "por"]
+    "iso639_1": ["es-GQ", "fr-GQ", "pt-GQ"]
   },
   "Gabon": {
     "language": ["French"],
-    "iso639_1": ["fr-GA"],
-    "iso639_2": ["fra"]
+    "iso639_1": ["fr-GA"]
   },
   "Republic of the Congo": {
     "language": ["French"],
-    "iso639_1": ["fr-CG"],
-    "iso639_2": ["fra"]
+    "iso639_1": ["fr-CG"]
   },
 
   "Albania": {
     "language": ["Albanian"],
-    "iso639_1": ["sq-AL"],
-    "iso639_2": ["alb"]
+    "iso639_1": ["sq-AL"]
   },
   "Andorra": {
     "language": ["Catalan"],
-    "iso639_1": ["ca"],
-    "iso639_2": ["cat"]
+    "iso639_1": ["ca"]
   },
   "Austria": {
     "language": ["German"],
-    "iso639_1": ["de-AT"],
-    "iso639_2": ["deu"]
+    "iso639_1": ["de-AT"]
   },
   "Belarus": {
     "language": ["Belarusian", "Russian"],
-    "iso639_1": ["be", "ru-BY"],
-    "iso639_2": ["bel", "rus"]
+    "iso639_1": ["be", "ru-BY"]
   },
   "Belgium": {
     "language": ["Dutch", "French", "German"],
-    "iso639_1": ["nl-BE", "fr-BE", "de-BE"],
-    "iso639_2": ["nld", "fra", "deu"]
+    "iso639_1": ["nl-BE", "fr-BE", "de-BE"]
   },
   "Bosnia and Herzegovina": {
     "language": ["Bosnian", "Croatian", "Serbian"],
-    "iso639_1": ["bs", "hr", "sr"],
-    "iso639_2": ["bos", "hrv", "srp"]
+    "iso639_1": ["bs", "hr", "sr"]
   },
   "Bulgaria": {
     "language": ["Bulgarian"],
-    "iso639_1": ["bg-BG"],
-    "iso639_2": ["bul"]
+    "iso639_1": ["bg-BG"]
   },
   "Croatia": {
     "language": ["Croatian"],
-    "iso639_1": ["hr-HR"],
-    "iso639_2": ["hrv"]
+    "iso639_1": ["hr-HR"]
   },
   "Czech Republic": {
     "language": ["Czech"],
-    "iso639_1": ["cs-CZ"],
-    "iso639_2": ["ces"]
+    "iso639_1": ["cs-CZ"]
   },
   "Denmark": {
     "language": ["Danish"],
-    "iso639_1": ["da-DK"],
-    "iso639_2": ["dan"]
+    "iso639_1": ["da-DK"]
   },
   "Estonia": {
     "language": ["Estonian"],
-    "iso639_1": ["et-EE"],
-    "iso639_2": ["est"]
+    "iso639_1": ["et-EE"]
   },
   "Finland": {
     "language": ["Finnish", "Swedish"],
-    "iso639_1": ["fi-FI", "sv-FI"],
-    "iso639_2": ["fin", "swe"]
+    "iso639_1": ["fi-FI", "sv-FI"]
   },
   "France": {
     "language": ["French"],
-    "iso639_1": ["fr-FR"],
-    "iso639_2": ["fra"]
+    "iso639_1": ["fr-FR"]
   },
   "Germany": {
     "language": ["German"],
-    "iso639_1": ["de-DE"],
-    "iso639_2": ["deu"]
+    "iso639_1": ["de-DE"]
   },
   "Greece": {
     "language": ["Greek"],
-    "iso639_1": ["el-GR"],
-    "iso639_2": ["gre"]
+    "iso639_1": ["el-GR"]
   },
   "Hungary": {
     "language": ["Hungarian"],
-    "iso639_1": ["hu-HU"],
-    "iso639_2": ["hun"]
+    "iso639_1": ["hu-HU"]
   },
   "Iceland": {
     "language": ["Icelandic"],
-    "iso639_1": ["is-IS"],
-    "iso639_2": ["isl"]
+    "iso639_1": ["is-IS"]
   },
   "Ireland": {
     "language": ["Irish"],
-    "iso639_1": ["ga-IE"],
-    "iso639_2": ["gle"]
+    "iso639_1": ["ga-IE"]
   },
   "Italy": {
     "language": ["Italian"],
-    "iso639_1": ["it-IT"],
-    "iso639_2": ["ita"]
+    "iso639_1": ["it-IT"]
   },
   "Latvia": {
     "language": ["Latvian"],
-    "iso639_1": ["lv-LV"],
-    "iso639_2": ["lav"]
+    "iso639_1": ["lv-LV"]
   },
   "Liechtenstein": {
     "language": ["German"],
-    "iso639_1": ["de-LI"],
-    "iso639_2": ["deu"]
+    "iso639_1": ["de-LI"]
   },
   "Lithuania": {
     "language": ["Lithuanian"],
-    "iso639_1": ["lt-LT"],
-    "iso639_2": ["lit"]
+    "iso639_1": ["lt-LT"]
   },
   "Luxembourg": {
     "language": ["Luxembourgish", "French", "German"],
-    "iso639_1": ["lb", "fr-LU", "de-LU"],
-    "iso639_2": ["lux", "fra", "deu"]
+    "iso639_1": ["lb", "fr-LU", "de-LU"]
   },
   "Malta": {
     "language": ["Maltese", "English"],
-    "iso639_1": ["mt", "en-MT"],
-    "iso639_2": ["mlt", "eng"]
+    "iso639_1": ["mt", "en-MT"]
   },
   "Moldova": {
     "language": ["Romanian"],
-    "iso639_1": ["ro-MD"],
-    "iso639_2": ["ron"]
+    "iso639_1": ["ro-MD"]
   },
   "Monaco": {
     "language": ["French"],
-    "iso639_1": ["fr-MC"],
-    "iso639_2": ["fra"]
+    "iso639_1": ["fr-MC"]
   },
   "Montenegro": {
     "language": ["Montenegrin"],
-    "iso639_1": ["me"],
-    "iso639_2": "mon"
+    "iso639_1": ["me"]
   },
   "Netherlands": {
     "language": ["Dutch"],
-    "iso639_1": ["nl-NL"],
-    "iso639_2": ["nld"]
+    "iso639_1": ["nl-NL"]
   },
   "North Macedonia": {
     "language": ["Macedonian"],
-    "iso639_1": ["mk-MK"],
-    "iso639_2": ["mkd"]
+    "iso639_1": ["mk-MK"]
   },
   "Norway": {
     "language": ["Norwegian"],
-    "iso639_1": ["no-NO"],
-    "iso639_2": ["nor"]
+    "iso639_1": ["no-NO"]
   },
   "Poland": {
     "language": ["Polish"],
-    "iso639_1": ["pl-PL"],
-    "iso639_2": ["pol"]
+    "iso639_1": ["pl-PL"]
   },
   "Portugal": {
     "language": ["Portuguese"],
-    "iso639_1": ["pt-PT"],
-    "iso639_2": ["por"]
+    "iso639_1": ["pt-PT"]
   },
   "Romania": {
     "language": ["Romanian"],
-    "iso639_1": ["ro-RO"],
-    "iso639_2": ["ron"]
+    "iso639_1": ["ro-RO"]
   },
   "Russia": {
     "language": ["Russian"],
-    "iso639_1": ["ru-RU"],
-    "iso639_2": ["rus"]
+    "iso639_1": ["ru-RU"]
   },
   "San Marino": {
     "language": ["Italian"],
-    "iso639_1": ["it-SM"],
-    "iso639_2": ["ita"]
+    "iso639_1": ["it-SM"]
   },
   "Serbia": {
     "language": ["Serbian"],
-    "iso639_1": ["sr-RS"],
-    "iso639_2": ["srp"]
+    "iso639_1": ["sr-RS"]
   },
   "Slovakia": {
     "language": ["Slovak"],
-    "iso639_1": ["sk-SK"],
-    "iso639_2": ["slk"]
+    "iso639_1": ["sk-SK"]
   },
-    "Slovenia": {
+  "Slovenia": {
     "language": ["Slovenian"],
-    "iso639_1": ["sl-SI"],
-    "iso639_2": ["slv"]
+    "iso639_1": ["sl-SI"]
   },
   "Spain": {
     "language": ["Spanish"],
-    "iso639_1": ["es-ES"],
-    "iso639_2": ["spa"]
+    "iso639_1": ["es-ES"]
   },
   "Sweden": {
     "language": ["Swedish"],
-    "iso639_1": ["sv-SE"],
-    "iso639_2": ["swe"]
+    "iso639_1": ["sv-SE"]
   },
   "Switzerland": {
     "language": ["German", "French", "Italian", "Romansh"],
-    "iso639_1": ["de-CH", "fr-CH", "it-CH", "rm"],
-    "iso639_2": ["deu", "fra", "ita", "rum"]
+    "iso639_1": ["de-CH", "fr-CH", "it-CH", "rm"]
   },
   "Ukraine": {
     "language": ["Ukrainian"],
-    "iso639_1": ["uk-UA"],
-    "iso639_2": ["ukr"]
+    "iso639_1": ["uk-UA"]
   },
   "United Kingdom": {
     "language": ["English"],
-    "iso639_1": ["en-GB"],
-    "iso639_2": ["eng"]
+    "iso639_1": ["en-GB"]
   },
   "Vatican City": {
     "language": ["Italian", "Latin"],
-    "iso639_1": ["it-VA", "la"],
-    "iso639_2": ["ita", "lat"]
+    "iso639_1": ["it-VA", "la"]
   },
 
   "Argentina": {
     "language": ["Spanish"],
-    "iso639_1": ["es-AR"],
-    "iso639_2": ["spa"]
+    "iso639_1": ["es-AR"]
   },
   "Bolivia": {
     "language": ["Spanish", "Quechua", "Aymara"],
-    "iso639_1": ["es-BO", "qu", "ay"],
-    "iso639_2": ["spa", "que", "aym"]
+    "iso639_1": ["es-BO", "qu", "ay"]
   },
   "Brazil": {
     "language": ["Portuguese"],
-    "iso639_1": ["pt-BR"],
-    "iso639_2": ["por"]
+    "iso639_1": ["pt-BR"]
   },
   "Chile": {
     "language": ["Spanish"],
-    "iso639_1": ["es-CL"],
-    "iso639_2": ["spa"]
+    "iso639_1": ["es-CL"]
   },
   "Colombia": {
     "language": ["Spanish"],
-    "iso639_1": ["es-CO"],
-    "iso639_2": ["spa"]
+    "iso639_1": ["es-CO"]
   },
   "Ecuador": {
     "language": ["Spanish"],
-    "iso639_1": ["es-EC"],
-    "iso639_2": ["spa"]
+    "iso639_1": ["es-EC"]
   },
   "Guyana": {
     "language": ["English"],
-    "iso639_1": ["en-GY"],
-    "iso639_2": ["eng"]
+    "iso639_1": ["en-GY"]
   },
   "Paraguay": {
     "language": ["Spanish", "Guarani"],
-    "iso639_1": ["es-PY", "gn"],
-    "iso639_2": ["spa", "gua"]
+    "iso639_1": ["es-PY", "gn"]
   },
   "Peru": {
     "language": ["Spanish", "Quechua"],
-    "iso639_1": ["es-PE", "qu"],
-    "iso639_2": ["spa", "que"]
+    "iso639_1": ["es-PE", "qu"]
   },
   "Suriname": {
     "language": ["Dutch"],
-    "iso639_1": ["nl-SR"],
-    "iso639_2": ["nld"]
+    "iso639_1": ["nl-SR"]
   },
   "Uruguay": {
     "language": ["Spanish"],
-    "iso639_1": ["es-UY"],
-    "iso639_2": ["spa"]
+    "iso639_1": ["es-UY"]
   },
   "Venezuela": {
     "language": ["Spanish"],
-    "iso639_1": ["es-VE"],
-    "iso639_2": ["spa"]
+    "iso639_1": ["es-VE"]
   },
 
   "Canada": {
     "language": ["English", "French"],
-    "iso639_1": ["en-CA", "fr-CA"],
-    "iso639_2": ["eng", "fra"]
+    "iso639_1": ["en-CA", "fr-CA"]
   },
   "United States": {
     "language": ["English"],
-    "iso639_1": ["en-US"],
-    "iso639_2": ["eng"]
+    "iso639_1": ["en-US"]
   },
   "Mexico": {
     "language": ["Spanish"],
-    "iso639_1": ["es-MX"],
-    "iso639_2": ["spa"]
+    "iso639_1": ["es-MX"]
   },
   "Cuba": {
     "language": ["Spanish"],
-    "iso639_1": ["es-CU"],
-    "iso639_2": ["spa"]
+    "iso639_1": ["es-CU"]
   },
   "Bahamas": {
     "language": ["English"],
-    "iso639_1": ["en-BS"],
-    "iso639_2": ["eng"]
+    "iso639_1": ["en-BS"]
   },
   "Jamaica": {
     "language": ["English"],
-    "iso639_1": ["en-JM"],
-    "iso639_2": ["eng"]
+    "iso639_1": ["en-JM"]
   },
   "Haiti": {
     "language": ["Haitian Creole", "French"],
-    "iso639_1": ["ht", "fr-HT"],
-    "iso639_2": ["hat", "fra"]
+    "iso639_1": ["ht", "fr-HT"]
   },
   "Dominican Republic": {
     "language": ["Spanish"],
-    "iso639_1": ["es-DO"],
-    "iso639_2": ["spa"]
+    "iso639_1": ["es-DO"]
   },
   "Trinidad and Tobago": {
     "language": ["English"],
-    "iso639_1": ["en-TT"],
-    "iso639_2": ["eng"]
+    "iso639_1": ["en-TT"]
   },
   "Antigua and Barbuda": {
     "language": ["English"],
-    "iso639_1": ["en-AG"],
-    "iso639_2": ["eng"]
+    "iso639_1": ["en-AG"]
   },
   "Barbados": {
     "language": ["English"],
-    "iso639_1": ["en-BB"],
-    "iso639_2": ["eng"]
+    "iso639_1": ["en-BB"]
   },
   "Belize": {
     "language": ["English"],
-    "iso639_1": ["en-BZ"],
-    "iso639_2": ["eng"]
+    "iso639_1": ["en-BZ"]
   },
   "Costa Rica": {
     "language": ["Spanish"],
-    "iso639_1": ["es-CR"],
-    "iso639_2": ["spa"]
+    "iso639_1": ["es-CR"]
   },
   "Dominica": {
     "language": ["English"],
-    "iso639_1": ["en-DM"],
-    "iso639_2": ["eng"]
+    "iso639_1": ["en-DM"]
   },
   "El Salvador": {
     "language": ["Spanish"],
-    "iso639_1": ["es-SV"],
-    "iso639_2": ["spa"]
+    "iso639_1": ["es-SV"]
   },
   "Grenada": {
     "language": ["English"],
-    "iso639_1": ["en-GD"],
-    "iso639_2": ["eng"]
+    "iso639_1": ["en-GD"]
   },
   "Guatemala": {
     "language": ["Spanish"],
-    "iso639_1": ["es-GT"],
-    "iso639_2": ["spa"]
+    "iso639_1": ["es-GT"]
   },
   "Honduras": {
     "language": ["Spanish"],
-    "iso639_1": ["es-HN"],
-    "iso639_2": ["spa"]
+    "iso639_1": ["es-HN"]
   },
   "Nicaragua": {
     "language": ["Spanish"],
-    "iso639_1": ["es-NI"],
-    "iso639_2": ["spa"]
+    "iso639_1": ["es-NI"]
   },
   "Panama": {
     "language": ["Spanish"],
-    "iso639_1": ["es-PA"],
-    "iso639_2": ["spa"]
+    "iso639_1": ["es-PA"]
   },
   "Saint Kitts and Nevis": {
     "language": ["English"],
-    "iso639_1": ["en-KN"],
-    "iso639_2": ["eng"]
+    "iso639_1": ["en-KN"]
   },
   "Saint Lucia": {
     "language": ["English"],
-    "iso639_1": ["en-LC"],
-    "iso639_2": ["eng"]
+    "iso639_1": ["en-LC"]
   },
   "Saint Vincent and the Grenadines": {
     "language": ["English"],
-    "iso639_1": ["en-VC"],
-    "iso639_2": ["eng"]
+    "iso639_1": ["en-VC"]
   },
   
   "Australia": {
     "language": ["English"],
-    "iso639_1": ["en-AU"],
-    "iso639_2": ["eng"]
+    "iso639_1": ["en-AU"]
   },
   "New Zealand": {
     "language": ["English", "Maori"],
-    "iso639_1": ["en-NZ", "mi"],
-    "iso639_2": ["eng", "mao"]
+    "iso639_1": ["en-NZ", "mi"]
   },
   "Papua New Guinea": {
     "language": ["English", "Tok Pisin"],
-    "iso639_1": ["en-PG", "tpi"],
-    "iso639_2": ["eng", "tpi"]
+    "iso639_1": ["en-PG", "tpi"]
   },
   "Solomon Islands": {
     "language": ["English"],
-    "iso639_1": ["en-SB"],
-    "iso639_2": ["eng"]
+    "iso639_1": ["en-SB"]
   },
   "Vanuatu": {
     "language": ["Bislama", "English", "French"],
-    "iso639_1": ["bi", "en-VU", "fr"],
-    "iso639_2": ["bis", "eng", "fra"]
+    "iso639_1": ["bi", "en-VU", "fr"]
   },
   "Fiji": {
     "language": ["English", "Fijian", "Hindi"],
-    "iso639_1": ["en-FJ", "fj", "hi-FJ"],
-    "iso639_2": ["eng", "fij", "hin"]
+    "iso639_1": ["en-FJ", "fj", "hi-FJ"]
   },
   "Micronesia": {
     "language": ["English"],
-    "iso639_1": ["en-FM"],
-    "iso639_2": ["eng"]
+    "iso639_1": ["en-FM"]
   },
   "Palau": {
     "language": ["Palauan"],
-    "iso639_1": ["pau"],
-    "iso639_2": ["pau"]
+    "iso639_1": ["pau"]
   },
   "Marshall Islands": {
     "language": ["Marshallese", "English"],
-    "iso639_1": ["mh", "en-MH"],
-    "iso639_2": ["mah", "eng"]
+    "iso639_1": ["mh", "en-MH"]
   },
   "Kiribati": {
     "language": ["Gilbertese", "English"],
-    "iso639_1": ["gil", "en-KI"],
-    "iso639_2": ["gil", "eng"]
+    "iso639_1": ["gil", "en-KI"]
   },
   "Nauru": {
     "language": ["Nauruan", "English"],
-    "iso639_1": ["na", "en-NR"],
-    "iso639_2": ["nau", "eng"]
+    "iso639_1": ["na", "en-NR"]
   },
   "Tonga": {
     "language": ["Tongan"],
-    "iso639_1": ["to"],
-    "iso639_2": ["ton"]
+    "iso639_1": ["to"]
   },
   "Samoa": {
     "language": ["Samoan", "English"],
-    "iso639_1": ["sm", "en-WS"],
-    "iso639_2": ["sam", "eng"]
+    "iso639_1": ["sm", "en-WS"]
   }
 }

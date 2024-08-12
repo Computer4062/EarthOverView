@@ -31,9 +31,6 @@ inputTimeZoneSearch.addEventListener("input", (event) => {
 				inputTimeZoneLabel.innerHTML = inputCountryBtns[i].innerHTML;
 				inputTimeZoneLabel.value = inputCountryBtns[i].value;
 
-				console.log("OUTPUT:", outputTimeZoneLabel.value);
-				console.log("INPUT:", inputTimeZoneLabel.value);
-
 				convertTime();
 			});
 		}
@@ -54,9 +51,6 @@ outputTimeZoneSearch.addEventListener("input", (event) => {
 			outputCountryBtns[i].addEventListener("click", () => {
 				outputTimeZoneLabel.innerHTML = outputCountryBtns[i].innerHTML;
 				outputTimeZoneLabel.value = outputCountryBtns[i].value;
-
-				console.log("OUTPUT:", outputTimeZoneLabel.value);
-				console.log("INPUT:", inputTimeZoneLabel.value);
 
 				convertTime();
 			});
@@ -94,25 +88,27 @@ inputMinuteBox.addEventListener("input", (event) => {
 	Searching
 */
 
-const searchBtn = document.querySelector("#search-btn");
 const searchBox = document.querySelector("#search-box");
 const searchSection = document.querySelector("#search-section");
 const closeBtn = document.querySelector("#close-button");
-
-let displaySearchSection = false;
 
 closeBtn.addEventListener("click", () => {
 	searchSection.classList.add("hidden");
 });
 
-searchBtn.addEventListener("click", () => {
-	search(searchBox.value);
+searchBox.addEventListener("input", () => {
+	searchCaller();
 });
 
-searchBox.addEventListener("keyup", (event) => {
-	if(event.keyCode === 13)
+function searchCaller(){
+	if(searchBox.value != "")
 		search(searchBox.value);
-});
+	else
+	{
+		searchSection.classList.add("hidden");
+		searchTable.innerHTML = "";
+	}
+}
 
 /*
 	Sorting
