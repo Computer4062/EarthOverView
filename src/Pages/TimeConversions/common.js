@@ -2,9 +2,9 @@ let continents = ["East Asia", "South Asia", "South East Asia", "Central Asia", 
 let continentsToRender = [];
 let currentTableList = [];
 
-const countriesJsonFileLocation = "../../Assets/Json/Countries.json";
-const countryCodesJsonFileLocation = "../../Assets/Json/CountryCodes.json";
-const jsonFileLocation = "../../Assets/Json/TimeZones.json";
+const countriesJsonFileLocation = "/Countries.json";
+const countryCodesJsonFileLocation = "/CountryCodes.json";
+const jsonFileLocation = "/TimeZones.json";
 
 const searchTable = document.querySelector("#search-table-body");
 const searchNotifier = document.querySelector("#search-section-notifier");

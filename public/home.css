@@ -2,6 +2,8 @@
 
 body
 {
+display: flex;
+flex-direction: column;
 background: #000;
 font-family: 'Poppins', sans-serif;
 margin: 0;
@@ -33,7 +35,7 @@ width: calc(10 * 5rem);
 #Earth{
 width: 300px;
 height: 300px;
-background: url("../src/Assets/Images/home/home-earth.jpg");
+background: url("./Assets/Images/home/home-earth.jpg");
 background-size: cover;
 background-repeat: repeat-x;
 border-radius: 50%;
@@ -79,8 +81,8 @@ font-size: 1.05rem;
 grid-area: 1 / 5 / 3 / 7;
 }
 #search-icon img{
-width: 65px;
-height: 65px;
+width: 53px;
+height: 53px;
 }
 #calling-codes-icon{
 grid-area: 2 / 8 / 4 / 10;
