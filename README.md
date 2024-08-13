@@ -1,0 +1,1 @@
+[detailed documentation](JOURNAL.md)
