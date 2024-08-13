@@ -208,3 +208,9 @@
 4. I think it would have been much better if I had drawn the flow charts of how the sort, filter and search options work way before I started coding
 5. I also have to update the Figma prototypes
 6. I can now get started on the rest of the pages
+
+13/08/2024
+
+1. I completed all of the pages in the countries section
+2. But I encounter a huge flaw which must be solved which is that there is a large loading time when a page needs to be loaded
+3. I also started an express server for the website
