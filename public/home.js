@@ -3,15 +3,6 @@ Get current population
 */
 const populationElement = document.getElementById("population");
 
-const url = 'https://get-population.p.rapidapi.com/population';
-const options = {
-	method: 'GET',
-	headers: {
-		'x-rapidapi-key': process.env.API_KEY,
-		'x-rapidapi-host': 'get-population.p.rapidapi.com'
-	}
-};
-
 (async function(){
 try {
   const response = await fetch(url, options);

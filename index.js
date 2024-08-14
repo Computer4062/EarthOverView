@@ -99,3 +99,7 @@ app.get("/Countries/Flags", (req, res) => {
 app.get("/Countries/CapitalCities", (req, res) => {
 	res.sendFile(__dirname + "/src/Pages/CapitalCities/CapitalCities.html");
 });
+
+app.get("/credits", (req, res) => {
+	res.sendFile(__dirname + "/src/Pages/Credits/Credits.html");
+});
