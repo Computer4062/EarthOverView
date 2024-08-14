@@ -214,3 +214,14 @@
 1. I completed all of the pages in the countries section
 2. But I encounter a huge flaw which must be solved which is that there is a large loading time when a page needs to be loaded
 3. I also started an express server for the website
+
+14/08/2024
+
+1. Managed to find out why there is a large loading time
+2. It was because of an invalid file I have put I corrected it and the website works fine now
+3. I recorded the page loading times in localhost ,but when I enter a page and try to exit back to the homepage there is a large load time
+4. I think this is because the server is trying to render population count from the population API
+5. I still haven't found a proper solution for the 1000req/h limitation
+6. I started searching for web hosting services and domain name providers
+7. I wrote down a list of all of them and selected what I thought was the best ones for me
+8. I will take advice and look further into this tommorow
