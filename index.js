@@ -12,8 +12,6 @@ const port = 3000;
 
 let populationCount = 0;
 
-//<a href="https://www.flaticon.com/free-icons/globe" title="globe icons">Globe icons created by Freepik - Flaticon</a>
-
 function formatNumber(number) {
 	const numberString = number.toString();
 	let commaAddedString = "";
