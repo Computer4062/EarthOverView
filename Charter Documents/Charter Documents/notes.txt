@@ -1,14 +1,17 @@
 Hosting Services
 --------------------
 
-Netlify - Price issues (monthly payments)
-Vercel - Has Free option for hobby projects
+Netlify - Has free option for hobby projects
+Vercel - Has free option for hobby projects
 Cloudflare - Cannot directly host a Express powered static webpage
 Heroku - Price issues (monthly payments)
 Hostinger - Price issues (monthly payments)
 HostGator - Price issues (monthly payments)
 BlueHost - Price issues (monthly payments)
 Github - It includes the .github part in the URL
+NGROK
+
+Name space or Vercel and Netlify free options ?
 
 _______________________________________________________________
 
