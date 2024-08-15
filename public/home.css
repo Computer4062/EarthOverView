@@ -133,6 +133,10 @@ width: auto;
 margin: 0.5rem;
 }
 
+footer{
+background-image: linear-gradient(black, #2c2c2c);
+}
+
 footer p{
 margin-bottom: 0px;
 padding: 0;
