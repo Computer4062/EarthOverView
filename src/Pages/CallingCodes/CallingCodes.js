@@ -25,6 +25,25 @@ function searchCaller(){
 }
 
 /*
+	Downloading
+*/
+
+const downloadSection = document.querySelector(".download-section");
+const downloadSecBtn = document.querySelector(".download-sec-btn");
+const downloadBtn = document.querySelector(".download-btn");
+
+downloadSecBtn.addEventListener("click", () => {
+	if(downloadSection.classList.contains("hidden"))
+		downloadSection.classList.remove("hidden");
+	else
+		downloadSection.classList.add("hidden");
+});
+
+downloadBtn.addEventListener("click", () => {
+	CallDownloader();
+});
+
+/*
 	Sorting
 */
 
