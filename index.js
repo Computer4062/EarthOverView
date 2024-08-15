@@ -10,7 +10,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 const port = 3300;
 
-let populationCount = 0;
+let populationCount = 8000000000;
 
 function formatNumber(number) {
 	const numberString = number.toString();
@@ -62,7 +62,8 @@ app.get("/", async(req, res) => {
 	try {
 		const response = await fetch(url, options);
 		result = await response.json();
-		populationCount = result.count;
+		if(result.count !== undefined)
+			populationCount = result.count;
 	} catch (error) {
 		console.error(error);
 	}

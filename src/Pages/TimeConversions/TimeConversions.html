@@ -12,9 +12,6 @@
 	<nav class="navbar navbar-expand-lg w-100 fixed-top" data-bs-theme="dark" style="background-color: #2c2c2c;">
 	<div class="container-fluid">
 		<a class="navbar-brand" href="/"><img src="/LOGO.png" class="navbar-logo" width="30" height=30 />EarthOverView</a>
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-		</button>
 	</div>
 	</nav>
 
@@ -54,9 +51,9 @@
 							AM
 						</button>
 						<ul class="dropdown-menu">
-							<li><button class="dropdown-item input-time-format-btn" type="button">AM</button></li>
-							<li><button class="dropdown-item input-time-format-btn" type="button">PM</button></li>
-							<li><button class="dropdown-item input-time-format-btn" type="button">24-hour</button></li>
+							<li><button class="dropdown-item input-time-format-btn add-bottom-border" type="button" style="background-color: #202529;">AM</button></li>
+							<li><button class="dropdown-item input-time-format-btn add-bottom-border" type="button" style="background-color: #202529;">PM</button></li>
+							<li><button class="dropdown-item input-time-format-btn" type="button" style="background-color: #202529;">24-hour</button></li>
 						</ul>
 					</div>
 				</div>
@@ -118,7 +115,7 @@
 					<div>
 						<p class="options-subtitle">Filter to Time</p>
 
-						<div class="input-group" data-bs-theme="dark" style="width: 320px">
+						<div class="input-group" data-bs-theme="dark" style="width: 280px">
 							<input type="text" placeholder="hour" aria-label="hour value" id="filter-hours-value" class="form-control time-filter" />
 							<span class="input-group-text">:</span>
 							<input type="text" placeholder="minute" aria-label="minute value" id="filter-minutes-value" class="form-control time-filter" />

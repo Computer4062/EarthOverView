@@ -178,8 +178,6 @@ function convertTime() {
 		const timeMoment = moment.tz(inputTime, 'hh:mm A', inputTimeZoneLabel.value);
 		const convertedTime = timeMoment.tz(outputTimeZoneLabel.value).format('hh:mm A');
 
-		console.log(convertedTime);
-
 		outputHourBox.value = `${convertedTime[0]}${convertedTime[1]}`;
 		outputMinuteBox.value = `${convertedTime[3]}${convertedTime[4]}`;
 

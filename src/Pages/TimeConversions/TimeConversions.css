@@ -62,7 +62,7 @@ justify-content: center;
 align-items: center;
 }
 
-@media (max-width: 650px){
+@media (max-width: 800px){
 	#time-search-section{
 	flex-direction: column;
 	}
@@ -77,4 +77,8 @@ align-items: center;
 #countries-select-dropdown{
 	background-color: #000;
 	padding: 10px;
+}
+
+.add-bottom-border{
+	border-bottom: 1px solid white;
 }
