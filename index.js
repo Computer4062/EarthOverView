@@ -42,6 +42,10 @@ app.listen(port, () => {
 });
 
 app.get("/", async(req, res) => {
+	res.sendFile(__dirname + "/public/Pages/HomePage/index.html");
+});
+
+app.get("/poppulation", async(req, res) => {
 	const url = 'https://get-population.p.rapidapi.com/population';
 	const options = {
 		method: 'GET',
@@ -58,11 +62,12 @@ app.get("/", async(req, res) => {
 		result = await response.json();
 		if(result.count !== undefined)
 			populationCount = result.count;
+
+		res.send(formatNumber(populationCount));
 	} catch (error) {
 		console.error(error);
+		res.send("Sorry... We are facing a problem");
 	}
-
-	res.render(__dirname + "/public/Pages/HomePage/index.ejs", {population: formatNumber(populationCount)});
 });
 
 app.get("/Countries/CallingCodes", (req, res) => {

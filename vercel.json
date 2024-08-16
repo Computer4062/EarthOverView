@@ -13,7 +13,7 @@
     "routes":[
         {
             "src": "/",
-            "dest": "public/Pages/HomePage/index.ejs"
+            "dest": "public/Pages/HomePage/index.html"
         }
     ]
 }
