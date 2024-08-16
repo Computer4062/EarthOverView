@@ -8,7 +8,7 @@ dotenv.config();
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const app = express();
-const port = 3300;
+const port = process.env.PORT || 3300;
 
 let populationCount = 8000000000;
 
@@ -102,3 +102,5 @@ app.get("/Countries/CapitalCities", (req, res) => {
 app.get("/credits", (req, res) => {
 	res.sendFile(__dirname + "/src/Pages/Credits/Credits.html");
 });
+
+export default app;
