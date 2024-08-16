@@ -3,8 +3,7 @@
     "builds": [
         {
             "src": "index.js",
-            "use": "@now/node",
-            "command": "npm run build"
+            "use": "@now/node"
         },
         {
             "src": "public/**",
