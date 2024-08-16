@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "public", "use": "@vercel/static" },
+    { "src": "src", "use": "@vercel/static" },
+    { "src": "src/Pages", "use": "@vercel/static" },
+    { "src": "src/Assets/Json", "use": "@vercel/static" },
+    { "src": "src/Assets/Images", "use": "@vercel/static" },
+    { "src": "src/Assets/Logo", "use": "@vercel/static" },
+    { "src": "src/Components", "use": "@vercel/static" }
+  ],
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
