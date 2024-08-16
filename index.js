@@ -35,13 +35,7 @@ function formatNumber(number) {
 	return finalString;
 }
 
-app.use(express.static(__dirname + "/src"));
 app.use(express.static(__dirname + "/public"));
-app.use(express.static(__dirname + "/src/Pages"));
-app.use(express.static(__dirname + "/src/Assets/Json"));
-app.use(express.static(__dirname + "/src/Assets/Images"));
-app.use(express.static(__dirname + "/src/Assets/Logo"));
-app.use(express.static(__dirname + "/src/Components"));
 
 app.listen(port, () => {
 	console.log(`Server listening on port ${port}`);
@@ -68,37 +62,37 @@ app.get("/", async(req, res) => {
 		console.error(error);
 	}
 
-	res.render(__dirname + "/public/index.ejs", {population: formatNumber(populationCount)});
+	res.render(__dirname + "/public/Pages/HomePage/index.ejs", {population: formatNumber(populationCount)});
 });
 
 app.get("/Countries/CallingCodes", (req, res) => {
-	res.sendFile(__dirname + "/src/Pages/CallingCodes/CallingCodes.html");
+	res.sendFile(__dirname + "/public/Pages/CallingCodes/CallingCodes.html");
 });
 
 app.get("/Countries/Currencies", (req, res) => {
-	res.sendFile(__dirname + "/src/Pages/Currencies/Currencies.html");
+	res.sendFile(__dirname + "/public/Pages/Currencies/Currencies.html");
 });
 
 app.get("/Countries/Demonyms", (req, res) => {
-	res.sendFile(__dirname + "/src/Pages/Demonyms/Demonyms.html");
+	res.sendFile(__dirname + "/public/Pages/Demonyms/Demonyms.html");
 });
 
 app.get("/Countries/TimeConversions", (req, res) => {
-	res.sendFile(__dirname + "/src/Pages/TimeConversions/TimeConversions.html");
+	res.sendFile(__dirname + "/public/Pages/TimeConversions/TimeConversions.html");
 });
 
 app.get("/Countries/Languages", (req, res) => {
-	res.sendFile(__dirname + "/src/Pages/LanguagesSpoken/LanguagesSpoken.html");
+	res.sendFile(__dirname + "/public/Pages/LanguagesSpoken/LanguagesSpoken.html");
 });
 
 app.get("/Countries/Flags", (req, res) => {
-	res.sendFile(__dirname + "/src/Pages/CountryFlags/CountryFlags.html");
+	res.sendFile(__dirname + "/public/Pages/CountryFlags/CountryFlags.html");
 });
 
 app.get("/Countries/CapitalCities", (req, res) => {
-	res.sendFile(__dirname + "/src/Pages/CapitalCities/CapitalCities.html");
+	res.sendFile(__dirname + "/public/Pages/CapitalCities/CapitalCities.html");
 });
 
 app.get("/credits", (req, res) => {
-	res.sendFile(__dirname + "/src/Pages/Credits/Credits.html");
+	res.sendFile(__dirname + "/public/Pages/Credits/Credits.html");
 });
