@@ -42,3 +42,15 @@ align-items: center;
 #title-banner p{
 margin: 0;
 }
+
+.dropdown-menu{
+padding: 0;
+}
+
+.search-options{
+background-color: #212529;
+}
+
+table{
+opacity: 0.8;
+}

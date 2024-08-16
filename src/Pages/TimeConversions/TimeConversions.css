@@ -82,3 +82,11 @@ align-items: center;
 .add-bottom-border{
 	border-bottom: 1px solid white;
 }
+
+.btn-dark{
+    opacity: 0.8;
+}
+
+table{
+opacity: 0.8;
+}

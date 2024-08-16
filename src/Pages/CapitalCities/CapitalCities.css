@@ -55,3 +55,7 @@ border: 1px solid white
 .map-cell{
 text-align: center;
 }
+
+.table{
+opacity: 0.8;
+}

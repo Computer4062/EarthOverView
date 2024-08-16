@@ -41,3 +41,7 @@ align-items: center;
 #title-banner p{
 margin: 0;
 }
+
+.table{
+opacity: 0.8;
+}
