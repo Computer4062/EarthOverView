@@ -1,4 +1,4 @@
 #!/bin/bash
 
 npm install
-node index.js
+npm run build
