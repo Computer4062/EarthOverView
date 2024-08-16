@@ -102,5 +102,3 @@ app.get("/Countries/CapitalCities", (req, res) => {
 app.get("/credits", (req, res) => {
 	res.sendFile(__dirname + "/src/Pages/Credits/Credits.html");
 });
-
-export default app;
