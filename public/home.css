@@ -115,6 +115,10 @@ width: 45px;
 height: 45px;
 }
 
+.man-img{
+margin-right: 56px;
+}
+
 #poppulation-banner{
 display: flex;
 justify-content: center;
