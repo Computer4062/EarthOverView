@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('/Components/ScrollBar/scrollbar.css');
-@import url('/Components/Search/Search.css');
-@import url('/Components/Filter/Filter.css');
-@import url('/Components/Sort/Sort.css');
-@import url('/Components/Sort/Sort.css');
-@import url('/Components/NavBar/NavBar.css');
-@import url('/Components/Table/Table.css');
+@import url('/public/Components/ScrollBar/scrollbar.css');
+@import url('/public/Components/Search/Search.css');
+@import url('/public/Components/Filter/Filter.css');
+@import url('/public/Components/Sort/Sort.css');
+@import url('/public/Components/Sort/Sort.css');
+@import url('/public/Components/Sort/Sort.css');
+@import url('/public/Components/NavBar/NavBar.css');
+@import url('/public/Components/Table/Table.css');
 
 body
 {

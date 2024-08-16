@@ -2,8 +2,8 @@ let continents = ["East Asia", "South Asia", "South East Asia", "Central Asia", 
 let continentsToRender = [];
 let currentTableList = [];
 
-const countriesJsonFileLocation = "/Assets/Json/Countries.json";
-const jsonFileLocation = "/Assets/Json/Currencies.json";
+const countriesJsonFileLocation = "/public/Assets/Json/Countries.json";
+const jsonFileLocation = "/public/Assets/Json/Currencies.json";
 
 const searchTable = document.querySelector("#search-table-body");
 const searchNotifier = document.querySelector("#search-section-notifier");
