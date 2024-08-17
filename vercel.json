@@ -5,6 +5,10 @@
             "src": "index.js",
             "use": "@now/node"
         },
+		{
+            "src": "population.js",
+            "use": "@now/node"
+        },
         {
             "src": "public/**",
             "use": "@vercel/static"
@@ -21,7 +25,7 @@
 		},
 		{
 			"src":"/poppulation",
-			"dest": "index.js"
+			"dest": "population.js"
 		}
     ]
 }
