@@ -251,3 +251,4 @@
 5. I started working in the dev branch and by watching a YouTube video I managed to fix the broken footer problem
 6. Now Iam working on Getting a loading sign
 7. This is important because users will be confused other wise
+8. I also worked on enlargening the filter card so that the elements appear properly
