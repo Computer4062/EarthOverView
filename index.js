@@ -37,10 +37,6 @@ function formatNumber(number) {
 
 app.use(express.static(__dirname + "/public"));
 
-app.listen(port, () => {
-	console.log(`Server listening on port ${port}`);
-});
-
 app.get("/", async(req, res) => {
 	res.sendFile(__dirname + "/public/Pages/HomePage/index.html");
 });
@@ -100,4 +96,8 @@ app.get("/Countries/CapitalCities", (req, res) => {
 
 app.get("/credits", (req, res) => {
 	res.sendFile(__dirname + "/public/Pages/Credits/Credits.html");
+});
+
+app.listen(port, () => {
+	console.log(`Server listening on port ${port}`);
 });
