@@ -35,7 +35,7 @@ function formatNumber(number) {
 	return finalString;
 }
 
-app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname));
 
 app.get("/", async(req, res) => {
 	res.sendFile(__dirname + "/public/Pages/HomePage/index.html");

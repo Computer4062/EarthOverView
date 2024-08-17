@@ -18,6 +18,10 @@
 		{
 			"src":"/Countries/CallingCodes",
 			"dest": "public/Pages/CallingCodes/CallingCodes.html"
+		},
+		{
+			"src":"/poppulation",
+			"dest": "index.js"
 		}
     ]
 }
