@@ -60,6 +60,8 @@ function render()
 
 /* Default renderer - played at the beginning */
 function defaultRender(){
+	showDefaultLoadingBar();
+
 	countriesTable.innerHTML = "";
 	currentTableList = [];
 
@@ -100,6 +102,9 @@ function defaultRender(){
 		})
 	.catch(error => {
 		console.error('Error:', error);
+	})
+	.finally(() => {
+		hideDefaultLoadingBar();
 	});
 }
 
