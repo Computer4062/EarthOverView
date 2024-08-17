@@ -1,5 +1,8 @@
 { 
-	"version": 2, 
+	"version": 2,
+	"builds": [
+    	{ "src": "public", "use": "@vercel/static" }
+  	], 
 	"rewrites": [
 		{ "source": "/", "destination": "/public/Pages/HomePage/index.html" },
 		{ "source": "/Countries/CallingCodes", "destination": "/public/Pages/CallingCodes/CallingCodes.html" }
