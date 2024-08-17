@@ -225,3 +225,29 @@
 6. I started searching for web hosting services and domain name providers
 7. I wrote down a list of all of them and selected what I thought was the best ones for me
 8. I will take advice and look further into this tommorow
+
+15/08/2024
+
+1. I made the app more mobile friendly
+2. I found out that there are some other spots which has to be made mobile friendly so I decided to focus on them as well
+3. I also added a new branch called download-feature and started working on it
+4. But I realized that right now the top priority should be to host the website
+5. So I decided to work on it later (once the website is hosted)
+6. I will make the website more mobile friendly, and host it by tommorow.
+
+16/08/2024
+
+1. The whole day I tried to deploy it to Vercel
+2. I also had to change all the links so that it would be viable for publishing on Vercel
+3. The homepage runs as intended but the problem is really that the server doesn't start
+4. I managed to get the server to start but that wasn't enough because the server then couldnot find the modules
+
+17/08/2024
+
+1. Today I started working on the website at 3PM
+2. I managed to deploy the web site and it works well
+3. But I had to deploy the web site in static mode
+4. I created a different branch called dev for my express server
+5. I started working in the dev branch and by watching a YouTube video I managed to fix the broken footer problem
+6. Now Iam working on Getting a loading sign
+7. This is important because users will be confused other wise
