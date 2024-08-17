@@ -1,6 +1,7 @@
 { 
 	"version": 2, 
 	"rewrites": [
-		{ "source": "/", "destination": "/public/Pages/HomePage/index.html" }
+		{ "source": "/", "destination": "/public/Pages/HomePage/index.html" },
+		{ "source": "/Countries/CallingCodes", "destination": "/public/Pages/CallingCodes/CallingCodes.html" }
 	] 
 }
