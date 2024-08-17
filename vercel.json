@@ -24,8 +24,32 @@
 			"dest": "public/Pages/CallingCodes/CallingCodes.html"
 		},
 		{
-			"src":"/poppulation",
-			"dest": "population.js"
+			"src":"/Countries/Currencies",
+			"dest": "public/Pages/Currencies/Currencies.html"
+		},
+		{
+			"src":"/Countries/Demonyms",
+			"dest": "public/Pages/Demonyms/Demonyms.html"
+		},
+		{
+			"src":"/Countries/TimeConversions",
+			"dest": "public/Pages/TimeConversions/TimeConversions.html"
+		},
+		{
+			"src":"/Countries/LanguagesSpoken",
+			"dest": "public/Pages/LanguagesSpoken/LanguagesSpoken.html"
+		},
+		{
+			"src":"/Countries/CountryFlags",
+			"dest": "public/Pages/CountryFlags/CountryFlags.html"
+		},
+		{
+			"src":"/Countries/CapitalCities",
+			"dest": "public/Pages/CapitalCities/CapitalCities.html"
+		},
+		{
+			"src":"/credits",
+			"dest": "public/Pages/Credits/Credits.html"
 		}
     ]
 }

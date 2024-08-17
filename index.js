@@ -10,30 +10,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 const port = process.env.PORT || 3300;
 
-let populationCount = 8000000000;
 
-function formatNumber(number) {
-	const numberString = number.toString();
-	let commaAddedString = "";
-
-	/* Add commas between each 3 numbers */
-	let count = -1;
-	for(let i = numberString.length - 1; i >= 0; i--)
-	{
-		count++;
-		if((count + 1) % 3 === 0)
-			commaAddedString += numberString[i] + " ";
-		else
-			commaAddedString += numberString[i];
-	}
-
-	/* Invert the list */
-	let finalString = "";
-	for(let i = commaAddedString.length - 1; i >= 0; i--)
-		finalString += commaAddedString[i];
-
-	return finalString;
-}
 
 app.use(express.static(__dirname));
 
