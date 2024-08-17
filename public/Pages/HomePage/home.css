@@ -3,6 +3,9 @@
 
 body
 {
+display: flex;
+flex-direction: column;
+min-height: 100vh;
 background: #000;
 font-family: 'Poppins', sans-serif;
 margin: 0;
@@ -17,6 +20,10 @@ display: none;
 ::selection{
 background-color: white;
 color: black;
+}
+
+main{
+flex-grow: 1;
 }
 
 #CIF-section{
@@ -332,13 +339,5 @@ color: white;
 
 	footer{
 	font-size: 10px;
-	}
-}
-
-@media (max-width: 540px)
-{
-	footer{
-	position: fixed;
-	bottom: 0;
 	}
 }
