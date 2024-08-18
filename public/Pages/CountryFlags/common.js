@@ -48,6 +48,8 @@ function render()
 
 /* Default renderer - played at the beginning */
 function defaultRender(){
+	showLoadingBar();
+
 	countriesTable.innerHTML = "";
 	currentTableList = [];
 
@@ -89,5 +91,6 @@ function defaultRender(){
 					console.error("Error: ", error);
 				});
 		})
-	.catch(error => console.log('error', error));
+	.catch(error => console.log('error', error))
+	.finally(() => hideLoadingBar())
 }

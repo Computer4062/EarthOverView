@@ -27,10 +27,12 @@ function renderContinent(){
 		})
 	.catch(error => {
 		console.error("Error: ", error);
-	});
+	})
 }
 
 function filterToDigits(hDigit, tDigit, oDigit){
+	showFilterLoadingBar();
+
 	countriesTable.innerHTML = "";
 
 	let findId = -1;
@@ -162,4 +164,6 @@ function filterToDigits(hDigit, tDigit, oDigit){
 		break;
 		}
 	});
+
+	hideFilterLoadingBar();
 }

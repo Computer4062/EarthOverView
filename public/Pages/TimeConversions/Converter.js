@@ -105,6 +105,8 @@ function currentTime12HourFormat() {
 */
 
 function getUserCountry() {
+  showLoadingBar();
+
   fetch('https://api.ipify.org?format=json')
     .then(response => response.json())
     .then(data => {
@@ -149,7 +151,8 @@ function getUserCountry() {
         })
         .catch(error => console.error("Error fetching country data:", error));
     })
-    .catch(error => console.error("Error fetching IP:", error));
+    .catch(error => console.error("Error fetching IP:", error))
+	.finally(() => hideLoadingBar());
 }
 
 /*

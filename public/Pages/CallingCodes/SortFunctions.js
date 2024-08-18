@@ -1,4 +1,4 @@
-function sortAscendingNames(){
+async function sortAscendingNames(){
 	currentTableList.sort((a, b) => {
 		if (a[tableColumns.country] < b[tableColumns.country]) {
 			return -1;
@@ -8,6 +8,8 @@ function sortAscendingNames(){
 			return 0;
 		}
 	});
+
+	return;
 }
 
 function sortDescendingNames(){
@@ -43,5 +45,5 @@ function sortDescendingCodes(){
 		} else {
 			return 0;
 		}
-	});
+	})
 }

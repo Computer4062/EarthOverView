@@ -24,6 +24,8 @@ function formatNumber(number) {
 }
 
 async function fetchPoppulation(){
+	showLoadingBar();
+
 	const url = 'https://get-population.p.rapidapi.com/population';
 	const options = {
 		method: 'GET',
@@ -38,12 +40,17 @@ async function fetchPoppulation(){
 	try {
 		const response = await fetch(url, options);
 		result = await response.json();
+
 		if(result.count !== undefined)
 			populationCount = result.count;
+
 		document.querySelector("#population").textContent = formatNumber(populationCount);
+
 	} catch (error) {
 		console.error(error);
 		document.querySelector("#population").textContent = "Sorry... We are facing a problem";
+	} finally {
+		hideLoadingBar();
 	}
 }
 

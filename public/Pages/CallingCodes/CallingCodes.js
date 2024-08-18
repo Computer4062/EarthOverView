@@ -33,14 +33,14 @@ const descendingNamesBtn = document.querySelector("#descendingNamesBtn");
 const ascendingCodesBtn = document.querySelector("#ascendingCodesBtn");
 const descendingCodesBtn = document.querySelector("#descendingCodesBtn");
 
-ascendingNamesBtn.addEventListener('change', function(){
+ascendingNamesBtn.addEventListener('change', async function(){
 	if(ascendingNamesBtn.checked)
 	{
 		ascendingCodeMode = false;
 		descendingCodeMode = false;
 		ascendingNamesMode = true;
 		descendingNamesMode = false;
-
+	
 		render();
 	}
 });
