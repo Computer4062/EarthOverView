@@ -1,6 +1,4 @@
-function sortAscendingNames(){
-	showSortLoadingBar();
-
+async function sortAscendingNames(){
 	currentTableList.sort((a, b) => {
 		if (a[tableColumns.country] < b[tableColumns.country]) {
 			return -1;
@@ -11,7 +9,7 @@ function sortAscendingNames(){
 		}
 	});
 
-	hideSortLoadingBar();
+	return;
 }
 
 function sortDescendingNames(){

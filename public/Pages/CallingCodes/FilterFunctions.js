@@ -1,6 +1,4 @@
 function renderContinent(){	
-	showFilterLoadingBar();
-
 	let continentsList = []
 	if(continentsToRender.length === 0)
 		continentsList = continents;
@@ -30,9 +28,6 @@ function renderContinent(){
 	.catch(error => {
 		console.error("Error: ", error);
 	})
-	.finally(() => {
-		hideFilterLoadingBar();
-	});
 }
 
 function filterToDigits(hDigit, tDigit, oDigit){

@@ -67,11 +67,10 @@ function render()
 
 /* Default renderer - played at the beginning */
 function defaultRender(){
+	showLoadingBar();
+
 	countriesTable.innerHTML = "";
 	currentTableList = [];
-
-	// Clean the list
-	currentTableList = removeDuplicateElements(currentTableList);
 
 	let i = 0;
 	fetch(jsonFileLocation)
@@ -112,7 +111,8 @@ function defaultRender(){
 		})
 	.catch(error => {
 		console.error('Error:', error);
-	});
+	})
+	.finally(() => hideLoadingBar());
 }
 
 /* 

@@ -254,6 +254,11 @@ color: white;
 	margin-left: 33px;
 	}
 
+	.loader-symbol{
+		width: 20px;
+		height: 20px;
+	}
+
 	footer{
 	font-size: 10px;
 	}
@@ -340,4 +345,8 @@ color: white;
 	footer{
 	font-size: 10px;
 	}
+}
+
+.hidden{
+display: none;
 }

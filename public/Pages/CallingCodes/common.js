@@ -60,7 +60,7 @@ function render()
 
 /* Default renderer - played at the beginning */
 function defaultRender(){
-	showDefaultLoadingBar();
+	showLoadingBar();
 
 	countriesTable.innerHTML = "";
 	currentTableList = [];
@@ -104,7 +104,7 @@ function defaultRender(){
 		console.error('Error:', error);
 	})
 	.finally(() => {
-		hideDefaultLoadingBar();
+		hideLoadingBar();
 	});
 }
 
