@@ -79,6 +79,8 @@ function defaultRender(){
 			fetch(countriesJsonFileLocation)
 				.then(response => response.json())
 				.then(countries => {
+					// Put user country and time data to time conversion boxes
+					getUserCountry();
 
 					continents.forEach(continent => {
 					countries[continent].forEach(country => {
