@@ -251,5 +251,4 @@ for(let i = 0; i < filterDayTimeSelector.length; i++)
 	});
 }
 
-getUserCountry();    // Write time conversion values
 defaultRender();     // Write the table
