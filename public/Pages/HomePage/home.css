@@ -77,6 +77,10 @@ align-items: center;
 text-align: center;
 }
 
+.Earth-grid-icons img{
+margin-bottom: 6px;
+}
+
 .Earth-grid-icons p{
 margin: 0;
 padding: 0;
