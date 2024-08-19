@@ -261,3 +261,10 @@
 4. There is one problem which is that the API key is visible to the public
 5. I found out that I could use templates and make an API to send messages to the front end
 6. So I tried that but it didnot work
+
+19/08/2024
+
+1. I linked up the domain name to Vercel through Name Servers
+2. Vercel actually takes care of SSL for free
+3. I then created a project evaluation document and wrote down about how the project went and things I learned
+4. Finally I also made a few adjustments to the website CSS and also added adjustments to the search function
