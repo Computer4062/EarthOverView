@@ -43,9 +43,12 @@ function returnTimeZones(input, country){
 	let noZonesFound = true;
 	for(let x = 0; x < countryList.length; x++)
 	{
+		let listItem = countryList[x].replace(/\s/g, '').toLowerCase();
+		let searchItem = country.replace(/\s/g, '').toLowerCase();
+
 		for(let i = 0; i < country.length; i++)
 		{
-			if(country[i].toLowerCase() != countryList[x][i].toLowerCase())
+			if(searchItem[i] != listItem[i])
 			{
 				found = false;
 				break;
@@ -173,8 +176,6 @@ function convertTime() {
 	else
 	{
 		const inputTime = `${inputHourBox.value}:${inputMinuteBox.value} ${inputTimeFormatLabel.innerHTML}`;
-
-		console.log(inputTime);
 
 		const timeMoment = moment.tz(inputTime, 'hh:mm A', inputTimeZoneLabel.value);
 		const convertedTime = timeMoment.tz(outputTimeZoneLabel.value).format('hh:mm A');
