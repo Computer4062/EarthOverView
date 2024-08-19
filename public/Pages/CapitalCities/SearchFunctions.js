@@ -8,12 +8,16 @@ function searchName(text){
 
 	for(let i = 0; i < currentTableList.length; i++){ // Iterate through the current elements
 		let found = false;
-		if(currentTableList[i][tableColumns.country].length >= text.length)
+
+		let listItem = currentTableList[i][tableColumns.country].replace(/\s/g, '').toLowerCase();
+		let searchItem = text.replace(/\s/g, '').toLowerCase();
+
+		if(listItem.length >= searchItem.length)
 		{
-			for(let j = 0; j < text.length; j++) // Iterate through the search box value
+			for(let j = 0; j < searchItem.length; j++) // Iterate through the search box value
 			{
 				/* Check if search results are similar */
-				if(text[j].toLowerCase() === currentTableList[i][tableColumns.country][j].toLowerCase())
+				if(searchItem[j] === listItem[j])
 				{
 					found = true;
 				}
@@ -73,11 +77,15 @@ function searchCity(text){
 
 	for(let i = 0; i < currentTableList.length; i++){ // Iterate through the current elements
 		let found = false;
-		if(currentTableList[i][tableColumns.city].length >= text.length){
-			for(let j = 0; j < text.length; j++) // Iterate through the search box value
+
+		let listItem = currentTableList[i][tableColumns.city].replace(/\s/g, '').toLowerCase();
+		let searchItem = text.replace(/\s/g, '').toLowerCase();
+
+		if(listItem.length >= searchItem.length){
+			for(let j = 0; j < searchItem.length; j++) // Iterate through the search box value
 			{
 				/* Check if search results are similar */
-					if(text[j].toLowerCase() === currentTableList[i][tableColumns.city][j].toLowerCase())
+					if(searchItem[j] === listItem[j])
 					{
 						found = true;
 					}
