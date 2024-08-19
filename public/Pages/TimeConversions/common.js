@@ -80,8 +80,6 @@ function defaultRender(){
 				.then(response => response.json())
 				.then(countries => {
 					// Put user country and time data to time conversion boxes
-					getUserCountry();
-
 					continents.forEach(continent => {
 					countries[continent].forEach(country => {
 
@@ -114,7 +112,7 @@ function defaultRender(){
 	.catch(error => {
 		console.error('Error:', error);
 	})
-	.finally(() => hideLoadingBar());
+	.finally(() => getUserCountry());
 }
 
 /* 

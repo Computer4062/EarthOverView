@@ -150,6 +150,7 @@ function getUserCountry() {
         .catch(error => console.error("Error fetching country data:", error));
     })
     .catch(error => console.error("Error fetching IP:", error))
+	.finally(() => hideLoadingBar());
 }
 
 /*
