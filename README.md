@@ -252,3 +252,12 @@
 6. Now Iam working on Getting a loading sign
 7. This is important because users will be confused other wise
 8. I also worked on enlargening the filter card so that the elements appear properly
+
+18/08/2024
+
+1. I added a loading spinner everytime someone gets into a page for the first time
+2. I tried to add a loading spinner for the time it takes for sorting and filtering but it just did not work
+3. I also got the domain name earthoverview.info
+4. There is one problem which is that the API key is visible to the public
+5. I found out that I could use templates and make an API to send messages to the front end
+6. So I tried that but it didnot work
