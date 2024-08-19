@@ -89,8 +89,8 @@ function defaultRender(){
 				})
 				.catch(error => {
 					console.error("Error: ", error);
-				});
+				})
+				.finally(() => hideLoadingBar())
 		})
 	.catch(error => console.log('error', error))
-	.finally(() => hideLoadingBar())
 }
