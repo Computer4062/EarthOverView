@@ -43,8 +43,8 @@ app.get("/poppulation", async(req, res) => {
 	}
 });
 
-app.get("/Countries/CallingCodes", (req, res) => {
-	res.sendFile(__dirname + "/public/Pages/CallingCodes/CallingCodes.html");
+app.get("/Countries/CountryCodes", (req, res) => {
+	res.sendFile(__dirname + "/public/Pages/CountryCodes/CountryCodes.html");
 });
 
 app.get("/Countries/Currencies", (req, res) => {

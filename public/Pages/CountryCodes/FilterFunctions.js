@@ -31,8 +31,6 @@ function renderContinent(){
 }
 
 function filterToDigits(hDigit, tDigit, oDigit){
-	showFilterLoadingBar();
-
 	countriesTable.innerHTML = "";
 
 	let findId = -1;
@@ -43,6 +41,7 @@ function filterToDigits(hDigit, tDigit, oDigit){
 	else if((hDigit != -1) && (tDigit != -1) && (oDigit == -1)) findId = 3;
 	else if((hDigit != -1) && (tDigit == -1) && (oDigit != -1)) findId = 4;
 	else if((hDigit == -1) && (tDigit != -1) && (oDigit != -1)) findId = 5;
+	else if((hDigit != -1) && (tDigit != -1) && (oDigit != -1)) findId = 6;
 
 	var i = 0;
 	currentTableList.forEach(countryData => {
@@ -162,8 +161,25 @@ function filterToDigits(hDigit, tDigit, oDigit){
 			}
 		}
 		break;
+
+		case 6:
+		{
+			if((Math.floor(countryData[tableColumns.code] / 100) % 10 == hDigit) && (Math.floor(countryData[tableColumns.code] / 10) % 10 == tDigit) && (Math.floor(countryData[tableColumns.code]) % 10 == oDigit))
+			{
+				i++;
+				let htmlContent = `
+					<tr>
+					<th scope="row">${i}</th>
+					<td>${countryData[tableColumns.country]}</td>
+					<td>${countryData[tableColumns.code]}</td>
+					<td>${countryData[tableColumns.continent]}</td>
+					</tr>
+				`;
+
+				countriesTable.innerHTML += htmlContent;
+			}
+		}
+		break;
 		}
 	});
-
-	hideFilterLoadingBar();
 }
