@@ -12,8 +12,8 @@
             "dest": "public/Pages/HomePage/index.html"
         },
 		{
-			"src":"/Countries/CountriesCodes",
-			"dest": "public/Pages/CountriesCodes/CountriesCodes.html"
+			"src":"/Countries/CountryCodes",
+			"dest": "public/Pages/CountryCodes/CountryCodes.html"
 		},
 		{
 			"src":"/Countries/Currencies",
