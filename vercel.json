@@ -12,8 +12,8 @@
             "dest": "public/Pages/HomePage/index.html"
         },
 		{
-			"src":"/Countries/CallingCodes",
-			"dest": "public/Pages/CallingCodes/CallingCodes.html"
+			"src":"/Countries/CountriesCodes",
+			"dest": "public/Pages/CountriesCodes/CountriesCodes.html"
 		},
 		{
 			"src":"/Countries/Currencies",
