@@ -28,7 +28,7 @@
 			"dest": "public/Pages/TimeConversions/TimeConversions.html"
 		},
 		{
-			"src":"/Countries/LanguagesSpoken",
+			"src":"/Countries/Languages",
 			"dest": "public/Pages/LanguagesSpoken/LanguagesSpoken.html"
 		},
 		{
