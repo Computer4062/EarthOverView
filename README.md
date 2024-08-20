@@ -268,3 +268,11 @@
 2. Vercel actually takes care of SSL for free
 3. I then created a project evaluation document and wrote down about how the project went and things I learned
 4. Finally I also made a few adjustments to the website CSS and also added adjustments to the search function
+
+20/08/2024
+
+1. I watched videos on how to write meta tags and titles
+2. Figured out that titles describe what the user gets from the webpage and meta data is a description for user attraction
+3. Rewrote the titles for all the pages and wrote the meta tags as well
+4. Corrected a feature in time conversions
+5. Corrected Calling Codes to be Country Codes
