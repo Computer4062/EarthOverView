@@ -44,7 +44,7 @@
 			"dest": "public/Pages/Credits/Credits.html"
 		},
 		{
-			"src":"/sitemap",
+			"src":"/sitemap.txt",
 			"dest": "public/sitemap.txt"
 		}
     ]
