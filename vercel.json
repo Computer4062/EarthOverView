@@ -42,6 +42,10 @@
 		{
 			"src":"/credits",
 			"dest": "public/Pages/Credits/Credits.html"
+		},
+		{
+			"src":"/sitemap",
+			"dest": "sitemap.txt"
 		}
     ]
 }
