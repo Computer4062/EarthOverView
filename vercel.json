@@ -45,7 +45,7 @@
 		},
 		{
 			"src":"/sitemap",
-			"dest": "sitemap.txt"
+			"dest": "./sitemap.txt"
 		}
     ]
 }
