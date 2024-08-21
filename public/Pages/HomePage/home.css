@@ -120,6 +120,7 @@ grid-area: 2 / 2 / 4 / 4;
 #Earth-hover-icon:hover{
 width: 55px;
 height: 55px;
+cursor: pointer;
 }
 
 #Earth-hover-icon:active{
