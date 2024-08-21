@@ -25,7 +25,8 @@ function render()
 	else if(descendingNamesMode) sortDescendingNames();
 	
 	countriesTable.innerHTML = "";
-	var i = 0;
+	
+	let i = 0;
 
 	currentTableList.forEach(countryData => {
 		i++;

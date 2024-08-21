@@ -48,12 +48,15 @@ function AddToTable(condition, countryData, i)
 		`;
 
 		countriesTable.innerHTML += htmlContent;
+		downloadsList.push([countryData[tableColumns.country], countryData[tableColumns.timezone]]);
 	}
 }
 
 function filterToTime(hDigits, mDigits, dayTime)
 {
 	countriesTable.innerHTML = "";
+	downloadsList = [];
+
 	let findId = -1;
 
 	if((hDigits != -1) && (mDigits != -1)) findId = 0;

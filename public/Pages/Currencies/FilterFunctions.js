@@ -32,6 +32,7 @@ function renderContinent(){
 
 function filterToUnits(currencyUnit){
 	countriesTable.innerHTML = ""; // Clear the table
+	downloadsList = [];
 
 	let counter = 0;
 	let nothingFound = true;
@@ -73,6 +74,8 @@ function filterToUnits(currencyUnit){
 			`;
 
 			searchNotifier.innerHTML = "<small>* Filter options affect the results *</small>";
+			downloadsList.push([currentTableList[i][tableColumns.country], currentTableList[i][tableColumns.unit], currentTableList[i][tableColumns.name],
+								currentTableList[i][tableColumns.symbol], currentTableList[i][tableColumns.code]]);
 		}
 	}
 }
