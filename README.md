@@ -282,4 +282,5 @@
 1. I completed the download feature so that users can download the table generated in CSV format
 2. Some adjustments were made to the meta tags
 3. Changes were made to the home page css
-4. The site was search indexed from google search console
+4. Site map was added
+5. The site was submitted for search indexing
