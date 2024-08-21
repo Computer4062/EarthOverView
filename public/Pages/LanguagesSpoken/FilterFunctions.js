@@ -32,6 +32,7 @@ function renderContinent(){
 
 function filterToLanguageName(languageName){
 	countriesTable.innerHTML = ""; // Clear the table
+	downloadsList = [];
 
 	let counter = 0;
 	for(let i = 0; i < currentTableList.length; i++){ // Iterate through the current elements
@@ -83,6 +84,12 @@ function filterToLanguageName(languageName){
 				<td>${currentTableList[i][tableColumns.continent]}</td>
 				</tr>
 			`;
+
+			downloadsList.push([
+				currentTableList[i][tableColumns.country],
+				currentTableList[i][tableColumns.lang].map(lang => `${lang}`).join('|'),
+				currentTableList[i][tableColumns.code].map(code => `${code}`).join('|')
+			]);
 		}
 	}
 }

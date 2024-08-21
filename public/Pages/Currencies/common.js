@@ -1,6 +1,7 @@
 let continents = ["East Asia", "South Asia", "South East Asia", "Central Asia", "Western Asia", "Northern Africa", "Western Africa", "Eastern Africa", "Southern Africa", "Central Africa", "Europe", "Southern America", "Northern America", "Oceania"];
 let continentsToRender = [];
 let currentTableList = [];
+let downloadsList = [];
 
 const countriesJsonFileLocation = "/public/Assets/Json/Countries.json";
 const jsonFileLocation = "/public/Assets/Json/Currencies.json";
@@ -38,6 +39,7 @@ function render()
 	else
 	{
 		countriesTable.innerHTML = "";
+		downloadsList = [];
 
 		var i = 0;
 		currentTableList.forEach(countryData => {
@@ -55,6 +57,7 @@ function render()
 			`;
 
 			countriesTable.innerHTML += htmlContent;
+			downloadsList.push([countryData[tableColumns.country], countryData[tableColumns.unit], countryData[tableColumns.name], countryData[tableColumns.symbol], countryData[tableColumns.code]]);
 		});
 	}
 
@@ -107,19 +110,11 @@ function defaultRender(){
 
 				countriesTable.innerHTML += htmlContent;
 				currentTableList.push([countryData[0], currency[countryData[0]].unit, currency[countryData[0]].currency, currency[countryData[0]].symbol, currency[countryData[0]].code, countryData[1]]);
+				downloadsList.push([countryData[0], currency[countryData[0]].unit, currency[countryData[0]].currency, currency[countryData[0]].symbol, currency[countryData[0]].code]);
 			});
 		})
 	.catch(error => {
 		console.error('Error:', error);
 	})
 	.finally(() => hideLoadingBar())
-}
-
-/* Functions */
-function removeItem(list, itemToRemove) {
-  const index = list.indexOf(itemToRemove);
-  if (index !== -1) {
-    list.splice(index, 1);
-  }
-  return list;
 }

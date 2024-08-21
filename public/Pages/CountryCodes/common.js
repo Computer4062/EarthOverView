@@ -1,6 +1,7 @@
 let continents = ["East Asia", "South Asia", "South East Asia", "Central Asia", "Western Asia", "Northern Africa", "Western Africa", "Eastern Africa", "Southern Africa", "Central Africa", "Europe", "Southern America", "Northern America", "Oceania"];
 let continentsToRender = [];
 let currentTableList = [];
+let downloadsList = [];
 
 const countriesJsonFileLocation = "/public/Assets/Json/Countries.json";
 const jsonFileLocation = "/public/Assets/Json/CallingCodes.json";
@@ -36,6 +37,7 @@ function render()
 	else
 	{
 		countriesTable.innerHTML = "";
+		downloadsList = [];
 
 		var i = 0;
 		currentTableList.forEach(countryData => {
@@ -50,6 +52,7 @@ function render()
 			`;
 
 			countriesTable.innerHTML += htmlContent;
+			downloadsList.push([countryData[tableColumns.country], countryData[tableColumns.code]]);
 		});
 	}
 
@@ -98,6 +101,7 @@ function defaultRender(){
 
 				countriesTable.innerHTML += htmlContent;
 				currentTableList.push([countryData[0], code[countryData[0]], countryData[1]]);
+				downloadsList.push([countryData[0], code[countryData[0]]]);
 			});
 		})
 	.catch(error => {

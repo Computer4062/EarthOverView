@@ -1,6 +1,7 @@
 let continents = ["East Asia", "South Asia", "South East Asia", "Central Asia", "Western Asia", "Northern Africa", "Western Africa", "Eastern Africa", "Southern Africa", "Central Africa", "Europe", "Southern America", "Northern America", "Oceania"];
 let continentsToRender = [];
 let currentTableList = [];
+let downloadsList = [];
 
 const countriesJsonFileLocation = "/public/Assets/Json/Countries.json";
 const jsonFileLocation = "/public/Assets/Json/CapitalCities.json";
@@ -34,6 +35,7 @@ function render()
 	else if(descendingLongitudesMode) sortDescendingLongitudes();
 
 	countriesTable.innerHTML = "";
+	downloadsList = [];
 
 	var i = 0;
 	currentTableList.forEach(countryData => {
@@ -56,6 +58,7 @@ function render()
 		`;
 
 		addMapBtnFunctionality();
+		downloadsList.push([countryData[tableColumns.country], countryData[tableColumns.city], countryData[tableColumns.lat], countryData[tableColumns.lng]]);
 	});
 
 	/* Reload the search section if it is activated so that it will also be sorted or filtered */
@@ -110,6 +113,7 @@ function defaultRender(){
 				`;
 
 				currentTableList.push([countryData[0], cityData[countryData[0]].city, cityData[countryData[0]].latitude, cityData[countryData[0]].longitude, countryData[1]]);
+				downloadsList.push([countryData[0], cityData[countryData[0]].city, cityData[countryData[0]].latitude, cityData[countryData[0]].longitude]);
 				addMapBtnFunctionality();
 			});
 		})
@@ -119,13 +123,4 @@ function defaultRender(){
 	.finally(() => {
 		hideLoadingBar();
 	});
-}
-
-/* Functions */
-function removeItem(list, itemToRemove) {
-  const index = list.indexOf(itemToRemove);
-  if (index !== -1) {
-    list.splice(index, 1);
-  }
-  return list;
 }

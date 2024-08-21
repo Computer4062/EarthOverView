@@ -32,6 +32,7 @@ function renderContinent(){
 
 function filterToDigits(hDigit, tDigit, oDigit){
 	countriesTable.innerHTML = "";
+	downloadsList = [];
 
 	let findId = -1;
 
@@ -63,6 +64,7 @@ function filterToDigits(hDigit, tDigit, oDigit){
 				`;
 
 				countriesTable.innerHTML += htmlContent;
+				downloadsList.push([countryData[tableColumns.country], countryData[tableColumns.code]]);
 			}
 		}
 		break;
@@ -82,6 +84,7 @@ function filterToDigits(hDigit, tDigit, oDigit){
 				`;
 
 				countriesTable.innerHTML += htmlContent;
+				downloadsList.push([countryData[tableColumns.country], countryData[tableColumns.code]]);
 			}
 		}
 		break;
@@ -101,6 +104,7 @@ function filterToDigits(hDigit, tDigit, oDigit){
 				`;
 
 				countriesTable.innerHTML += htmlContent;
+				downloadsList.push([countryData[tableColumns.country], countryData[tableColumns.code]]);
 			}
 		}
 		break;
@@ -120,6 +124,7 @@ function filterToDigits(hDigit, tDigit, oDigit){
 				`;
 
 				countriesTable.innerHTML += htmlContent;
+				downloadsList.push([countryData[tableColumns.country], countryData[tableColumns.code]]);
 			}
 		}
 		break;
@@ -139,6 +144,7 @@ function filterToDigits(hDigit, tDigit, oDigit){
 				`;
 
 				countriesTable.innerHTML += htmlContent;
+				downloadsList.push([countryData[tableColumns.country], countryData[tableColumns.code]]);
 			}
 		}
 		break;
@@ -158,6 +164,7 @@ function filterToDigits(hDigit, tDigit, oDigit){
 				`;
 
 				countriesTable.innerHTML += htmlContent;
+				downloadsList.push([countryData[tableColumns.country], countryData[tableColumns.code]]);
 			}
 		}
 		break;
@@ -177,6 +184,7 @@ function filterToDigits(hDigit, tDigit, oDigit){
 				`;
 
 				countriesTable.innerHTML += htmlContent;
+				downloadsList.push([countryData[tableColumns.country], countryData[tableColumns.code]]);
 			}
 		}
 		break;

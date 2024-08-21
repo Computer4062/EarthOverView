@@ -1,0 +1,22 @@
+.download-pannel{
+width: 500px;
+border: 1px solid white;
+border-radius: 9px;
+padding: 20px;
+}
+
+.download-btn-holder{
+display: flex;
+justify-content: center;
+}
+
+@media (max-width: 540px)
+{
+	.download-section .options-heading{
+		font-size: 18px;
+	}
+
+	.download-pannel{
+		width: 310px;
+	}
+}

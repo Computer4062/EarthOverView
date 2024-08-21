@@ -2,17 +2,12 @@
 	Searching
 */
 
-const searchBtn = document.querySelector("#search-btn");
 const searchBox = document.querySelector("#search-box");
 const searchSection = document.querySelector("#search-section");
 const closeBtn = document.querySelector("#close-button");
 
 closeBtn.addEventListener("click", () => {
 	searchSection.classList.add("hidden");
-});
-
-searchBtn.addEventListener("click", () => {
-	search(searchBox.value);
 });
 
 searchBox.addEventListener("input", () => {
@@ -27,6 +22,25 @@ function searchCaller(){
 		searchTable.innerHTML = "";
 	}
 }
+
+/*
+	Downloading
+*/
+
+const downloadSection = document.querySelector(".download-section");
+const downloadSecBtn = document.querySelector(".download-sec-btn");
+const downloadBtn = document.querySelector(".download-btn");
+
+downloadSecBtn.addEventListener("click", () => {
+	if(downloadSection.classList.contains("hidden"))
+		downloadSection.classList.remove("hidden");
+	else
+		downloadSection.classList.add("hidden");
+});
+
+downloadBtn.addEventListener("click", () => {
+	CallDownloader("demonyms");
+});
 
 /*
 	Sorting

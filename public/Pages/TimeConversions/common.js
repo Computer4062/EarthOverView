@@ -1,6 +1,7 @@
 let continents = ["East Asia", "South Asia", "South East Asia", "Central Asia", "Western Asia", "Northern Africa", "Western Africa", "Eastern Africa", "Southern Africa", "Central Africa", "Europe", "Southern America", "Northern America", "Oceania"];
 let continentsToRender = [];
 let currentTableList = [];
+let downloadsList = [];
 
 const countriesJsonFileLocation = "/public/Assets/Json/Countries.json";
 const countryCodesJsonFileLocation = "/public/Assets/Json/CountryCodes.json";
@@ -41,22 +42,25 @@ function render()
 	else
 	{
 		countriesTable.innerHTML = "";
-		var i = 0;
+		downloadsList = [];
+
+		let i = 0;
 
 		currentTableList.forEach(countryData => {
 			i++;
 			let htmlContent = `
 				<tr>
 				<th scope="row">${i}</th>
-				<td>${countryData[0]}</td>
-				<td>${countryData[1]}</td>
-				<td>${countryData[2]}</td>
-				<td>${countryData[3]}</td>
-				<td>${countryData[4]}</td>
+				<td>${countryData[tableColumns.country]}</td>
+				<td>${countryData[tableColumns.time]}</td>
+				<td>${countryData[tableColumns.date]}</td>
+				<td>${countryData[tableColumns.timezone]}</td>
+				<td>${countryData[tableColumns.continent]}</td>
 				</tr>
 			`;
 
 			countriesTable.innerHTML += htmlContent;
+			downloadsList.push([countryData[tableColumns.country], countryData[tableColumns.timezone]]);
 		});
 	}
 
@@ -101,6 +105,7 @@ function defaultRender(){
 
 							countriesTable.innerHTML += htmlContent;
 							currentTableList.push([country, timeAndDate[0], timeAndDate[1], timeData[country], continent]);
+							downloadsList.push([country, timeData[country]]);
 						}
 					});
 				});
@@ -133,20 +138,4 @@ function getTimeAndDate(timezone)
   {
 	return undefined;
   }
-}
-
-function removeDuplicateElements(array) {
-  const elementCounts = new Map();
-  const result = [];
-
-  for (const subArray of array) {
-    const firstElement = subArray[0];
-    elementCounts.set(firstElement, (elementCounts.get(firstElement) || 0) + 1);
-
-    if (elementCounts.get(firstElement) <= 2) {
-      result.push(subArray);
-    }
-  }
-
-  return result;
 }
