@@ -276,3 +276,10 @@
 3. Rewrote the titles for all the pages and wrote the meta tags as well
 4. Corrected a feature in time conversions
 5. Corrected Calling Codes to be Country Codes
+
+21/08/2024
+
+1. I completed the download feature so that users can download the table generated in CSV format
+2. Some adjustments were made to the meta tags
+3. Changes were made to the home page css
+4. The site was search indexed from google search console
