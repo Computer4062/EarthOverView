@@ -1,7 +1,0 @@
-https://www.earthoverview.info/Countries/CountryCodes
-https://www.earthoverview.info/Countries/Currencies
-https://www.earthoverview.info/Countries/Demonyms
-https://www.earthoverview.info/Countries/TimeConversions
-https://www.earthoverview.info/Countries/Languages
-https://www.earthoverview.info/Countries/Flags
-https://www.earthoverview.info/Countries/CapitalCities
