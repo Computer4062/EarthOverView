@@ -112,12 +112,12 @@ function defaultRender(){
 			})
 			.catch(error => {
 				console.error("Error:", error);
-			});
+			})
+			.finally(() => getUserCountry());
 		})
 	.catch(error => {
 		console.error('Error:', error);
 	})
-	.finally(() => getUserCountry());
 }
 
 /* 
