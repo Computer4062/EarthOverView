@@ -29,6 +29,10 @@ main{
 	.table{
 	width: 690px;
 	}
+
+	.search-area{
+	width: 690px;
+	}
 }
 
 ::selection{
@@ -45,6 +49,10 @@ align-items: center;
 
 #title-banner p{
 margin: 0;
+}
+
+.search-options{
+background-color: #212529;
 }
 
 .map-btn{

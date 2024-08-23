@@ -31,6 +31,10 @@ padding: 56px;
 	.table{
 	width: 690px;
 	}
+
+	.search-area{
+	width: 690px;
+	}
 }
 
 ::selection{
