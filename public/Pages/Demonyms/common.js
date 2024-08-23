@@ -57,44 +57,38 @@ function defaultRender(){
 	countriesTable.innerHTML = "";
 	currentTableList = [];
 
-	let listOfCountries = [];
 	fetch(countriesJsonFileLocation)
 	.then(response => response.json())
 	.then(countries => {
-		continents.forEach(continent => {
-			countries[continent].forEach(country => {
-				listOfCountries.push([country, continent]);
-			});
-		});
+		let i = 0;
+
+		fetch(jsonFileLocation)
+		.then(response => response.json())
+		.then(demonyms => {
+			continents.forEach(continent => {
+				countries[continent].forEach(country => {
+					i++;
+					let htmlContent = `
+						<tr>
+						<th scope="row">${i}</th>
+						<td>${country}</td>
+						<td>${demonyms[country]}</td>
+						<td>${continent}</td>
+						</tr>
+					`;
+
+					countriesTable.innerHTML += htmlContent;
+					currentTableList.push([country, demonyms[country], continent]);
+					downloadsList.push([country, demonyms[country]]);
+				})
+			})
+		})
+		.catch(error => {
+			console.error("Error:", error);
+		})
+		.finally(() => hideLoadingBar());
 	})
 	.catch(error => {
 		console.error("Error:", error);
-	});
-
-	var i = 0;
-	fetch(jsonFileLocation)
-		.then(response => response.json())
-		.then(demonyms => {
-			countriesTable.innerHTML = "";
-
-			listOfCountries.forEach(countryData => {
-				i++;
-				let htmlContent = `
-					<tr>
-					<th scope="row">${i}</th>
-					<td>${countryData[0]}</td>
-					<td>${demonyms[countryData[0]]}</td>
-					<td>${countryData[1]}</td>
-					</tr>
-				`;
-
-				countriesTable.innerHTML += htmlContent;
-				currentTableList.push([countryData[0], demonyms[countryData[0]], countryData[1]]);
-				downloadsList.push([countryData[0], demonyms[countryData[0]]])
-			});
-		})
-	.catch(error => {
-		console.error('Error:', error);
 	})
-	.finally(() => hideLoadingBar())
 }

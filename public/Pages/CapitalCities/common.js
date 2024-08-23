@@ -73,54 +73,46 @@ function defaultRender(){
 	countriesTable.innerHTML = "";
 	currentTableList = [];
 
-	let listOfCountries = [];
 	fetch(countriesJsonFileLocation)
 	.then(response => response.json())
 	.then(countries => {
-		continents.forEach(continent => {
-			countries[continent].forEach(country => {
-				listOfCountries.push([country, continent]);
-			});
-		});
+		let i = 0;
+
+		fetch(jsonFileLocation)
+		.then(response => response.json())
+		.then(cityData => {
+			continents.forEach(continent => {
+				countries[continent].forEach(country => {
+					i++;
+					countriesTable.innerHTML += `
+						<tr>
+						<th scope="row">${i}</th>
+						<td>${country}</td>
+						<td>${cityData[country].city}</td>
+						<td>${cityData[country].latitude}</td>
+						<td>${cityData[country].longitude}</td>
+						<td class="map-cell">
+							<button class="map-btn" value="${cityData[country].latitude},${cityData[country].longitude}"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+								<path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
+								<path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/></svg>
+							</button>
+						</td>
+						<td>${continent}</td>
+						</tr>
+					`;
+
+					currentTableList.push([country, cityData[country].city, cityData[country].latitude, cityData[country].longitude, continent]);
+					downloadsList.push([country, cityData[country].city, cityData[country].latitude, cityData[country].longitude]);
+					addMapBtnFunctionality();
+				})
+			})
+		})
+		.catch(error => {
+			console.error("Error:", error);
+		})
+		.finally(() => hideLoadingBar());
 	})
 	.catch(error => {
 		console.error("Error:", error);
-	});
-
-	var i = 0;
-	fetch(jsonFileLocation)
-		.then(response => response.json())
-		.then(cityData => {
-			countriesTable.innerHTML = "";
-
-			listOfCountries.forEach(countryData => {
-				i++;
-				countriesTable.innerHTML += `
-					<tr>
-					<th scope="row">${i}</th>
-					<td>${countryData[0]}</td>
-					<td>${cityData[countryData[0]].city}</td>
-					<td>${cityData[countryData[0]].latitude}</td>
-					<td>${cityData[countryData[0]].longitude}</td>
-					<td class="map-cell">
-						<button class="map-btn" value="${cityData[countryData[0]].latitude},${cityData[countryData[0]].longitude}"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
-							<path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
-							<path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/></svg>
-						</button>
-					</td>
-					<td>${countryData[1]}</td>
-					</tr>
-				`;
-
-				currentTableList.push([countryData[0], cityData[countryData[0]].city, cityData[countryData[0]].latitude, cityData[countryData[0]].longitude, countryData[1]]);
-				downloadsList.push([countryData[0], cityData[countryData[0]].city, cityData[countryData[0]].latitude, cityData[countryData[0]].longitude]);
-				addMapBtnFunctionality();
-			});
-		})
-	.catch(error => {
-		console.error('Error:', error);
 	})
-	.finally(() => {
-		hideLoadingBar();
-	});
 }

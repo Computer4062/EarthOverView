@@ -76,66 +76,51 @@ function defaultRender(){
 	countriesTable.innerHTML = "";
 	currentTableList = [];
 
-	let listOfCountries = [];
 	fetch(countriesJsonFileLocation)
 	.then(response => response.json())
 	.then(countries => {
-		continents.forEach(continent => {
-			countries[continent].forEach(country => {
-				listOfCountries.push([country, continent]);
+		let i = 0;
+
+		fetch(jsonFileLocation)
+		.then(response => response.json())
+		.then(languages => {
+			continents.forEach(continent => {
+				countries[continent].forEach(country => {
+					i++;
+					let htmlContent = `
+						<tr>
+						<th scope="row">${i}</th>
+						<td>${country}</td>
+						<td>
+							<ul>
+								${languages[country].language.map(lang => `<li>${lang}</li>`).join('')}
+							</ul>
+						</td>
+						<td>
+							<ul>
+								${languages[country].iso639_1.map(code => `<li>${code}</li>`).join('')}
+							</ul>
+						</td>
+						<td>${continent}</td>
+						</tr>
+					`;
+
+					countriesTable.innerHTML += htmlContent;
+					currentTableList.push([country, languages[country].language, languages[country].iso639_1, continent]);
+					downloadsList.push([
+						country,
+						languages[country].language.map(lang => `${lang}`).join('|'),
+						languages[country].iso639_1.map(code => `${code}`).join('|')
+					]);
+				});
 			});
-		});
+		})
+		.catch(error => {
+			console.error("Error:", error);
+		})
 	})
 	.catch(error => {
 		console.error("Error:", error);
-	});
-
-	var i = 0;
-	fetch(jsonFileLocation)
-		.then(response => response.json())
-		.then(languages => {
-			countriesTable.innerHTML = "";
-
-			listOfCountries.forEach(countryData => {
-				i++;
-				let htmlContent = `
-					<tr>
-					<th scope="row">${i}</th>
-					<td>${countryData[0]}</td>
-					<td>
-						<ul>
-							${languages[countryData[0]].language.map(lang => `<li>${lang}</li>`).join('')}
-						</ul>
-					</td>
-					<td>
-						<ul>
-							${languages[countryData[0]].iso639_1.map(code => `<li>${code}</li>`).join('')}
-						</ul>
-					</td>
-					<td>${countryData[1]}</td>
-					</tr>
-				`;
-
-				countriesTable.innerHTML += htmlContent;
-				currentTableList.push([countryData[0], languages[countryData[0]].language, languages[countryData[0]].iso639_1, countryData[1]]);
-				downloadsList.push([
-					countryData[0],
-					languages[countryData[0]].language.map(lang => `${lang}`).join('|'),
-					languages[countryData[0]].iso639_1.map(code => `${code}`).join('|')
-				]);
-			});
-		})
-	.catch(error => {
-		console.error('Error:', error);
 	})
 	.finally(() => hideLoadingBar());
-}
-
-/* Functions */
-function removeItem(list, itemToRemove) {
-  const index = list.indexOf(itemToRemove);
-  if (index !== -1) {
-    list.splice(index, 1);
-  }
-  return list;
 }
