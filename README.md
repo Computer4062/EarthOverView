@@ -284,3 +284,11 @@
 3. Changes were made to the home page css
 4. Site map was added
 5. The site was submitted for search indexing
+
+24/08/2024
+
+1. Added the footer to the end of every page
+2. Fixed a bug that involved loading
+3. I made it so that the search bar stretches in mobile
+4. Footer still needs to be fixed
+5. dev branch in Github changed
