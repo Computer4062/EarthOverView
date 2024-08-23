@@ -74,47 +74,41 @@ function defaultRender(){
 	countriesTable.innerHTML = "";
 	currentTableList = [];
 
-	let listOfCountries = [];
 	fetch(countriesJsonFileLocation)
 	.then(response => response.json())
 	.then(countries => {
-		continents.forEach(continent => {
-			countries[continent].forEach(country => {
-				listOfCountries.push([country, continent]);
-			});
-		});
+		let i = 0;
+
+		fetch(jsonFileLocation)
+		.then(response => response.json())
+		.then(currency => {
+			continents.forEach(continent => {
+				countries[continent].forEach(country => {
+					i++;
+					let htmlContent = `
+						<tr>
+						<th scope="row">${i}</th>
+						<td>${country}</td>
+						<td>${currency[country].unit}</td>
+						<td>${currency[country].currency}</td>
+						<td>${currency[country].symbol}</td>
+						<td>${currency[country].code}</td>
+						<td>${continent}</td>
+						</tr>
+					`;
+
+					countriesTable.innerHTML += htmlContent;
+					currentTableList.push([country, currency[country].unit, currency[country].currency, currency[country].symbol, currency[country].code, continent]);
+					downloadsList.push([country, currency[country].unit, currency[country].currency, currency[country].symbol, currency[country].code]);
+				})
+			})
+		})
+		.catch(error => {
+			console.error("Error:", error);
+		})
+		.finally(() => hideLoadingBar());
 	})
 	.catch(error => {
 		console.error("Error:", error);
 	});
-
-	var i = 0;
-	fetch(jsonFileLocation)
-		.then(response => response.json())
-		.then(currency => {
-			countriesTable.innerHTML = "";
-
-			listOfCountries.forEach(countryData => {
-				i++;
-				let htmlContent = `
-					<tr>
-					<th scope="row">${i}</th>
-					<td>${countryData[0]}</td>
-					<td>${currency[countryData[0]].unit}</td>
-					<td>${currency[countryData[0]].currency}</td>
-					<td>${currency[countryData[0]].symbol}</td>
-					<td>${currency[countryData[0]].code}</td>
-					<td>${countryData[1]}</td>
-					</tr>
-				`;
-
-				countriesTable.innerHTML += htmlContent;
-				currentTableList.push([countryData[0], currency[countryData[0]].unit, currency[countryData[0]].currency, currency[countryData[0]].symbol, currency[countryData[0]].code, countryData[1]]);
-				downloadsList.push([countryData[0], currency[countryData[0]].unit, currency[countryData[0]].currency, currency[countryData[0]].symbol, currency[countryData[0]].code]);
-			});
-		})
-	.catch(error => {
-		console.error('Error:', error);
-	})
-	.finally(() => hideLoadingBar())
 }
